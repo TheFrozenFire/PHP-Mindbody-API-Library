@@ -10,10 +10,10 @@ class Select_x0020_Service extends SoapClient {
                                     'ErrorCode' => 'ErrorCode',
                                     'SelectAggregateData' => 'SelectAggregateData',
                                     'SelectAggregateDataResponse' => 'SelectAggregateDataResponse',
-                                    'Row' => 'Row',
-                                    'RecordSet' => 'RecordSet',
                                     'Hotword' => 'Hotword',
                                     'Hotwords' => 'Hotwords',
+                                    'Row' => 'Row',
+                                    'RecordSet' => 'RecordSet',
                                    );
 
   public function Select_x0020_Service($wsdl = "http://clients.mindbodyonline.com/api/0_4/SelectService.asmx?WSDL", $options = array()) {
@@ -23,7 +23,7 @@ class Select_x0020_Service extends SoapClient {
       }
     }
     $directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
-    foreach($options['classmap'] as $key => $value) if(file_exists("$directory../structures/{$value}.php")) include_once("$directory../structures/{$value}.php");
+	foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
     parent::__construct($wsdl, $options);
   }
 
