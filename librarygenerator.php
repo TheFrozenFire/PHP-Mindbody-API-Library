@@ -90,7 +90,7 @@ if(!is_dir("splitteroutput/services")) mkdir("splitteroutput/services");
 
 foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 	$file = file_get_contents($serviceFile);
-	$file = str_replace("parent::__construct(\$wsdl, \$options);", "foreach(\$options['classmap'] as \$key => \$value) if(file_exists(\"../structures/{\$value}.php\")) include_once(\"../structures/{\$value}.php\");\n    parent::__construct(\$wsdl, \$options);", $file);
+	$file = str_replace("parent::__construct(\$wsdl, \$options);", "\$directory = dirname(__FILE__).DIRECTORY_SEPARATOR; foreach(\$options['classmap'] as \$key => \$value) if(file_exists(\"{\$directory}../structures/{\$value}.php\")) include_once(\"{\$directory}../structures/{\$value}.php\");\n    parent::__construct(\$wsdl, \$options);", $file);
 	file_put_contents($serviceFile, $file);
 	rename($serviceFile, "splitteroutput/services/".basename($serviceFile));
 }

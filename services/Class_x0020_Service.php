@@ -53,7 +53,8 @@ class Class_x0020_Service extends SoapClient {
         $options['classmap'][$key] = $value;
       }
     }
-    foreach($options['classmap'] as $key => $value) if(file_exists("../structures/{$value}.php")) include_once("../structures/{$value}.php");
+    $directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
+    foreach($options['classmap'] as $key => $value) if(file_exists("$directory../structures/{$value}.php")) include_once("$directory../structures/{$value}.php");
     parent::__construct($wsdl, $options);
   }
 
