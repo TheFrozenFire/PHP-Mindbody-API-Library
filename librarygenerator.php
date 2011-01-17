@@ -60,13 +60,12 @@ if(!class_exists("DOMDocument")) die("DOM is required for this script to functio
 if(!is_includeable("wsdl2php.php")) die("wsdl2php is required for this script to function.");
 
 $services = array(
-	"http://clients.mindbodyonline.com/api/0_4/AppointmentService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_4/ClassService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_4/ClientService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_4/RegionService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_4/SaleService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_4/StaffService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_4/SelectService.asmx?WSDL"
+	"http://clients.mindbodyonline.com/api/0_5/AppointmentService.asmx?WSDL",
+	"http://clients.mindbodyonline.com/api/0_5/ClassService.asmx?WSDL",
+	"http://clients.mindbodyonline.com/api/0_5/ClientService.asmx?WSDL",
+	"http://clients.mindbodyonline.com/api/0_5/SiteService.asmx?WSDL",
+	"http://clients.mindbodyonline.com/api/0_5/SaleService.asmx?WSDL",
+	"http://clients.mindbodyonline.com/api/0_5/StaffService.asmx?WSDL"
 );
 
 if(!is_dir("wsdl2phpoutput")) {

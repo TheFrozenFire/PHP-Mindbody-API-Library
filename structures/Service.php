@@ -1,5 +1,8 @@
 <?php
 class Service {
-  public $TypeGroup; // TypeGroup
+  public $Action; // ActionCode
+  public $ID; // string
+  public $Name; // string
+  public $Count; // int
 }
 ?>

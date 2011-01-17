@@ -1,0 +1,9 @@
+<?php
+class Sale {
+  public $ID; // long
+  public $SaleTime; // dateTime
+  public $SaleDate; // dateTime
+  public $SaleDateTime; // dateTime
+  public $Payments; // ArrayOfPayment
+}
+?>

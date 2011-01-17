@@ -1,7 +1,9 @@
 <?php
 class Location {
-  public $LocationID; // int
-  public $LocationName; // string
+  public $BusinessID; // int
+  public $Action; // ActionCode
+  public $ID; // int
+  public $Name; // string
   public $Address; // string
   public $Address2; // string
   public $Tax1; // double
@@ -15,7 +17,10 @@ class Location {
   public $PostalCode; // string
   public $Latitude; // double
   public $Longitude; // double
+  public $DistanceInMiles; // double
   public $ImageURL; // string
   public $Description; // string
+  public $HasSite; // boolean
+  public $CanBook; // boolean
 }
 ?>

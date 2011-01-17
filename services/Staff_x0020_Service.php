@@ -2,19 +2,45 @@
 class Staff_x0020_Service extends SoapClient {
 
   private static $classmap = array(
-                                    'getStaffList' => 'getStaffList',
-                                    'Tertiary' => 'Tertiary',
-                                    'getStaffListResponse' => 'getStaffListResponse',
-                                    'Result_StaffList' => 'Result_StaffList',
-                                    'Result' => 'Result',
-                                    'Option' => 'Option',
-                                    'ErrorCode' => 'ErrorCode',
-                                    'Trainer' => 'Trainer',
-                                    'Hotword' => 'Hotword',
-                                    'Hotwords' => 'Hotwords',
+                                    'GetStaff' => 'GetStaff',
+                                    'GetStaffRequest' => 'GetStaffRequest',
+                                    'MBRequest' => 'MBRequest',
+                                    'SourceCredentials' => 'SourceCredentials',
+                                    'UserCredentials' => 'UserCredentials',
+                                    'XMLDetailLevel' => 'XMLDetailLevel',
+                                    'StaffCredentials' => 'StaffCredentials',
+                                    'StaffFilter' => 'StaffFilter',
+                                    'GetStaffResponse' => 'GetStaffResponse',
+                                    'GetStaffResult' => 'GetStaffResult',
+                                    'MBResult' => 'MBResult',
+                                    'StatusCode' => 'StatusCode',
+                                    'Staff' => 'Staff',
+                                    'MBObject' => 'MBObject',
+                                    'Site' => 'Site',
+                                    'Resource' => 'Resource',
+                                    'ActionCode' => 'ActionCode',
+                                    'ClientService' => 'ClientService',
+                                    'Program' => 'Program',
+                                    'ScheduleType' => 'ScheduleType',
+                                    'ClientIndexValue' => 'ClientIndexValue',
+                                    'ClientIndex' => 'ClientIndex',
+                                    'Client' => 'Client',
+                                    'ClientCreditCard' => 'ClientCreditCard',
+                                    'Location' => 'Location',
+                                    'SessionType' => 'SessionType',
+                                    'ScheduleItem' => 'ScheduleItem',
+                                    'Appointment' => 'Appointment',
+                                    'AppointmentStatus' => 'AppointmentStatus',
+                                    'Unavailability' => 'Unavailability',
+                                    'Availability' => 'Availability',
+                                    'GetStaffPermissions' => 'GetStaffPermissions',
+                                    'GetStaffPermissionsRequest' => 'GetStaffPermissionsRequest',
+                                    'GetStaffPermissionsResponse' => 'GetStaffPermissionsResponse',
+                                    'GetStaffPermissionsResult' => 'GetStaffPermissionsResult',
+                                    'Permission' => 'Permission',
                                    );
 
-  public function Staff_x0020_Service($wsdl = "http://clients.mindbodyonline.com/api/0_4/StaffService.asmx?WSDL", $options = array()) {
+  public function Staff_x0020_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/StaffService.asmx?WSDL", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;
@@ -26,26 +52,28 @@ class Staff_x0020_Service extends SoapClient {
   }
 
   /**
-   * Returns a list of staff based on given parameterized options. All options must have a 
-   * value of True, False, or Dont_Care. For IsSalesRep and IsMale, the tertiary logic is straightforward:<br 
-   * /><br />All Males (IsMale = True)<br />All Females (IsMale = False)<br />All Males and 
-   * Females (IsMale = Dont_Care)<br /><br />The logic used by for class and appoinment instructors 
-   * is special, and follows the following truth table:<br /><table><tr><td>IsClass</td><td>IsAppt</td><td>&nbsp;</td></tr><tr><td>T</td><td>T</td><td>All 
-   * Instructors (Class inclusiveOR Appt)</td></tr><tr><td>T</td><td>F</td><td>Class Instructors 
-   * (ONLY)</td></tr><tr><td>T</td><td>DC</td><td>Class Instructors (May also be appt instructors)</td></tr><tr><td>F</td><td>T</td><td>Appt 
-   * Instructors (ONLY)</td></tr><tr><td>F</td><td>F</td><td>Non-Instructors (Staff that do 
-   * not instruct classes or appts)</td></tr><tr><td>F</td><td>DC</td><td>Non-Class Instructors 
-   * (Staff that do not instruct classes)</td></tr><tr><td>DC</td><td>T</td><td>Appt Instructors 
-   * (May also be class instructors)</td></tr><tr><td>DC</td><td>F</td><td>Non-Appt Instructors 
-   * (Staff that do not instruct appts)</td></tr><tr><td>DC</td><td>DC</td><td>All Staff</td></tr></table> 
-   * 
+   * Gets a list of staff members. 
    *
-   * @param getStaffList $parameters
-   * @return getStaffListResponse
+   * @param GetStaff $parameters
+   * @return GetStaffResponse
    */
-  public function getStaffList(getStaffList $parameters) {
-    return $this->__soapCall('getStaffList', array($parameters),       array(
-            'uri' => 'http://clients.mindbodyonline.com/API/0_4',
+  public function GetStaff(GetStaff $parameters) {
+    return $this->__soapCall('GetStaff', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets a list of staff permissions based on the given staff member. 
+   *
+   * @param GetStaffPermissions $parameters
+   * @return GetStaffPermissionsResponse
+   */
+  public function GetStaffPermissions(GetStaffPermissions $parameters) {
+    return $this->__soapCall('GetStaffPermissions', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )
       );

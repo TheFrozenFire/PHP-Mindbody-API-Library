@@ -1,7 +1,7 @@
 <?php
 class ClientIndexValue {
-  public $ClientIndexValueID; // int
-  public $ClientIndexID; // int
-  public $ClientIndexValueName; // string
+  public $Action; // ActionCode
+  public $ID; // int
+  public $Name; // string
 }
 ?>

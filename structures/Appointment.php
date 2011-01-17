@@ -1,17 +1,19 @@
 <?php
 class Appointment {
-  public $AppointmentID; // int
-  public $CardID; // string
-  public $TrainerID; // int
-  public $AppointmentDate; // string
-  public $StartTime; // string
-  public $EndTime; // string
-  public $Resources; // ArrayOfResource
+  public $Action; // ActionCode
+  public $ID; // long
+  public $Status; // AppointmentStatus
+  public $StartDateTime; // dateTime
+  public $EndDateTime; // dateTime
   public $Notes; // string
-  public $LastModifiedByEmployeeID; // int
-  public $LastModifiedByEmployeeName; // string
-  public $LastModifiedTimestamp; // string
-  public $StudioID; // int
-  public $Status; // AppointmentStatusDetail
+  public $StaffRequested; // boolean
+  public $Program; // Program
+  public $SessionType; // SessionType
+  public $Location; // Location
+  public $Staff; // Staff
+  public $Client; // Client
+  public $FirstAppointment; // boolean
+  public $ClientService; // ClientService
+  public $Resources; // ArrayOfResource
 }
 ?>
