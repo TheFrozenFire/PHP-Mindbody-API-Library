@@ -30,6 +30,21 @@ class Site_x0020_Service extends SoapClient {
                                     'GetSessionTypesRequest' => 'GetSessionTypesRequest',
                                     'GetSessionTypesResponse' => 'GetSessionTypesResponse',
                                     'GetSessionTypesResult' => 'GetSessionTypesResult',
+                                    'SessionType' => 'SessionType',
+                                    'GetResources' => 'GetResources',
+                                    'GetResourcesRequest' => 'GetResourcesRequest',
+                                    'GetResourcesResponse' => 'GetResourcesResponse',
+                                    'GetResourcesResult' => 'GetResourcesResult',
+                                    'Resource' => 'Resource',
+                                    'GetRelationships' => 'GetRelationships',
+                                    'GetRelationshipsRequest' => 'GetRelationshipsRequest',
+                                    'GetRelationshipsResponse' => 'GetRelationshipsResponse',
+                                    'GetRelationshipsResult' => 'GetRelationshipsResult',
+                                    'Relationship' => 'Relationship',
+                                    'AddSiteToCredentials' => 'AddSiteToCredentials',
+                                    'AddSiteToCredentialsRequest' => 'AddSiteToCredentialsRequest',
+                                    'AddSiteToCredentialsResponse' => 'AddSiteToCredentialsResponse',
+                                    'AddSiteToCredentialsResult' => 'AddSiteToCredentialsResult',
                                    );
 
   public function Site_x0020_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/SiteService.asmx?WSDL", $options = array()) {
@@ -93,6 +108,48 @@ class Site_x0020_Service extends SoapClient {
    */
   public function GetSessionTypes(GetSessionTypes $parameters) {
     return $this->__soapCall('GetSessionTypes', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets a list of resources. 
+   *
+   * @param GetResources $parameters
+   * @return GetResourcesResponse
+   */
+  public function GetResources(GetResources $parameters) {
+    return $this->__soapCall('GetResources', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets a list of relationships. 
+   *
+   * @param GetRelationships $parameters
+   * @return GetRelationshipsResponse
+   */
+  public function GetRelationships(GetRelationships $parameters) {
+    return $this->__soapCall('GetRelationships', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Adds a site to the credentials. 
+   *
+   * @param AddSiteToCredentials $parameters
+   * @return AddSiteToCredentialsResponse
+   */
+  public function AddSiteToCredentials(AddSiteToCredentials $parameters) {
+    return $this->__soapCall('AddSiteToCredentials', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )

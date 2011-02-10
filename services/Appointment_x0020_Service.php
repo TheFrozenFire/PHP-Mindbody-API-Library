@@ -22,11 +22,13 @@ class Appointment_x0020_Service extends SoapClient {
                                     'ClientService' => 'ClientService',
                                     'Program' => 'Program',
                                     'ScheduleType' => 'ScheduleType',
-                                    'ClientIndexValue' => 'ClientIndexValue',
-                                    'ClientIndex' => 'ClientIndex',
+                                    'ClientRelationship' => 'ClientRelationship',
                                     'Client' => 'Client',
+                                    'ClientIndex' => 'ClientIndex',
+                                    'ClientIndexValue' => 'ClientIndexValue',
                                     'ClientCreditCard' => 'ClientCreditCard',
                                     'Location' => 'Location',
+                                    'Relationship' => 'Relationship',
                                     'SessionType' => 'SessionType',
                                     'Staff' => 'Staff',
                                     'Unavailability' => 'Unavailability',
@@ -54,6 +56,11 @@ class Appointment_x0020_Service extends SoapClient {
                                     'GetActiveSessionTimesRequest' => 'GetActiveSessionTimesRequest',
                                     'GetActiveSessionTimesResponse' => 'GetActiveSessionTimesResponse',
                                     'GetActiveSessionTimesResult' => 'GetActiveSessionTimesResult',
+                                    'GetAppointmentOptions' => 'GetAppointmentOptions',
+                                    'GetAppointmentOptionsRequest' => 'GetAppointmentOptionsRequest',
+                                    'GetAppointmentOptionsResponse' => 'GetAppointmentOptionsResponse',
+                                    'GetAppointmentOptionsResult' => 'GetAppointmentOptionsResult',
+                                    'Option' => 'Option',
                                    );
 
   public function Appointment_x0020_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/AppointmentService.asmx?WSDL", $options = array()) {
@@ -145,6 +152,20 @@ class Appointment_x0020_Service extends SoapClient {
    */
   public function GetActiveSessionTimes(GetActiveSessionTimes $parameters) {
     return $this->__soapCall('GetActiveSessionTimes', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets a list appointment options. 
+   *
+   * @param GetAppointmentOptions $parameters
+   * @return GetAppointmentOptionsResponse
+   */
+  public function GetAppointmentOptions(GetAppointmentOptions $parameters) {
+    return $this->__soapCall('GetAppointmentOptions', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )

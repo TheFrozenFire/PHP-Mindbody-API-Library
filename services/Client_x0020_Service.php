@@ -24,6 +24,8 @@ class Client_x0020_Service extends SoapClient {
                                     'ClientIndex' => 'ClientIndex',
                                     'ClientIndexValue' => 'ClientIndexValue',
                                     'ClientCreditCard' => 'ClientCreditCard',
+                                    'ClientRelationship' => 'ClientRelationship',
+                                    'Relationship' => 'Relationship',
                                     'Location' => 'Location',
                                     'AddOrUpdateClientsResponse' => 'AddOrUpdateClientsResponse',
                                     'AddOrUpdateClientsResult' => 'AddOrUpdateClientsResult',

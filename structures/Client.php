@@ -8,6 +8,8 @@ class Client {
   public $Notes; // string
   public $ClientCreditCards; // ArrayOfClientCreditCard
   public $LastFormulaNotes; // string
+  public $AppointmentGenderPreference; // string
+  public $ClientRelationships; // ArrayOfClientRelationship
   public $Action; // ActionCode
   public $ID; // string
   public $FirstName; // string

@@ -2,12 +2,18 @@
 class Sale_x0020_Service extends SoapClient {
 
   private static $classmap = array(
-                                    'CheckoutShoppingCart' => 'CheckoutShoppingCart',
-                                    'CheckoutShoppingCartRequest' => 'CheckoutShoppingCartRequest',
+                                    'GetAcceptedCardType' => 'GetAcceptedCardType',
+                                    'GetAcceptedCardTypeRequest' => 'GetAcceptedCardTypeRequest',
                                     'MBRequest' => 'MBRequest',
                                     'SourceCredentials' => 'SourceCredentials',
                                     'UserCredentials' => 'UserCredentials',
                                     'XMLDetailLevel' => 'XMLDetailLevel',
+                                    'GetAcceptedCardTypeResponse' => 'GetAcceptedCardTypeResponse',
+                                    'GetAcceptedCardTypeResult' => 'GetAcceptedCardTypeResult',
+                                    'MBResult' => 'MBResult',
+                                    'StatusCode' => 'StatusCode',
+                                    'CheckoutShoppingCart' => 'CheckoutShoppingCart',
+                                    'CheckoutShoppingCartRequest' => 'CheckoutShoppingCartRequest',
                                     'CartItem' => 'CartItem',
                                     'MBObject' => 'MBObject',
                                     'Site' => 'Site',
@@ -22,13 +28,15 @@ class Sale_x0020_Service extends SoapClient {
                                     'ClientIndex' => 'ClientIndex',
                                     'ClientIndexValue' => 'ClientIndexValue',
                                     'ClientCreditCard' => 'ClientCreditCard',
+                                    'ClientRelationship' => 'ClientRelationship',
+                                    'Relationship' => 'Relationship',
                                     'Location' => 'Location',
                                     'ClientService' => 'ClientService',
                                     'Staff' => 'Staff',
                                     'Appointment' => 'Appointment',
                                     'ScheduleItem' => 'ScheduleItem',
-                                    'Unavailability' => 'Unavailability',
                                     'Availability' => 'Availability',
+                                    'Unavailability' => 'Unavailability',
                                     'AppointmentStatus' => 'AppointmentStatus',
                                     'Resource' => 'Resource',
                                     'ShoppingCart' => 'ShoppingCart',
@@ -38,12 +46,10 @@ class Sale_x0020_Service extends SoapClient {
                                     'Product' => 'Product',
                                     'Service' => 'Service',
                                     'PaymentInfo' => 'PaymentInfo',
-                                    'DebitAccountInfo' => 'DebitAccountInfo',
                                     'CreditCardInfo' => 'CreditCardInfo',
+                                    'DebitAccountInfo' => 'DebitAccountInfo',
                                     'CheckoutShoppingCartResponse' => 'CheckoutShoppingCartResponse',
                                     'CheckoutShoppingCartResult' => 'CheckoutShoppingCartResult',
-                                    'MBResult' => 'MBResult',
-                                    'StatusCode' => 'StatusCode',
                                     'GetSales' => 'GetSales',
                                     'GetSalesRequest' => 'GetSalesRequest',
                                     'GetSalesResponse' => 'GetSalesResponse',
@@ -73,6 +79,20 @@ class Sale_x0020_Service extends SoapClient {
     $directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
 	foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
     parent::__construct($wsdl, $options);
+  }
+
+  /**
+   * Gets a list of card types that the site accepts. 
+   *
+   * @param GetAcceptedCardType $parameters
+   * @return GetAcceptedCardTypeResponse
+   */
+  public function GetAcceptedCardType(GetAcceptedCardType $parameters) {
+    return $this->__soapCall('GetAcceptedCardType', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
   }
 
   /**

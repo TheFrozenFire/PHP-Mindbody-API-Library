@@ -6,5 +6,6 @@ class GetStaffAppointmentsRequest {
   public $StartDate; // dateTime
   public $EndDate; // dateTime
   public $StaffIDs; // ArrayOfLong
+  public $ClientIDs; // ArrayOfString
 }
 ?>

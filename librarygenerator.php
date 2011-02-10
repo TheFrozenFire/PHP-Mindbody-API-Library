@@ -82,6 +82,25 @@ chdir("..");
 
 if(!is_dir("splitteroutput")) mkdir("splitteroutput");
 
+// Fix for MBO API 0.5 naming clusterfsck
+if(file_exists("wsdl2phpoutput/Class_x0020_Service.php")) {
+	$file = file_get_contents("wsdl2phpoutput/Class_x0020_Service.php");
+	if(strpos($file, "class Class {")) {
+		$file = str_replace(
+			array(
+				"class Class {",
+				"'Class' => 'Class',"
+			),
+			array(
+				"class Mindbody_Class {",
+				"'Class' => 'Mindbody_Class',"
+			),
+			$file
+		);
+		file_put_contents("wsdl2phpoutput/Class_x0020_Service.php", $file);
+	}
+}
+
 foreach(glob("wsdl2phpoutput/*.php") as $serviceFile) split_file($serviceFile, "splitteroutput");
 
 if(!is_dir("splitteroutput/structures")) mkdir("splitteroutput/structures");

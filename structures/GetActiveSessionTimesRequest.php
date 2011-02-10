@@ -1,6 +1,6 @@
 <?php
 class GetActiveSessionTimesRequest {
-  public $ProgramID; // int
+  public $ScheduleType; // ScheduleType
   public $StartTime; // dateTime
   public $EndTime; // dateTime
 }
