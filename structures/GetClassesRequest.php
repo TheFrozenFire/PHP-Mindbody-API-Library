@@ -8,5 +8,6 @@ class GetClassesRequest {
   public $ClientID; // string
   public $ProgramIDs; // ArrayOfInt
   public $SessionTypeIDs; // ArrayOfInt
+  public $LocationIDs; // ArrayOfInt
 }
 ?>

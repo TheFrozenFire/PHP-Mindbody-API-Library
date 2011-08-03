@@ -53,8 +53,9 @@ class Site_x0020_Service extends SoapClient {
         $options['classmap'][$key] = $value;
       }
     }
+    if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
     $directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
-	foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
+    foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
     parent::__construct($wsdl, $options);
   }
 

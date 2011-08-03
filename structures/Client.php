@@ -9,7 +9,9 @@ class Client {
   public $ClientCreditCards; // ArrayOfClientCreditCard
   public $LastFormulaNotes; // string
   public $AppointmentGenderPreference; // string
+  public $Gender; // string
   public $ClientRelationships; // ArrayOfClientRelationship
+  public $CustomClientFields; // ArrayOfCustomClientField
   public $Action; // ActionCode
   public $ID; // string
   public $FirstName; // string

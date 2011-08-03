@@ -1,5 +1,7 @@
 <?php
 class ClassSchedule {
+  public $Classes; // ArrayOfClass
+  public $Clients; // ArrayOfClient
   public $Action; // ActionCode
   public $ID; // int
   public $ClassDescription; // ClassDescription

@@ -33,9 +33,14 @@ class Class_x0020_Service extends SoapClient {
                                     'ClientCreditCard' => 'ClientCreditCard',
                                     'ClientRelationship' => 'ClientRelationship',
                                     'Relationship' => 'Relationship',
+                                    'CustomClientField' => 'CustomClientField',
                                     'ClientService' => 'ClientService',
                                     'ClassDescription' => 'ClassDescription',
                                     'Visit' => 'Visit',
+                                    'UpdateClientVisits' => 'UpdateClientVisits',
+                                    'UpdateClientVisitsRequest' => 'UpdateClientVisitsRequest',
+                                    'UpdateClientVisitsResponse' => 'UpdateClientVisitsResponse',
+                                    'UpdateClientVisitsResult' => 'UpdateClientVisitsResult',
                                     'GetClassVisits' => 'GetClassVisits',
                                     'GetClassVisitsRequest' => 'GetClassVisitsRequest',
                                     'GetClassVisitsResponse' => 'GetClassVisitsResponse',
@@ -49,10 +54,18 @@ class Class_x0020_Service extends SoapClient {
                                     'GetEnrollmentsResponse' => 'GetEnrollmentsResponse',
                                     'GetEnrollmentsResult' => 'GetEnrollmentsResult',
                                     'ClassSchedule' => 'ClassSchedule',
+                                    'GetClassSchedules' => 'GetClassSchedules',
+                                    'GetClassSchedulesRequest' => 'GetClassSchedulesRequest',
+                                    'GetClassSchedulesResponse' => 'GetClassSchedulesResponse',
+                                    'GetClassSchedulesResult' => 'GetClassSchedulesResult',
                                     'AddClientsToClasses' => 'AddClientsToClasses',
                                     'AddClientsToClassesRequest' => 'AddClientsToClassesRequest',
                                     'AddClientsToClassesResponse' => 'AddClientsToClassesResponse',
                                     'AddClientsToClassesResult' => 'AddClientsToClassesResult',
+                                    'AddClientsToEnrollments' => 'AddClientsToEnrollments',
+                                    'AddClientsToEnrollmentsRequest' => 'AddClientsToEnrollmentsRequest',
+                                    'AddClientsToEnrollmentsResponse' => 'AddClientsToEnrollmentsResponse',
+                                    'AddClientsToEnrollmentsResult' => 'AddClientsToEnrollmentsResult',
                                    );
 
   public function Class_x0020_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/ClassService.asmx?WSDL", $options = array()) {
@@ -61,8 +74,9 @@ class Class_x0020_Service extends SoapClient {
         $options['classmap'][$key] = $value;
       }
     }
+    if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
     $directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
-	foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
+    foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
     parent::__construct($wsdl, $options);
   }
 
@@ -74,6 +88,20 @@ class Class_x0020_Service extends SoapClient {
    */
   public function GetClasses(GetClasses $parameters) {
     return $this->__soapCall('GetClasses', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Update a list of visits. 
+   *
+   * @param UpdateClientVisits $parameters
+   * @return UpdateClientVisitsResponse
+   */
+  public function UpdateClientVisits(UpdateClientVisits $parameters) {
+    return $this->__soapCall('UpdateClientVisits', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )
@@ -123,6 +151,20 @@ class Class_x0020_Service extends SoapClient {
   }
 
   /**
+   * Gets a list of class schedules. 
+   *
+   * @param GetClassSchedules $parameters
+   * @return GetClassSchedulesResponse
+   */
+  public function GetClassSchedules(GetClassSchedules $parameters) {
+    return $this->__soapCall('GetClassSchedules', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
    * Adds clients to classes (signup). 
    *
    * @param AddClientsToClasses $parameters
@@ -130,6 +172,20 @@ class Class_x0020_Service extends SoapClient {
    */
   public function AddClientsToClasses(AddClientsToClasses $parameters) {
     return $this->__soapCall('AddClientsToClasses', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Adds clients to enrollments (signup). 
+   *
+   * @param AddClientsToEnrollments $parameters
+   * @return AddClientsToEnrollmentsResponse
+   */
+  public function AddClientsToEnrollments(AddClientsToEnrollments $parameters) {
+    return $this->__soapCall('AddClientsToEnrollments', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )

@@ -26,6 +26,7 @@ class Client_x0020_Service extends SoapClient {
                                     'ClientCreditCard' => 'ClientCreditCard',
                                     'ClientRelationship' => 'ClientRelationship',
                                     'Relationship' => 'Relationship',
+                                    'CustomClientField' => 'CustomClientField',
                                     'Location' => 'Location',
                                     'AddOrUpdateClientsResponse' => 'AddOrUpdateClientsResponse',
                                     'AddOrUpdateClientsResult' => 'AddOrUpdateClientsResult',
@@ -33,6 +34,10 @@ class Client_x0020_Service extends SoapClient {
                                     'GetClientsRequest' => 'GetClientsRequest',
                                     'GetClientsResponse' => 'GetClientsResponse',
                                     'GetClientsResult' => 'GetClientsResult',
+                                    'GetCustomClientFields' => 'GetCustomClientFields',
+                                    'GetCustomClientFieldsRequest' => 'GetCustomClientFieldsRequest',
+                                    'GetCustomClientFieldsResponse' => 'GetCustomClientFieldsResponse',
+                                    'GetCustomClientFieldsResult' => 'GetCustomClientFieldsResult',
                                     'GetClientIndexes' => 'GetClientIndexes',
                                     'GetClientIndexesRequest' => 'GetClientIndexesRequest',
                                     'GetClientIndexesResponse' => 'GetClientIndexesResponse',
@@ -79,8 +84,9 @@ class Client_x0020_Service extends SoapClient {
         $options['classmap'][$key] = $value;
       }
     }
+    if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
     $directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
-	foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
+    foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
     parent::__construct($wsdl, $options);
   }
 
@@ -120,6 +126,20 @@ class Client_x0020_Service extends SoapClient {
    */
   public function GetClients(GetClients $parameters) {
     return $this->__soapCall('GetClients', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets a list of currently available client indexes. 
+   *
+   * @param GetCustomClientFields $parameters
+   * @return GetCustomClientFieldsResponse
+   */
+  public function GetCustomClientFields(GetCustomClientFields $parameters) {
+    return $this->__soapCall('GetCustomClientFields', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )
@@ -197,7 +217,7 @@ class Client_x0020_Service extends SoapClient {
   }
 
   /**
-   * Updates a client service for a given client. 
+   * Gets a client service for a given client. 
    *
    * @param GetClientServices $parameters
    * @return GetClientServicesResponse

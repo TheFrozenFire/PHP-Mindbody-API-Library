@@ -59,6 +59,8 @@ if(!class_exists("SoapClient")) die("SOAP is required for this script to functio
 if(!class_exists("DOMDocument")) die("DOM is required for this script to function.");
 if(!is_includeable("wsdl2php.php")) die("wsdl2php is required for this script to function.");
 
+if(!ini_get('user_agent')) die("This script requires that your user_agent ini setting be configured. This is due to Mindbody blocking all requests from clients not providing a user_agent header.\nAn example would be: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19'\n");
+
 $services = array(
 	"http://clients.mindbodyonline.com/api/0_5/AppointmentService.asmx?WSDL",
 	"http://clients.mindbodyonline.com/api/0_5/ClassService.asmx?WSDL",
@@ -108,7 +110,7 @@ if(!is_dir("splitteroutput/services")) mkdir("splitteroutput/services");
 
 foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 	$file = file_get_contents($serviceFile);
-	$file = str_replace("parent::__construct(\$wsdl, \$options);", "\$directory = dirname(__FILE__).DIRECTORY_SEPARATOR;\n	foreach(\$options['classmap'] as \$key => \$value) if(file_exists(\"{\$directory}../structures/{\$value}.php\")) include_once(\"{\$directory}../structures/{\$value}.php\");\n    parent::__construct(\$wsdl, \$options);", $file);
+	$file = str_replace("parent::__construct(\$wsdl, \$options);", "if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');\n    \$directory = dirname(__FILE__).DIRECTORY_SEPARATOR;\n    foreach(\$options['classmap'] as \$key => \$value) if(file_exists(\"{\$directory}../structures/{\$value}.php\")) include_once(\"{\$directory}../structures/{\$value}.php\");\n    parent::__construct(\$wsdl, \$options);", $file);
 	file_put_contents($serviceFile, $file);
 	rename($serviceFile, "splitteroutput/services/".basename($serviceFile));
 }
