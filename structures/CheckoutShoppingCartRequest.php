@@ -4,6 +4,7 @@ class CheckoutShoppingCartRequest {
   public $ClientID; // string
   public $Test; // boolean
   public $CartItems; // ArrayOfCartItem
+  public $PromotionCode; // string
   public $Payments; // ArrayOfPaymentInfo
 }
 ?>

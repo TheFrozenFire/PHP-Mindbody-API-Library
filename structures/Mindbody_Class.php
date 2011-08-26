@@ -1,5 +1,6 @@
 <?php
 class Mindbody_Class {
+  public $ClassScheduleID; // int
   public $Visits; // ArrayOfVisit
   public $Clients; // ArrayOfClient
   public $Location; // Location
@@ -7,6 +8,7 @@ class Mindbody_Class {
   public $WebCapacity; // int
   public $TotalBooked; // int
   public $WebBooked; // int
+  public $SemesterID; // int
   public $Action; // ActionCode
   public $ID; // int
   public $IsAvailable; // boolean

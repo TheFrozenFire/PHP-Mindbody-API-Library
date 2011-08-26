@@ -1,6 +1,6 @@
 <?php
 class Client {
-  public $NewID; // double
+  public $NewID; // string
   public $AccountBalance; // double
   public $ClientIndexes; // ArrayOfClientIndex
   public $Username; // string
@@ -10,6 +10,7 @@ class Client {
   public $LastFormulaNotes; // string
   public $AppointmentGenderPreference; // string
   public $Gender; // string
+  public $IsCompany; // boolean
   public $ClientRelationships; // ArrayOfClientRelationship
   public $CustomClientFields; // ArrayOfCustomClientField
   public $Action; // ActionCode

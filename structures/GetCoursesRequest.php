@@ -1,12 +1,11 @@
 <?php
-class GetEnrollmentsRequest {
+class GetCoursesRequest {
   public $LocationIDs; // ArrayOfInt
-  public $ClassScheduleIDs; // ArrayOfInt
+  public $CourseIDs; // ArrayOfLong
   public $StaffIDs; // ArrayOfLong
   public $ProgramIDs; // ArrayOfInt
-  public $SessionTypeIDs; // ArrayOfInt
-  public $SemesterIDs; // ArrayOfInt
   public $StartDate; // dateTime
   public $EndDate; // dateTime
+  public $SemesterIDs; // ArrayOfInt
 }
 ?>

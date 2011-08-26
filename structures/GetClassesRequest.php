@@ -9,5 +9,6 @@ class GetClassesRequest {
   public $ProgramIDs; // ArrayOfInt
   public $SessionTypeIDs; // ArrayOfInt
   public $LocationIDs; // ArrayOfInt
+  public $SemesterIDs; // ArrayOfInt
 }
 ?>
