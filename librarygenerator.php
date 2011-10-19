@@ -117,6 +117,8 @@ if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Int
     parent::__construct(\$wsdl, \$options);
 EOD;
 	$file = str_replace("parent::__construct(\$wsdl, \$options);", $constructorcode, $file);
+	$file = rtrim($file, '?>');
+	$file .= "\nclass_alias(\"".basename($serviceFile, '.php')."\", \"".str_replace('_x0020', '', basename($serviceFile, '.php'))."\");\n?>";
 	file_put_contents($serviceFile, $file);
 	rename($serviceFile, "splitteroutput/services/".basename($serviceFile));
 }

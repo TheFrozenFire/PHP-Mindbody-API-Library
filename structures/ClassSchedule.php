@@ -2,6 +2,7 @@
 class ClassSchedule {
   public $Classes; // ArrayOfClass
   public $Clients; // ArrayOfClient
+  public $Course; // Course
   public $SemesterID; // int
   public $Action; // ActionCode
   public $ID; // int

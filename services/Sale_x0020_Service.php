@@ -17,14 +17,12 @@ class Sale_x0020_Service extends SoapClient {
                                     'CartItem' => 'CartItem',
                                     'MBObject' => 'MBObject',
                                     'Site' => 'Site',
-                                    'ClassDescription' => 'ClassDescription',
-                                    'ActionCode' => 'ActionCode',
-                                    'Program' => 'Program',
-                                    'ScheduleType' => 'ScheduleType',
-                                    'SessionType' => 'SessionType',
+                                    'ClassSchedule' => 'ClassSchedule',
+                                    'Class' => 'Class',
                                     'Visit' => 'Visit',
                                     'Client' => 'Client',
                                     'ClientIndex' => 'ClientIndex',
+                                    'ActionCode' => 'ActionCode',
                                     'ClientIndexValue' => 'ClientIndexValue',
                                     'ClientCreditCard' => 'ClientCreditCard',
                                     'ClientRelationship' => 'ClientRelationship',
@@ -32,7 +30,11 @@ class Sale_x0020_Service extends SoapClient {
                                     'CustomClientField' => 'CustomClientField',
                                     'Location' => 'Location',
                                     'ClientService' => 'ClientService',
-                                    'Class' => 'Class',
+                                    'Program' => 'Program',
+                                    'ScheduleType' => 'ScheduleType',
+                                    'ClassDescription' => 'ClassDescription',
+                                    'Level' => 'Level',
+                                    'SessionType' => 'SessionType',
                                     'Staff' => 'Staff',
                                     'Appointment' => 'Appointment',
                                     'ScheduleItem' => 'ScheduleItem',
@@ -40,15 +42,17 @@ class Sale_x0020_Service extends SoapClient {
                                     'Unavailability' => 'Unavailability',
                                     'AppointmentStatus' => 'AppointmentStatus',
                                     'Resource' => 'Resource',
+                                    'Course' => 'Course',
                                     'ShoppingCart' => 'ShoppingCart',
                                     'Size' => 'Size',
                                     'Color' => 'Color',
                                     'Item' => 'Item',
+                                    'Package' => 'Package',
                                     'Service' => 'Service',
                                     'Product' => 'Product',
                                     'PaymentInfo' => 'PaymentInfo',
-                                    'DebitAccountInfo' => 'DebitAccountInfo',
                                     'CreditCardInfo' => 'CreditCardInfo',
+                                    'DebitAccountInfo' => 'DebitAccountInfo',
                                     'CheckoutShoppingCartResponse' => 'CheckoutShoppingCartResponse',
                                     'CheckoutShoppingCartResult' => 'CheckoutShoppingCartResult',
                                     'GetSales' => 'GetSales',
@@ -65,10 +69,22 @@ class Sale_x0020_Service extends SoapClient {
                                     'GetServicesRequest' => 'GetServicesRequest',
                                     'GetServicesResponse' => 'GetServicesResponse',
                                     'GetServicesResult' => 'GetServicesResult',
+                                    'UpdateServices' => 'UpdateServices',
+                                    'UpdateServicesRequest' => 'UpdateServicesRequest',
+                                    'UpdateServicesResponse' => 'UpdateServicesResponse',
+                                    'UpdateServicesResult' => 'UpdateServicesResult',
+                                    'GetPackages' => 'GetPackages',
+                                    'GetPackagesRequest' => 'GetPackagesRequest',
+                                    'GetPackagesResponse' => 'GetPackagesResponse',
+                                    'GetPackagesResult' => 'GetPackagesResult',
                                     'GetProducts' => 'GetProducts',
                                     'GetProductsRequest' => 'GetProductsRequest',
                                     'GetProductsResponse' => 'GetProductsResponse',
                                     'GetProductsResult' => 'GetProductsResult',
+                                    'UpdateProducts' => 'UpdateProducts',
+                                    'UpdateProductsRequest' => 'UpdateProductsRequest',
+                                    'UpdateProductsResponse' => 'UpdateProductsResponse',
+                                    'UpdateProductsResult' => 'UpdateProductsResult',
                                    );
 
   public function Sale_x0020_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/SaleService.asmx?WSDL", $options = array()) {
@@ -154,6 +170,34 @@ class Sale_x0020_Service extends SoapClient {
   }
 
   /**
+   * Update select services information. 
+   *
+   * @param UpdateServices $parameters
+   * @return UpdateServicesResponse
+   */
+  public function UpdateServices(UpdateServices $parameters) {
+    return $this->__soapCall('UpdateServices', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets a list of packages available for sale. 
+   *
+   * @param GetPackages $parameters
+   * @return GetPackagesResponse
+   */
+  public function GetPackages(GetPackages $parameters) {
+    return $this->__soapCall('GetPackages', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
    * Get a list of products available for sale. 
    *
    * @param GetProducts $parameters
@@ -167,5 +211,21 @@ class Sale_x0020_Service extends SoapClient {
       );
   }
 
+  /**
+   * Update select products information. 
+   *
+   * @param UpdateProducts $parameters
+   * @return UpdateProductsResponse
+   */
+  public function UpdateProducts(UpdateProducts $parameters) {
+    return $this->__soapCall('UpdateProducts', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
 }
+
+class_alias("Sale_x0020_Service", "Sale_Service");
 ?>

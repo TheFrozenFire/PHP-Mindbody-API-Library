@@ -2,10 +2,13 @@
 class Location {
   public $BusinessID; // int
   public $SiteID; // int
+  public $BusinessDescription; // string
   public $AdditionalImageURLs; // ArrayOfString
   public $FacilitySquareFeet; // int
   public $TreatmentRooms; // int
   public $ProSpaFinderSite; // boolean
+  public $HasClasses; // boolean
+  public $PhoneExtension; // string
   public $Action; // ActionCode
   public $ID; // int
   public $Name; // string

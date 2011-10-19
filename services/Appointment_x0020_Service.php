@@ -175,4 +175,6 @@ class Appointment_x0020_Service extends SoapClient {
   }
 
 }
+
+class_alias("Appointment_x0020_Service", "Appointment_Service");
 ?>

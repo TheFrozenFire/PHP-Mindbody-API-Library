@@ -1,5 +1,6 @@
 <?php
 class Product {
+  public $Price; // decimal
   public $Action; // ActionCode
   public $ID; // string
   public $GroupID; // int

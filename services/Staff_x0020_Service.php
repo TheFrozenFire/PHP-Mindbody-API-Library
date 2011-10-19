@@ -84,4 +84,6 @@ class Staff_x0020_Service extends SoapClient {
   }
 
 }
+
+class_alias("Staff_x0020_Service", "Staff_Service");
 ?>

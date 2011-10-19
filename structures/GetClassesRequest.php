@@ -10,5 +10,6 @@ class GetClassesRequest {
   public $SessionTypeIDs; // ArrayOfInt
   public $LocationIDs; // ArrayOfInt
   public $SemesterIDs; // ArrayOfInt
+  public $HideCanceledClasses; // boolean
 }
 ?>

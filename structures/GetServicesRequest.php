@@ -4,6 +4,8 @@ class GetServicesRequest {
   public $SessionTypeIDs; // ArrayOfInt
   public $ServiceIDs; // ArrayOfString
   public $ClassID; // int
+  public $ClassScheduleID; // int
   public $SellOnline; // boolean
+  public $LocationID; // int
 }
 ?>

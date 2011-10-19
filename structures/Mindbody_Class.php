@@ -9,6 +9,7 @@ class Mindbody_Class {
   public $TotalBooked; // int
   public $WebBooked; // int
   public $SemesterID; // int
+  public $IsCanceled; // boolean
   public $Action; // ActionCode
   public $ID; // int
   public $IsAvailable; // boolean

@@ -6,6 +6,7 @@ class GetEnrollmentsRequest {
   public $ProgramIDs; // ArrayOfInt
   public $SessionTypeIDs; // ArrayOfInt
   public $SemesterIDs; // ArrayOfInt
+  public $CourseIDs; // ArrayOfLong
   public $StartDate; // dateTime
   public $EndDate; // dateTime
 }

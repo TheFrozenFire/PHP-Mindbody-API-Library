@@ -5,5 +5,6 @@ class AppointmentStatus {
   const Confirmed = 'Confirmed';
   const Arrived = 'Arrived';
   const NoShow = 'NoShow';
+  const Cancelled = 'Cancelled';
 }
 ?>

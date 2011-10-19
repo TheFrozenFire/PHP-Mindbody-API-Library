@@ -4,5 +4,6 @@ class GetScheduleItemsRequest {
   public $StaffIDs; // ArrayOfLong
   public $StartDate; // dateTime
   public $EndDate; // dateTime
+  public $IgnorePrepFinishTimes; // boolean
 }
 ?>

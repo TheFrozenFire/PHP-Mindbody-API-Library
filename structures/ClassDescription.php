@@ -1,5 +1,7 @@
 <?php
 class ClassDescription {
+  public $ImageURL; // string
+  public $Level; // Level
   public $Action; // ActionCode
   public $ID; // int
   public $Name; // string

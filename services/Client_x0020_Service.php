@@ -274,4 +274,6 @@ class Client_x0020_Service extends SoapClient {
   }
 
 }
+
+class_alias("Client_x0020_Service", "Client_Service");
 ?>

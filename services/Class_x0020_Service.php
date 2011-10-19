@@ -36,6 +36,7 @@ class Class_x0020_Service extends SoapClient {
                                     'CustomClientField' => 'CustomClientField',
                                     'ClientService' => 'ClientService',
                                     'ClassDescription' => 'ClassDescription',
+                                    'Level' => 'Level',
                                     'Visit' => 'Visit',
                                     'UpdateClientVisits' => 'UpdateClientVisits',
                                     'UpdateClientVisitsRequest' => 'UpdateClientVisitsRequest',
@@ -54,6 +55,7 @@ class Class_x0020_Service extends SoapClient {
                                     'GetEnrollmentsResponse' => 'GetEnrollmentsResponse',
                                     'GetEnrollmentsResult' => 'GetEnrollmentsResult',
                                     'ClassSchedule' => 'ClassSchedule',
+                                    'Course' => 'Course',
                                     'GetClassSchedules' => 'GetClassSchedules',
                                     'GetClassSchedulesRequest' => 'GetClassSchedulesRequest',
                                     'GetClassSchedulesResponse' => 'GetClassSchedulesResponse',
@@ -66,6 +68,24 @@ class Class_x0020_Service extends SoapClient {
                                     'AddClientsToEnrollmentsRequest' => 'AddClientsToEnrollmentsRequest',
                                     'AddClientsToEnrollmentsResponse' => 'AddClientsToEnrollmentsResponse',
                                     'AddClientsToEnrollmentsResult' => 'AddClientsToEnrollmentsResult',
+                                    'RemoveFromWaitlist' => 'RemoveFromWaitlist',
+                                    'RemoveFromWaitlistRequest' => 'RemoveFromWaitlistRequest',
+                                    'RemoveFromWaitlistResponse' => 'RemoveFromWaitlistResponse',
+                                    'RemoveFromWaitlistResult' => 'RemoveFromWaitlistResult',
+                                    'GetSemesters' => 'GetSemesters',
+                                    'GetSemestersRequest' => 'GetSemestersRequest',
+                                    'GetSemestersResponse' => 'GetSemestersResponse',
+                                    'GetSemestersResult' => 'GetSemestersResult',
+                                    'Semester' => 'Semester',
+                                    'GetCourses' => 'GetCourses',
+                                    'GetCoursesRequest' => 'GetCoursesRequest',
+                                    'GetCoursesResponse' => 'GetCoursesResponse',
+                                    'GetCoursesResult' => 'GetCoursesResult',
+                                    'GetWaitlistEntries' => 'GetWaitlistEntries',
+                                    'GetWaitlistEntriesRequest' => 'GetWaitlistEntriesRequest',
+                                    'GetWaitlistEntriesResponse' => 'GetWaitlistEntriesResponse',
+                                    'GetWaitlistEntriesResult' => 'GetWaitlistEntriesResult',
+                                    'WaitlistEntry' => 'WaitlistEntry',
                                    );
 
   public function Class_x0020_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/ClassService.asmx?WSDL", $options = array()) {
@@ -192,5 +212,63 @@ class Class_x0020_Service extends SoapClient {
       );
   }
 
+  /**
+   * Removes client from enrollment waitlist 
+   *
+   * @param RemoveFromWaitlist $parameters
+   * @return RemoveFromWaitlistResponse
+   */
+  public function RemoveFromWaitlist(RemoveFromWaitlist $parameters) {
+    return $this->__soapCall('RemoveFromWaitlist', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets a list of semesters. 
+   *
+   * @param GetSemesters $parameters
+   * @return GetSemestersResponse
+   */
+  public function GetSemesters(GetSemesters $parameters) {
+    return $this->__soapCall('GetSemesters', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets a list of courses. 
+   *
+   * @param GetCourses $parameters
+   * @return GetCoursesResponse
+   */
+  public function GetCourses(GetCourses $parameters) {
+    return $this->__soapCall('GetCourses', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Get waitlist entries. 
+   *
+   * @param GetWaitlistEntries $parameters
+   * @return GetWaitlistEntriesResponse
+   */
+  public function GetWaitlistEntries(GetWaitlistEntries $parameters) {
+    return $this->__soapCall('GetWaitlistEntries', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
 }
+
+class_alias("Class_x0020_Service", "Class_Service");
 ?>

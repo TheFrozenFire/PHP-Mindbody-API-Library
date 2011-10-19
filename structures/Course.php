@@ -9,5 +9,6 @@ class Course {
   public $Location; // Location
   public $Organizer; // Staff
   public $Program; // Program
+  public $ImageURL; // string
 }
 ?>
