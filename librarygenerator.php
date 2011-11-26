@@ -110,7 +110,7 @@ if(!is_dir("splitteroutput/services")) mkdir("splitteroutput/services");
 
 foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 	$oldServiceName = basename($serviceFile, ".php");
-	$serviceName = str_replace("_x0020_", "", $oldServiceName);
+	$serviceName = str_replace("_x0020", "", $oldServiceName);
 	$file = file_get_contents($serviceFile);
 	$constructorcode = <<<EOD
 if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');

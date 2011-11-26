@@ -1,5 +1,5 @@
 <?php
-class SaleService extends SoapClient {
+class Sale_Service extends SoapClient {
 
   private static $classmap = array(
                                     'GetAcceptedCardType' => 'GetAcceptedCardType',
@@ -87,7 +87,7 @@ class SaleService extends SoapClient {
                                     'UpdateProductsResult' => 'UpdateProductsResult',
                                    );
 
-  public function SaleService($wsdl = "http://clients.mindbodyonline.com/api/0_5/SaleService.asmx?WSDL", $options = array()) {
+  public function Sale_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/SaleService.asmx?WSDL", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;
@@ -226,5 +226,5 @@ class SaleService extends SoapClient {
   }
 
 }
-class_alias("SaleService", "Sale_x0020_Service");
+class_alias("Sale_Service", "Sale_x0020_Service");
 ?>

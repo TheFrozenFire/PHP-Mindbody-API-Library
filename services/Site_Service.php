@@ -1,5 +1,5 @@
 <?php
-class SiteService extends SoapClient {
+class Site_Service extends SoapClient {
 
   private static $classmap = array(
                                     'GetSites' => 'GetSites',
@@ -47,7 +47,7 @@ class SiteService extends SoapClient {
                                     'AddSiteToCredentialsResult' => 'AddSiteToCredentialsResult',
                                    );
 
-  public function SiteService($wsdl = "http://clients.mindbodyonline.com/api/0_5/SiteService.asmx?WSDL", $options = array()) {
+  public function Site_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/SiteService.asmx?WSDL", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;
@@ -158,5 +158,5 @@ class SiteService extends SoapClient {
   }
 
 }
-class_alias("SiteService", "Site_x0020_Service");
+class_alias("Site_Service", "Site_x0020_Service");
 ?>

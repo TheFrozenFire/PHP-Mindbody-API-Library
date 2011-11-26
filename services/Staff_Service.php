@@ -1,5 +1,5 @@
 <?php
-class StaffService extends SoapClient {
+class Staff_Service extends SoapClient {
 
   private static $classmap = array(
                                     'GetStaff' => 'GetStaff',
@@ -43,7 +43,7 @@ class StaffService extends SoapClient {
                                     'Permission' => 'Permission',
                                    );
 
-  public function StaffService($wsdl = "http://clients.mindbodyonline.com/api/0_5/StaffService.asmx?WSDL", $options = array()) {
+  public function Staff_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/StaffService.asmx?WSDL", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;
@@ -84,5 +84,5 @@ class StaffService extends SoapClient {
   }
 
 }
-class_alias("StaffService", "Staff_x0020_Service");
+class_alias("Staff_Service", "Staff_x0020_Service");
 ?>
