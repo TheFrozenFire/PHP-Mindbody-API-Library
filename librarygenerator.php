@@ -127,7 +127,7 @@ EOD;
 	$file = str_replace("?>", $aliascode, $file);
 	file_put_contents($serviceFile, $file);
 	rename($serviceFile, "splitteroutput/services/{$serviceName}.php");
-	symlink("{$serviceName}.php", "splitteroutput/services/{$oldServiceName}.php");
+	file_put_contents("splitteroutput/services/${oldServiceName}.php", "<?php include_once(\"${serviceName}.php\"); ?>\n");
 }
 foreach(glob("splitteroutput/*.php") as $structureFile) rename($structureFile, "splitteroutput/structures/".basename($structureFile));
 ?>
