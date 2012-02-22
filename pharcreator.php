@@ -1,9 +1,14 @@
 <?php
 $mindbody = new Phar("mboapi.phar");
 $mindbody->startBuffering();
-$mindbody->buildFromDirectory(dirname(__FILE__));
-$mindbody->delete("pharcreator.php");
-$mindbody->delete("librarygenerator.php");
+
+$files = new AppendIterator();
+$files->append(new DirectoryIterator("services"));
+$files->append(new DirectoryIterator("structures"));
+
+$mindbody->buildFromIterator($files, dirname(__FILE__));
+$mindbody->addFile("LICENSE");
+$mindbody->addFile("README.markdown");
 $mindbody->addFromString("loadServices.php",
 "<?php
 	include_once(\"services/Appointment_Service.php\");
@@ -15,4 +20,8 @@ $mindbody->addFromString("loadServices.php",
 ?>");
 $mindbody->setStub($mindbody->createDefaultStub("loadServices.php"));
 $mindbody->stopBuffering();
+
+foreach(new RecursiveIteratorIterator($mindbody) as $file) {
+	echo $file->getFileName()."\n";
+}
 ?>
