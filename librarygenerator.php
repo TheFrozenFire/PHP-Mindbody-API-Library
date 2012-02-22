@@ -109,6 +109,8 @@ if(!is_dir("splitteroutput/structures")) mkdir("splitteroutput/structures");
 if(!is_dir("splitteroutput/services")) mkdir("splitteroutput/services");
 
 foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
+	$oldServiceName = basename($serviceFile, ".php");
+	$serviceName = str_replace("_x0020", "", $oldServiceName);
 	$file = file_get_contents($serviceFile);
 	$constructorcode = <<<EOD
 if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
@@ -116,11 +118,16 @@ if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Int
     foreach(\$options['classmap'] as \$key => \$value) if(file_exists("{\$directory}../structures/{\$value}.php")) include_once("{\$directory}../structures/{\$value}.php");
     parent::__construct(\$wsdl, \$options);
 EOD;
+	$aliascode = <<<EOD
+class_alias("{$serviceName}", "{$oldServiceName}");
+?>
+EOD;
+	$file = str_replace($oldServiceName, $serviceName, $file);
 	$file = str_replace("parent::__construct(\$wsdl, \$options);", $constructorcode, $file);
-	$file = rtrim($file, '?>');
-	$file .= "\nclass_alias(\"".basename($serviceFile, '.php')."\", \"".str_replace('_x0020', '', basename($serviceFile, '.php'))."\");\n?>";
+	$file = str_replace("?>", $aliascode, $file);
 	file_put_contents($serviceFile, $file);
-	rename($serviceFile, "splitteroutput/services/".basename($serviceFile));
+	rename($serviceFile, "splitteroutput/services/{$serviceName}.php");
+	file_put_contents("splitteroutput/services/${oldServiceName}.php", "<?php include_once(\"${serviceName}.php\"); ?>\n");
 }
 foreach(glob("splitteroutput/*.php") as $structureFile) rename($structureFile, "splitteroutput/structures/".basename($structureFile));
 ?>
