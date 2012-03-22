@@ -68,7 +68,8 @@ $services = array(
 	"https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL",
 	"https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL",
 	"https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL",
-	"https://api.mindbodyonline.com/0_5/DataService.asmx?WSDL"
+	"https://api.mindbodyonline.com/0_5/DataService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL",
 );
 
 if(!is_dir("wsdl2phpoutput")) {
