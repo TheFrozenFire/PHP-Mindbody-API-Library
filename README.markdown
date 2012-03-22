@@ -30,9 +30,9 @@ print out a full informational listing on locations associated with your
 specified site.
 
     <?php
-    require("services/Site_x0020_Service.php");
+    require("services/Site_Service.php");
     
-    $service = new Site_x0020_Service();
+    $service = new Site_Service();
     
     $parameters = new GetLocations();
     $parameters->Request = new GetLocationsRequest();
