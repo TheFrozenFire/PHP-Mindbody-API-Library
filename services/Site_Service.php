@@ -47,7 +47,7 @@ class Site_Service extends SoapClient {
                                     'AddSiteToCredentialsResult' => 'AddSiteToCredentialsResult',
                                    );
 
-  public function Site_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/SiteService.asmx?WSDL", $options = array()) {
+  public function Site_Service($wsdl = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;

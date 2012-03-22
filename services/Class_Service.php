@@ -88,7 +88,7 @@ class Class_Service extends SoapClient {
                                     'WaitlistEntry' => 'WaitlistEntry',
                                    );
 
-  public function Class_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/ClassService.asmx?WSDL", $options = array()) {
+  public function Class_Service($wsdl = "https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;

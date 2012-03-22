@@ -62,12 +62,13 @@ if(!is_includeable("wsdl2php.php")) die("wsdl2php is required for this script to
 if(!ini_get('user_agent')) die("This script requires that your user_agent ini setting be configured. This is due to Mindbody blocking all requests from clients not providing a user_agent header.\nAn example would be: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19'\n");
 
 $services = array(
-	"http://clients.mindbodyonline.com/api/0_5/AppointmentService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_5/ClassService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_5/ClientService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_5/SiteService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_5/SaleService.asmx?WSDL",
-	"http://clients.mindbodyonline.com/api/0_5/StaffService.asmx?WSDL"
+	"https://api.mindbodyonline.com/0_5/AppointmentService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5/DataService.asmx?WSDL"
 );
 
 if(!is_dir("wsdl2phpoutput")) {

@@ -17,6 +17,7 @@ $mindbody->addFromString("loadServices.php",
 	include_once(\"services/Sale_Service.php\");
 	include_once(\"services/Site_Service.php\");
 	include_once(\"services/Staff_Service.php\");
+	include_once(\"services/Data_Service.php\");
 ?>");
 $mindbody->setStub($mindbody->createDefaultStub("loadServices.php"));
 $mindbody->stopBuffering();

@@ -47,9 +47,9 @@ class Sale_Service extends SoapClient {
                                     'Size' => 'Size',
                                     'Color' => 'Color',
                                     'Item' => 'Item',
+                                    'Product' => 'Product',
                                     'Package' => 'Package',
                                     'Service' => 'Service',
-                                    'Product' => 'Product',
                                     'PaymentInfo' => 'PaymentInfo',
                                     'CreditCardInfo' => 'CreditCardInfo',
                                     'DebitAccountInfo' => 'DebitAccountInfo',
@@ -87,7 +87,7 @@ class Sale_Service extends SoapClient {
                                     'UpdateProductsResult' => 'UpdateProductsResult',
                                    );
 
-  public function Sale_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/SaleService.asmx?WSDL", $options = array()) {
+  public function Sale_Service($wsdl = "https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;

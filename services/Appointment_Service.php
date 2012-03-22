@@ -64,7 +64,7 @@ class Appointment_Service extends SoapClient {
                                     'Option' => 'Option',
                                    );
 
-  public function Appointment_Service($wsdl = "http://clients.mindbodyonline.com/api/0_5/AppointmentService.asmx?WSDL", $options = array()) {
+  public function Appointment_Service($wsdl = "https://api.mindbodyonline.com/0_5/AppointmentService.asmx?WSDL", $options = array()) {
     foreach(self::$classmap as $key => $value) {
       if(!isset($options['classmap'][$key])) {
         $options['classmap'][$key] = $value;
