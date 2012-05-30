@@ -11,5 +11,6 @@ class GetClassesRequest {
   public $LocationIDs; // ArrayOfInt
   public $SemesterIDs; // ArrayOfInt
   public $HideCanceledClasses; // boolean
+  public $SchedulingWindow; // boolean
 }
 ?>

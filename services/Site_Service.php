@@ -20,6 +20,10 @@ class Site_Service extends SoapClient {
                                     'Location' => 'Location',
                                     'MBObject' => 'MBObject',
                                     'ActionCode' => 'ActionCode',
+                                    'GetActivationCode' => 'GetActivationCode',
+                                    'GetActivationCodeRequest' => 'GetActivationCodeRequest',
+                                    'GetActivationCodeResponse' => 'GetActivationCodeResponse',
+                                    'GetActivationCodeResult' => 'GetActivationCodeResult',
                                     'GetPrograms' => 'GetPrograms',
                                     'GetProgramsRequest' => 'GetProgramsRequest',
                                     'ScheduleType' => 'ScheduleType',
@@ -81,6 +85,20 @@ class Site_Service extends SoapClient {
    */
   public function GetLocations(GetLocations $parameters) {
     return $this->__soapCall('GetLocations', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Gets an activation code. 
+   *
+   * @param GetActivationCode $parameters
+   * @return GetActivationCodeResponse
+   */
+  public function GetActivationCode(GetActivationCode $parameters) {
+    return $this->__soapCall('GetActivationCode', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )

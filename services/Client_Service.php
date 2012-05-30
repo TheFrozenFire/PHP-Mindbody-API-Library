@@ -26,8 +26,17 @@ class Client_Service extends SoapClient {
                                     'ClientCreditCard' => 'ClientCreditCard',
                                     'ClientRelationship' => 'ClientRelationship',
                                     'Relationship' => 'Relationship',
-                                    'CustomClientField' => 'CustomClientField',
+                                    'Rep' => 'Rep',
+                                    'Staff' => 'Staff',
+                                    'Appointment' => 'Appointment',
+                                    'ScheduleItem' => 'ScheduleItem',
+                                    'Availability' => 'Availability',
+                                    'SessionType' => 'SessionType',
                                     'Location' => 'Location',
+                                    'Unavailability' => 'Unavailability',
+                                    'AppointmentStatus' => 'AppointmentStatus',
+                                    'Resource' => 'Resource',
+                                    'CustomClientField' => 'CustomClientField',
                                     'AddOrUpdateClientsResponse' => 'AddOrUpdateClientsResponse',
                                     'AddOrUpdateClientsResult' => 'AddOrUpdateClientsResult',
                                     'GetClients' => 'GetClients',
@@ -42,6 +51,26 @@ class Client_Service extends SoapClient {
                                     'GetClientIndexesRequest' => 'GetClientIndexesRequest',
                                     'GetClientIndexesResponse' => 'GetClientIndexesResponse',
                                     'GetClientIndexesResult' => 'GetClientIndexesResult',
+                                    'GetClientContactLogs' => 'GetClientContactLogs',
+                                    'GetClientContactLogsRequest' => 'GetClientContactLogsRequest',
+                                    'GetClientContactLogsResponse' => 'GetClientContactLogsResponse',
+                                    'GetClientContactLogsResult' => 'GetClientContactLogsResult',
+                                    'ContactLog' => 'ContactLog',
+                                    'ContactLogComment' => 'ContactLogComment',
+                                    'ContactLogType' => 'ContactLogType',
+                                    'ContactLogSubtype' => 'ContactLogSubtype',
+                                    'AddOrUpdateContactLogs' => 'AddOrUpdateContactLogs',
+                                    'AddOrUpdateContactLogsRequest' => 'AddOrUpdateContactLogsRequest',
+                                    'AddOrUpdateContactLogsResponse' => 'AddOrUpdateContactLogsResponse',
+                                    'AddOrUpdateContactLogsResult' => 'AddOrUpdateContactLogsResult',
+                                    'GetContactLogTypes' => 'GetContactLogTypes',
+                                    'GetContactLogTypesRequest' => 'GetContactLogTypesRequest',
+                                    'GetContactLogTypesResponse' => 'GetContactLogTypesResponse',
+                                    'GetContactLogTypesResult' => 'GetContactLogTypesResult',
+                                    'UploadClientDocument' => 'UploadClientDocument',
+                                    'UploadClientDocumentRequest' => 'UploadClientDocumentRequest',
+                                    'UploadClientDocumentResponse' => 'UploadClientDocumentResponse',
+                                    'UploadClientDocumentResult' => 'UploadClientDocumentResult',
                                     'GetClientReferralTypes' => 'GetClientReferralTypes',
                                     'GetClientReferralTypesRequest' => 'GetClientReferralTypesRequest',
                                     'GetClientReferralTypesResponse' => 'GetClientReferralTypesResponse',
@@ -64,6 +93,22 @@ class Client_Service extends SoapClient {
                                     'GetClientServicesRequest' => 'GetClientServicesRequest',
                                     'GetClientServicesResponse' => 'GetClientServicesResponse',
                                     'GetClientServicesResult' => 'GetClientServicesResult',
+                                    'GetClientVisits' => 'GetClientVisits',
+                                    'GetClientVisitsRequest' => 'GetClientVisitsRequest',
+                                    'GetClientVisitsResponse' => 'GetClientVisitsResponse',
+                                    'GetClientVisitsResult' => 'GetClientVisitsResult',
+                                    'Visit' => 'Visit',
+                                    'GetClientPurchases' => 'GetClientPurchases',
+                                    'GetClientPurchasesRequest' => 'GetClientPurchasesRequest',
+                                    'GetClientPurchasesResponse' => 'GetClientPurchasesResponse',
+                                    'GetClientPurchasesResult' => 'GetClientPurchasesResult',
+                                    'SaleItem' => 'SaleItem',
+                                    'Sale' => 'Sale',
+                                    'Payment' => 'Payment',
+                                    'GetClientSchedule' => 'GetClientSchedule',
+                                    'GetClientScheduleRequest' => 'GetClientScheduleRequest',
+                                    'GetClientScheduleResponse' => 'GetClientScheduleResponse',
+                                    'GetClientScheduleResult' => 'GetClientScheduleResult',
                                     'GetRequiredClientFields' => 'GetRequiredClientFields',
                                     'GetRequiredClientFieldsRequest' => 'GetRequiredClientFieldsRequest',
                                     'GetRequiredClientFieldsResponse' => 'GetRequiredClientFieldsResponse',
@@ -161,6 +206,62 @@ class Client_Service extends SoapClient {
   }
 
   /**
+   * Get contact logs for a client. 
+   *
+   * @param GetClientContactLogs $parameters
+   * @return GetClientContactLogsResponse
+   */
+  public function GetClientContactLogs(GetClientContactLogs $parameters) {
+    return $this->__soapCall('GetClientContactLogs', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Add or update client contact logs. 
+   *
+   * @param AddOrUpdateContactLogs $parameters
+   * @return AddOrUpdateContactLogsResponse
+   */
+  public function AddOrUpdateContactLogs(AddOrUpdateContactLogs $parameters) {
+    return $this->__soapCall('AddOrUpdateContactLogs', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Get contact log types for a client. 
+   *
+   * @param GetContactLogTypes $parameters
+   * @return GetContactLogTypesResponse
+   */
+  public function GetContactLogTypes(GetContactLogTypes $parameters) {
+    return $this->__soapCall('GetContactLogTypes', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Upload a client document. 
+   *
+   * @param UploadClientDocument $parameters
+   * @return UploadClientDocumentResponse
+   */
+  public function UploadClientDocument(UploadClientDocument $parameters) {
+    return $this->__soapCall('UploadClientDocument', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
    * Gets a list of clients. 
    *
    * @param GetClientReferralTypes $parameters
@@ -224,6 +325,48 @@ class Client_Service extends SoapClient {
    */
   public function GetClientServices(GetClientServices $parameters) {
     return $this->__soapCall('GetClientServices', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Get visits for a client. 
+   *
+   * @param GetClientVisits $parameters
+   * @return GetClientVisitsResponse
+   */
+  public function GetClientVisits(GetClientVisits $parameters) {
+    return $this->__soapCall('GetClientVisits', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Get purchases for a client. 
+   *
+   * @param GetClientPurchases $parameters
+   * @return GetClientPurchasesResponse
+   */
+  public function GetClientPurchases(GetClientPurchases $parameters) {
+    return $this->__soapCall('GetClientPurchases', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Get visits for a client. 
+   *
+   * @param GetClientSchedule $parameters
+   * @return GetClientScheduleResponse
+   */
+  public function GetClientSchedule(GetClientSchedule $parameters) {
+    return $this->__soapCall('GetClientSchedule', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )

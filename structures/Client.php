@@ -6,12 +6,13 @@ class Client {
   public $Username; // string
   public $Password; // string
   public $Notes; // string
-  public $ClientCreditCards; // ArrayOfClientCreditCard
+  public $ClientCreditCard; // ClientCreditCard
   public $LastFormulaNotes; // string
   public $AppointmentGenderPreference; // string
   public $Gender; // string
   public $IsCompany; // boolean
   public $ClientRelationships; // ArrayOfClientRelationship
+  public $Reps; // ArrayOfRep
   public $CustomClientFields; // ArrayOfCustomClientField
   public $Action; // ActionCode
   public $ID; // string

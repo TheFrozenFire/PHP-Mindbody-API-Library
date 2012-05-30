@@ -22,6 +22,7 @@ class Staff_Service extends SoapClient {
                                     'ClientService' => 'ClientService',
                                     'Program' => 'Program',
                                     'ScheduleType' => 'ScheduleType',
+                                    'Rep' => 'Rep',
                                     'ClientRelationship' => 'ClientRelationship',
                                     'Client' => 'Client',
                                     'ClientIndex' => 'ClientIndex',
@@ -41,6 +42,10 @@ class Staff_Service extends SoapClient {
                                     'GetStaffPermissionsResponse' => 'GetStaffPermissionsResponse',
                                     'GetStaffPermissionsResult' => 'GetStaffPermissionsResult',
                                     'Permission' => 'Permission',
+                                    'AddOrUpdateStaff' => 'AddOrUpdateStaff',
+                                    'AddOrUpdateStaffRequest' => 'AddOrUpdateStaffRequest',
+                                    'AddOrUpdateStaffResponse' => 'AddOrUpdateStaffResponse',
+                                    'AddOrUpdateStaffResult' => 'AddOrUpdateStaffResult',
                                    );
 
   public function Staff_Service($wsdl = "https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL", $options = array()) {
@@ -77,6 +82,20 @@ class Staff_Service extends SoapClient {
    */
   public function GetStaffPermissions(GetStaffPermissions $parameters) {
     return $this->__soapCall('GetStaffPermissions', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Add or update staff. 
+   *
+   * @param AddOrUpdateStaff $parameters
+   * @return AddOrUpdateStaffResponse
+   */
+  public function AddOrUpdateStaff(AddOrUpdateStaff $parameters) {
+    return $this->__soapCall('AddOrUpdateStaff', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )

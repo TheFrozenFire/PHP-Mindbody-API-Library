@@ -1,6 +1,7 @@
 <?php
 class CartItem {
   public $Item; // Item
+  public $DiscountAmount; // decimal
   public $Appointments; // ArrayOfAppointment
   public $EnrollmentIDs; // ArrayOfInt
   public $ClassIDs; // ArrayOfInt

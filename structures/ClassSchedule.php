@@ -4,6 +4,7 @@ class ClassSchedule {
   public $Clients; // ArrayOfClient
   public $Course; // Course
   public $SemesterID; // int
+  public $IsAvailable; // boolean
   public $Action; // ActionCode
   public $ID; // int
   public $ClassDescription; // ClassDescription

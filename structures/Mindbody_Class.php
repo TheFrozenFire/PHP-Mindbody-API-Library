@@ -4,12 +4,16 @@ class Mindbody_Class {
   public $Visits; // ArrayOfVisit
   public $Clients; // ArrayOfClient
   public $Location; // Location
+  public $Resource; // Resource
   public $MaxCapacity; // int
   public $WebCapacity; // int
   public $TotalBooked; // int
   public $WebBooked; // int
   public $SemesterID; // int
   public $IsCanceled; // boolean
+  public $Substitute; // boolean
+  public $Active; // boolean
+  public $IsWaitlistAvailable; // boolean
   public $Action; // ActionCode
   public $ID; // int
   public $IsAvailable; // boolean
