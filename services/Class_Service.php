@@ -15,18 +15,22 @@ class Class_Service extends SoapClient {
                                     'Class' => 'Mindbody_Class',
                                     'MBObject' => 'MBObject',
                                     'Site' => 'Site',
-                                    'Resource' => 'Resource',
+                                    'ClassDescription' => 'ClassDescription',
+                                    'Level' => 'Level',
                                     'ActionCode' => 'ActionCode',
-                                    'ScheduleItem' => 'ScheduleItem',
-                                    'Appointment' => 'Appointment',
-                                    'AppointmentStatus' => 'AppointmentStatus',
                                     'Program' => 'Program',
                                     'ScheduleType' => 'ScheduleType',
                                     'SessionType' => 'SessionType',
-                                    'Location' => 'Location',
+                                    'Resource' => 'Resource',
+                                    'ClientService' => 'ClientService',
+                                    'Rep' => 'Rep',
                                     'Staff' => 'Staff',
-                                    'Unavailability' => 'Unavailability',
+                                    'Appointment' => 'Appointment',
+                                    'ScheduleItem' => 'ScheduleItem',
                                     'Availability' => 'Availability',
+                                    'Location' => 'Location',
+                                    'Unavailability' => 'Unavailability',
+                                    'AppointmentStatus' => 'AppointmentStatus',
                                     'Client' => 'Client',
                                     'ClientIndex' => 'ClientIndex',
                                     'ClientIndexValue' => 'ClientIndexValue',
@@ -34,9 +38,6 @@ class Class_Service extends SoapClient {
                                     'ClientRelationship' => 'ClientRelationship',
                                     'Relationship' => 'Relationship',
                                     'CustomClientField' => 'CustomClientField',
-                                    'ClientService' => 'ClientService',
-                                    'ClassDescription' => 'ClassDescription',
-                                    'Level' => 'Level',
                                     'Visit' => 'Visit',
                                     'UpdateClientVisits' => 'UpdateClientVisits',
                                     'UpdateClientVisitsRequest' => 'UpdateClientVisitsRequest',
@@ -64,6 +65,10 @@ class Class_Service extends SoapClient {
                                     'AddClientsToClassesRequest' => 'AddClientsToClassesRequest',
                                     'AddClientsToClassesResponse' => 'AddClientsToClassesResponse',
                                     'AddClientsToClassesResult' => 'AddClientsToClassesResult',
+                                    'RemoveClientsFromClasses' => 'RemoveClientsFromClasses',
+                                    'RemoveClientsFromClassesRequest' => 'RemoveClientsFromClassesRequest',
+                                    'RemoveClientsFromClassesResponse' => 'RemoveClientsFromClassesResponse',
+                                    'RemoveClientsFromClassesResult' => 'RemoveClientsFromClassesResult',
                                     'AddClientsToEnrollments' => 'AddClientsToEnrollments',
                                     'AddClientsToEnrollmentsRequest' => 'AddClientsToEnrollmentsRequest',
                                     'AddClientsToEnrollmentsResponse' => 'AddClientsToEnrollmentsResponse',
@@ -192,6 +197,20 @@ class Class_Service extends SoapClient {
    */
   public function AddClientsToClasses(AddClientsToClasses $parameters) {
     return $this->__soapCall('AddClientsToClasses', array($parameters),       array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+            'soapaction' => ''
+           )
+      );
+  }
+
+  /**
+   * Removes clients from classes. 
+   *
+   * @param RemoveClientsFromClasses $parameters
+   * @return RemoveClientsFromClassesResponse
+   */
+  public function RemoveClientsFromClasses(RemoveClientsFromClasses $parameters) {
+    return $this->__soapCall('RemoveClientsFromClasses', array($parameters),       array(
             'uri' => 'http://clients.mindbodyonline.com/api/0_5',
             'soapaction' => ''
            )

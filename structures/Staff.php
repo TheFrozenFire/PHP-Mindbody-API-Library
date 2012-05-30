@@ -3,6 +3,17 @@ class Staff {
   public $Appointments; // ArrayOfAppointment
   public $Unavailabilities; // ArrayOfUnavailability
   public $Availabilities; // ArrayOfAvailability
+  public $Email; // string
+  public $MobilePhone; // string
+  public $HomePhone; // string
+  public $WorkPhone; // string
+  public $Address; // string
+  public $Address2; // string
+  public $City; // string
+  public $State; // string
+  public $Country; // string
+  public $PostalCode; // string
+  public $ForeignZip; // string
   public $Action; // ActionCode
   public $ID; // long
   public $Name; // string

@@ -4,5 +4,6 @@ class AddClientsToClassesRequest {
   public $ClassIDs; // ArrayOfInt
   public $Test; // boolean
   public $RequirePayment; // boolean
+  public $Waitlist; // boolean
 }
 ?>
