@@ -18,7 +18,7 @@ class Sale_Service extends SoapClient {
                                     'MBObject' => 'MBObject',
                                     'Site' => 'Site',
                                     'ClassSchedule' => 'ClassSchedule',
-                                    'Class' => 'Class',
+                                    'Class' => 'Mindbody_Class',
                                     'Visit' => 'Visit',
                                     'Staff' => 'Staff',
                                     'Appointment' => 'Appointment',
@@ -99,8 +99,9 @@ class Sale_Service extends SoapClient {
       }
     }
     if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
+    if(empty($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/SaleService.asmx';
     $directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
-    foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
+    foreach($options['classmap'] as $key => $value) if(file_exists('{$directory}../structures/{$value}.php')) include_once('{$directory}../structures/{$value}.php');
     parent::__construct($wsdl, $options);
   }
 
