@@ -87,25 +87,21 @@ chdir("..");
 if(!is_dir("splitteroutput")) mkdir("splitteroutput");
 
 // Fix for MBO API 0.5 naming clusterfsck
-if(file_exists("wsdl2phpoutput/Class_x0020_Service.php")) {
-	$file = file_get_contents("wsdl2phpoutput/Class_x0020_Service.php");
-	if(strpos($file, "class Class {")) {
-		$file = str_replace(
-			array(
-				"class Class {",
-				"'Class' => 'Class',"
-			),
-			array(
-				"class Mindbody_Class {",
-				"'Class' => 'Mindbody_Class',"
-			),
-			$file
-		);
-		file_put_contents("wsdl2phpoutput/Class_x0020_Service.php", $file);
-	}
+foreach(glob("wsdl2phpoutput/*.php") as $serviceFile) {
+  $contents = file_get_contents($serviceFile);
+  file_put_contents($serviceFile, str_replace(
+    array(
+      "class Class {",
+      "'Class' => 'Class',"
+    ),
+    array(
+      "class Mindbody_Class {",
+      "'Class' => 'Mindbody_Class',"
+    ),
+    $contents
+  ));
+  split_file($serviceFile, "splitteroutput");
 }
-
-foreach(glob("wsdl2phpoutput/*.php") as $serviceFile) split_file($serviceFile, "splitteroutput");
 
 if(!is_dir("splitteroutput/structures")) mkdir("splitteroutput/structures");
 if(!is_dir("splitteroutput/services")) mkdir("splitteroutput/services");
@@ -114,12 +110,16 @@ foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 	$oldServiceName = basename($serviceFile, ".php");
 	$serviceName = str_replace("_x0020", "", $oldServiceName);
 	$file = file_get_contents($serviceFile);
-	$constructorcode = <<<EOD
-if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-	\$directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
-	foreach(\$options['classmap'] as \$key => \$value) if(file_exists("{\$directory}../structures/{\$value}.php")) include_once("{\$directory}../structures/{\$value}.php");
-	parent::__construct(\$wsdl, \$options);
-EOD;
+
+  $constructorcode = "if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');\n";
+
+  if($serviceName == 'Sale_Service') {
+    $constructorcode.= "    if(empty(\$options['location']) \$options['location'] = 'https://api.mindbodyonline.com/0_5/SaleService.asmx';\n";
+  }
+  $constructorcode.= "    \$directory = dirname(__FILE__).DIRECTORY_SEPARATOR;\n";
+  $constructorcode.= "    foreach(\$options['classmap'] as \$key => \$value) if(file_exists('{\$directory}../structures/{\$value}.php')) include_once('{\$directory}../structures/{\$value}.php');\n";
+  $constructorcode.= "    parent::__construct(\$wsdl, \$options);";
+
 	$aliascode = <<<EOD
 class_alias("{$serviceName}", "{$oldServiceName}");
 ?>
