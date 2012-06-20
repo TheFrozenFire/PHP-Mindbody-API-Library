@@ -114,7 +114,7 @@ foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
   $constructorcode = "if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');\n";
 
   if($serviceName == 'Sale_Service') {
-    $constructorcode.= "    if(empty(\$options['location']) \$options['location'] = 'https://api.mindbodyonline.com/0_5/SaleService.asmx';\n";
+    $constructorcode.= "    if(empty(\$options['location'])) \$options['location'] = 'https://api.mindbodyonline.com/0_5/SaleService.asmx';\n";
   }
   $constructorcode.= "    \$directory = dirname(__FILE__).DIRECTORY_SEPARATOR;\n";
   $constructorcode.= "    foreach(\$options['classmap'] as \$key => \$value) if(file_exists('{\$directory}../structures/{\$value}.php')) include_once('{\$directory}../structures/{\$value}.php');\n";
