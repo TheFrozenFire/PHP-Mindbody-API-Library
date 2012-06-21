@@ -137,7 +137,9 @@ EOD;
 	
 	foreach($classmap as $key => $value) {
 		$mapReplacements[0][] = "'{$key}' => '{$value}'";
+		$mapReplacements[0][] = "public function {$value}({$value}";
 		$mapReplacements[1][] = "'{$key}' => 'MindbodyAPI\structures\\{$value}'";
+		$mapReplacements[1][] = "public function {$value}(structures\\{$value}";
 	}
 	
 	$file = str_replace($mapReplacements[0], $mapReplacements[1], $file);

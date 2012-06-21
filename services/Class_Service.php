@@ -107,7 +107,7 @@ class Class_Service extends MindbodyClient {
 	 * @param GetClasses $parameters
 	 * @return GetClassesResponse
 	 */
-	public function GetClasses(GetClasses $parameters) {
+	public function GetClasses(structures\GetClasses $parameters) {
 		return $this->__soapCall('GetClasses', array(
 			$parameters
 		) , array(
@@ -121,7 +121,7 @@ class Class_Service extends MindbodyClient {
 	 * @param UpdateClientVisits $parameters
 	 * @return UpdateClientVisitsResponse
 	 */
-	public function UpdateClientVisits(UpdateClientVisits $parameters) {
+	public function UpdateClientVisits(structures\UpdateClientVisits $parameters) {
 		return $this->__soapCall('UpdateClientVisits', array(
 			$parameters
 		) , array(
@@ -135,7 +135,7 @@ class Class_Service extends MindbodyClient {
 	 * @param GetClassVisits $parameters
 	 * @return GetClassVisitsResponse
 	 */
-	public function GetClassVisits(GetClassVisits $parameters) {
+	public function GetClassVisits(structures\GetClassVisits $parameters) {
 		return $this->__soapCall('GetClassVisits', array(
 			$parameters
 		) , array(
@@ -149,7 +149,7 @@ class Class_Service extends MindbodyClient {
 	 * @param GetClassDescriptions $parameters
 	 * @return GetClassDescriptionsResponse
 	 */
-	public function GetClassDescriptions(GetClassDescriptions $parameters) {
+	public function GetClassDescriptions(structures\GetClassDescriptions $parameters) {
 		return $this->__soapCall('GetClassDescriptions', array(
 			$parameters
 		) , array(
@@ -163,7 +163,7 @@ class Class_Service extends MindbodyClient {
 	 * @param GetEnrollments $parameters
 	 * @return GetEnrollmentsResponse
 	 */
-	public function GetEnrollments(GetEnrollments $parameters) {
+	public function GetEnrollments(structures\GetEnrollments $parameters) {
 		return $this->__soapCall('GetEnrollments', array(
 			$parameters
 		) , array(
@@ -177,7 +177,7 @@ class Class_Service extends MindbodyClient {
 	 * @param GetClassSchedules $parameters
 	 * @return GetClassSchedulesResponse
 	 */
-	public function GetClassSchedules(GetClassSchedules $parameters) {
+	public function GetClassSchedules(structures\GetClassSchedules $parameters) {
 		return $this->__soapCall('GetClassSchedules', array(
 			$parameters
 		) , array(
@@ -191,7 +191,7 @@ class Class_Service extends MindbodyClient {
 	 * @param AddClientsToClasses $parameters
 	 * @return AddClientsToClassesResponse
 	 */
-	public function AddClientsToClasses(AddClientsToClasses $parameters) {
+	public function AddClientsToClasses(structures\AddClientsToClasses $parameters) {
 		return $this->__soapCall('AddClientsToClasses', array(
 			$parameters
 		) , array(
@@ -205,7 +205,7 @@ class Class_Service extends MindbodyClient {
 	 * @param RemoveClientsFromClasses $parameters
 	 * @return RemoveClientsFromClassesResponse
 	 */
-	public function RemoveClientsFromClasses(RemoveClientsFromClasses $parameters) {
+	public function RemoveClientsFromClasses(structures\RemoveClientsFromClasses $parameters) {
 		return $this->__soapCall('RemoveClientsFromClasses', array(
 			$parameters
 		) , array(
@@ -219,7 +219,7 @@ class Class_Service extends MindbodyClient {
 	 * @param AddClientsToEnrollments $parameters
 	 * @return AddClientsToEnrollmentsResponse
 	 */
-	public function AddClientsToEnrollments(AddClientsToEnrollments $parameters) {
+	public function AddClientsToEnrollments(structures\AddClientsToEnrollments $parameters) {
 		return $this->__soapCall('AddClientsToEnrollments', array(
 			$parameters
 		) , array(
@@ -233,7 +233,7 @@ class Class_Service extends MindbodyClient {
 	 * @param RemoveFromWaitlist $parameters
 	 * @return RemoveFromWaitlistResponse
 	 */
-	public function RemoveFromWaitlist(RemoveFromWaitlist $parameters) {
+	public function RemoveFromWaitlist(structures\RemoveFromWaitlist $parameters) {
 		return $this->__soapCall('RemoveFromWaitlist', array(
 			$parameters
 		) , array(
@@ -247,7 +247,7 @@ class Class_Service extends MindbodyClient {
 	 * @param GetSemesters $parameters
 	 * @return GetSemestersResponse
 	 */
-	public function GetSemesters(GetSemesters $parameters) {
+	public function GetSemesters(structures\GetSemesters $parameters) {
 		return $this->__soapCall('GetSemesters', array(
 			$parameters
 		) , array(
@@ -261,7 +261,7 @@ class Class_Service extends MindbodyClient {
 	 * @param GetCourses $parameters
 	 * @return GetCoursesResponse
 	 */
-	public function GetCourses(GetCourses $parameters) {
+	public function GetCourses(structures\GetCourses $parameters) {
 		return $this->__soapCall('GetCourses', array(
 			$parameters
 		) , array(
@@ -275,7 +275,7 @@ class Class_Service extends MindbodyClient {
 	 * @param GetWaitlistEntries $parameters
 	 * @return GetWaitlistEntriesResponse
 	 */
-	public function GetWaitlistEntries(GetWaitlistEntries $parameters) {
+	public function GetWaitlistEntries(structures\GetWaitlistEntries $parameters) {
 		return $this->__soapCall('GetWaitlistEntries', array(
 			$parameters
 		) , array(

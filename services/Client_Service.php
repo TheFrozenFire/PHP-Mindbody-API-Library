@@ -137,7 +137,7 @@ class Client_Service extends MindbodyClient {
 	 * @param AddArrival $parameters
 	 * @return AddArrivalResponse
 	 */
-	public function AddArrival(AddArrival $parameters) {
+	public function AddArrival(structures\AddArrival $parameters) {
 		return $this->__soapCall('AddArrival', array(
 			$parameters
 		) , array(
@@ -151,7 +151,7 @@ class Client_Service extends MindbodyClient {
 	 * @param AddOrUpdateClients $parameters
 	 * @return AddOrUpdateClientsResponse
 	 */
-	public function AddOrUpdateClients(AddOrUpdateClients $parameters) {
+	public function AddOrUpdateClients(structures\AddOrUpdateClients $parameters) {
 		return $this->__soapCall('AddOrUpdateClients', array(
 			$parameters
 		) , array(
@@ -165,7 +165,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClients $parameters
 	 * @return GetClientsResponse
 	 */
-	public function GetClients(GetClients $parameters) {
+	public function GetClients(structures\GetClients $parameters) {
 		return $this->__soapCall('GetClients', array(
 			$parameters
 		) , array(
@@ -179,7 +179,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetCustomClientFields $parameters
 	 * @return GetCustomClientFieldsResponse
 	 */
-	public function GetCustomClientFields(GetCustomClientFields $parameters) {
+	public function GetCustomClientFields(structures\GetCustomClientFields $parameters) {
 		return $this->__soapCall('GetCustomClientFields', array(
 			$parameters
 		) , array(
@@ -193,7 +193,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientIndexes $parameters
 	 * @return GetClientIndexesResponse
 	 */
-	public function GetClientIndexes(GetClientIndexes $parameters) {
+	public function GetClientIndexes(structures\GetClientIndexes $parameters) {
 		return $this->__soapCall('GetClientIndexes', array(
 			$parameters
 		) , array(
@@ -207,7 +207,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientContactLogs $parameters
 	 * @return GetClientContactLogsResponse
 	 */
-	public function GetClientContactLogs(GetClientContactLogs $parameters) {
+	public function GetClientContactLogs(structures\GetClientContactLogs $parameters) {
 		return $this->__soapCall('GetClientContactLogs', array(
 			$parameters
 		) , array(
@@ -221,7 +221,7 @@ class Client_Service extends MindbodyClient {
 	 * @param AddOrUpdateContactLogs $parameters
 	 * @return AddOrUpdateContactLogsResponse
 	 */
-	public function AddOrUpdateContactLogs(AddOrUpdateContactLogs $parameters) {
+	public function AddOrUpdateContactLogs(structures\AddOrUpdateContactLogs $parameters) {
 		return $this->__soapCall('AddOrUpdateContactLogs', array(
 			$parameters
 		) , array(
@@ -235,7 +235,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetContactLogTypes $parameters
 	 * @return GetContactLogTypesResponse
 	 */
-	public function GetContactLogTypes(GetContactLogTypes $parameters) {
+	public function GetContactLogTypes(structures\GetContactLogTypes $parameters) {
 		return $this->__soapCall('GetContactLogTypes', array(
 			$parameters
 		) , array(
@@ -249,7 +249,7 @@ class Client_Service extends MindbodyClient {
 	 * @param UploadClientDocument $parameters
 	 * @return UploadClientDocumentResponse
 	 */
-	public function UploadClientDocument(UploadClientDocument $parameters) {
+	public function UploadClientDocument(structures\UploadClientDocument $parameters) {
 		return $this->__soapCall('UploadClientDocument', array(
 			$parameters
 		) , array(
@@ -263,7 +263,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientReferralTypes $parameters
 	 * @return GetClientReferralTypesResponse
 	 */
-	public function GetClientReferralTypes(GetClientReferralTypes $parameters) {
+	public function GetClientReferralTypes(structures\GetClientReferralTypes $parameters) {
 		return $this->__soapCall('GetClientReferralTypes', array(
 			$parameters
 		) , array(
@@ -277,7 +277,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetActiveClientMemberships $parameters
 	 * @return GetActiveClientMembershipsResponse
 	 */
-	public function GetActiveClientMemberships(GetActiveClientMemberships $parameters) {
+	public function GetActiveClientMemberships(structures\GetActiveClientMemberships $parameters) {
 		return $this->__soapCall('GetActiveClientMemberships', array(
 			$parameters
 		) , array(
@@ -291,7 +291,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientContracts $parameters
 	 * @return GetClientContractsResponse
 	 */
-	public function GetClientContracts(GetClientContracts $parameters) {
+	public function GetClientContracts(structures\GetClientContracts $parameters) {
 		return $this->__soapCall('GetClientContracts', array(
 			$parameters
 		) , array(
@@ -305,7 +305,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientAccountBalances $parameters
 	 * @return GetClientAccountBalancesResponse
 	 */
-	public function GetClientAccountBalances(GetClientAccountBalances $parameters) {
+	public function GetClientAccountBalances(structures\GetClientAccountBalances $parameters) {
 		return $this->__soapCall('GetClientAccountBalances', array(
 			$parameters
 		) , array(
@@ -319,7 +319,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientServices $parameters
 	 * @return GetClientServicesResponse
 	 */
-	public function GetClientServices(GetClientServices $parameters) {
+	public function GetClientServices(structures\GetClientServices $parameters) {
 		return $this->__soapCall('GetClientServices', array(
 			$parameters
 		) , array(
@@ -333,7 +333,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientVisits $parameters
 	 * @return GetClientVisitsResponse
 	 */
-	public function GetClientVisits(GetClientVisits $parameters) {
+	public function GetClientVisits(structures\GetClientVisits $parameters) {
 		return $this->__soapCall('GetClientVisits', array(
 			$parameters
 		) , array(
@@ -347,7 +347,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientPurchases $parameters
 	 * @return GetClientPurchasesResponse
 	 */
-	public function GetClientPurchases(GetClientPurchases $parameters) {
+	public function GetClientPurchases(structures\GetClientPurchases $parameters) {
 		return $this->__soapCall('GetClientPurchases', array(
 			$parameters
 		) , array(
@@ -361,7 +361,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetClientSchedule $parameters
 	 * @return GetClientScheduleResponse
 	 */
-	public function GetClientSchedule(GetClientSchedule $parameters) {
+	public function GetClientSchedule(structures\GetClientSchedule $parameters) {
 		return $this->__soapCall('GetClientSchedule', array(
 			$parameters
 		) , array(
@@ -375,7 +375,7 @@ class Client_Service extends MindbodyClient {
 	 * @param GetRequiredClientFields $parameters
 	 * @return GetRequiredClientFieldsResponse
 	 */
-	public function GetRequiredClientFields(GetRequiredClientFields $parameters) {
+	public function GetRequiredClientFields(structures\GetRequiredClientFields $parameters) {
 		return $this->__soapCall('GetRequiredClientFields', array(
 			$parameters
 		) , array(
@@ -390,7 +390,7 @@ class Client_Service extends MindbodyClient {
 	 * @param ValidateLogin $parameters
 	 * @return ValidateLoginResponse
 	 */
-	public function ValidateLogin(ValidateLogin $parameters) {
+	public function ValidateLogin(structures\ValidateLogin $parameters) {
 		return $this->__soapCall('ValidateLogin', array(
 			$parameters
 		) , array(
@@ -404,7 +404,7 @@ class Client_Service extends MindbodyClient {
 	 * @param UpdateClientServices $parameters
 	 * @return UpdateClientServicesResponse
 	 */
-	public function UpdateClientServices(UpdateClientServices $parameters) {
+	public function UpdateClientServices(structures\UpdateClientServices $parameters) {
 		return $this->__soapCall('UpdateClientServices', array(
 			$parameters
 		) , array(

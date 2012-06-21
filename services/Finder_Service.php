@@ -99,7 +99,7 @@ class Finder_Service extends MindbodyClient {
 	 * @param GetClassesWithinRadius $parameters
 	 * @return GetClassesWithinRadiusResponse
 	 */
-	public function GetClassesWithinRadius(GetClassesWithinRadius $parameters) {
+	public function GetClassesWithinRadius(structures\GetClassesWithinRadius $parameters) {
 		return $this->__soapCall('GetClassesWithinRadius', array(
 			$parameters
 		) , array(
@@ -113,7 +113,7 @@ class Finder_Service extends MindbodyClient {
 	 * @param GetSessionTypesWithinRadius $parameters
 	 * @return GetSessionTypesWithinRadiusResponse
 	 */
-	public function GetSessionTypesWithinRadius(GetSessionTypesWithinRadius $parameters) {
+	public function GetSessionTypesWithinRadius(structures\GetSessionTypesWithinRadius $parameters) {
 		return $this->__soapCall('GetSessionTypesWithinRadius', array(
 			$parameters
 		) , array(
@@ -127,7 +127,7 @@ class Finder_Service extends MindbodyClient {
 	 * @param GetBusinessLocationsWithinRadius $parameters
 	 * @return GetBusinessLocationsWithinRadiusResponse
 	 */
-	public function GetBusinessLocationsWithinRadius(GetBusinessLocationsWithinRadius $parameters) {
+	public function GetBusinessLocationsWithinRadius(structures\GetBusinessLocationsWithinRadius $parameters) {
 		return $this->__soapCall('GetBusinessLocationsWithinRadius', array(
 			$parameters
 		) , array(
@@ -141,7 +141,7 @@ class Finder_Service extends MindbodyClient {
 	 * @param FinderCheckoutShoppingCart $parameters
 	 * @return FinderCheckoutShoppingCartResponse
 	 */
-	public function FinderCheckoutShoppingCart(FinderCheckoutShoppingCart $parameters) {
+	public function FinderCheckoutShoppingCart(structures\FinderCheckoutShoppingCart $parameters) {
 		return $this->__soapCall('FinderCheckoutShoppingCart', array(
 			$parameters
 		) , array(
@@ -156,7 +156,7 @@ class Finder_Service extends MindbodyClient {
 	 * @param AddOrUpdateFinderUsers $parameters
 	 * @return AddOrUpdateFinderUsersResponse
 	 */
-	public function AddOrUpdateFinderUsers(AddOrUpdateFinderUsers $parameters) {
+	public function AddOrUpdateFinderUsers(structures\AddOrUpdateFinderUsers $parameters) {
 		return $this->__soapCall('AddOrUpdateFinderUsers', array(
 			$parameters
 		) , array(
@@ -170,7 +170,7 @@ class Finder_Service extends MindbodyClient {
 	 * @param GetFinderUser $parameters
 	 * @return GetFinderUserResponse
 	 */
-	public function GetFinderUser(GetFinderUser $parameters) {
+	public function GetFinderUser(structures\GetFinderUser $parameters) {
 		return $this->__soapCall('GetFinderUser', array(
 			$parameters
 		) , array(
@@ -184,7 +184,7 @@ class Finder_Service extends MindbodyClient {
 	 * @param SendUserNewPassword $parameters
 	 * @return SendUserNewPasswordResponse
 	 */
-	public function SendUserNewPassword(SendUserNewPassword $parameters) {
+	public function SendUserNewPassword(structures\SendUserNewPassword $parameters) {
 		return $this->__soapCall('SendUserNewPassword', array(
 			$parameters
 		) , array(

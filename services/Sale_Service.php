@@ -106,7 +106,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param GetAcceptedCardType $parameters
 	 * @return GetAcceptedCardTypeResponse
 	 */
-	public function GetAcceptedCardType(GetAcceptedCardType $parameters) {
+	public function GetAcceptedCardType(structures\GetAcceptedCardType $parameters) {
 		return $this->__soapCall('GetAcceptedCardType', array(
 			$parameters
 		) , array(
@@ -120,7 +120,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param CheckoutShoppingCart $parameters
 	 * @return CheckoutShoppingCartResponse
 	 */
-	public function CheckoutShoppingCart(CheckoutShoppingCart $parameters) {
+	public function CheckoutShoppingCart(structures\CheckoutShoppingCart $parameters) {
 		return $this->__soapCall('CheckoutShoppingCart', array(
 			$parameters
 		) , array(
@@ -134,7 +134,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param GetSales $parameters
 	 * @return GetSalesResponse
 	 */
-	public function GetSales(GetSales $parameters) {
+	public function GetSales(structures\GetSales $parameters) {
 		return $this->__soapCall('GetSales', array(
 			$parameters
 		) , array(
@@ -148,7 +148,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param GetItemPrograms $parameters
 	 * @return GetItemProgramsResponse
 	 */
-	public function GetItemPrograms(GetItemPrograms $parameters) {
+	public function GetItemPrograms(structures\GetItemPrograms $parameters) {
 		return $this->__soapCall('GetItemPrograms', array(
 			$parameters
 		) , array(
@@ -162,7 +162,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param GetServices $parameters
 	 * @return GetServicesResponse
 	 */
-	public function GetServices(GetServices $parameters) {
+	public function GetServices(structures\GetServices $parameters) {
 		return $this->__soapCall('GetServices', array(
 			$parameters
 		) , array(
@@ -176,7 +176,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param UpdateServices $parameters
 	 * @return UpdateServicesResponse
 	 */
-	public function UpdateServices(UpdateServices $parameters) {
+	public function UpdateServices(structures\UpdateServices $parameters) {
 		return $this->__soapCall('UpdateServices', array(
 			$parameters
 		) , array(
@@ -190,7 +190,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param GetPackages $parameters
 	 * @return GetPackagesResponse
 	 */
-	public function GetPackages(GetPackages $parameters) {
+	public function GetPackages(structures\GetPackages $parameters) {
 		return $this->__soapCall('GetPackages', array(
 			$parameters
 		) , array(
@@ -204,7 +204,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param GetProducts $parameters
 	 * @return GetProductsResponse
 	 */
-	public function GetProducts(GetProducts $parameters) {
+	public function GetProducts(structures\GetProducts $parameters) {
 		return $this->__soapCall('GetProducts', array(
 			$parameters
 		) , array(
@@ -218,7 +218,7 @@ class Sale_Service extends MindbodyClient {
 	 * @param UpdateProducts $parameters
 	 * @return UpdateProductsResponse
 	 */
-	public function UpdateProducts(UpdateProducts $parameters) {
+	public function UpdateProducts(structures\UpdateProducts $parameters) {
 		return $this->__soapCall('UpdateProducts', array(
 			$parameters
 		) , array(

@@ -79,7 +79,7 @@ class Appointment_Service extends MindbodyClient {
 	 * @param GetStaffAppointments $parameters
 	 * @return GetStaffAppointmentsResponse
 	 */
-	public function GetStaffAppointments(GetStaffAppointments $parameters) {
+	public function GetStaffAppointments(structures\GetStaffAppointments $parameters) {
 		return $this->__soapCall('GetStaffAppointments', array(
 			$parameters
 		) , array(
@@ -93,7 +93,7 @@ class Appointment_Service extends MindbodyClient {
 	 * @param AddOrUpdateAppointments $parameters
 	 * @return AddOrUpdateAppointmentsResponse
 	 */
-	public function AddOrUpdateAppointments(AddOrUpdateAppointments $parameters) {
+	public function AddOrUpdateAppointments(structures\AddOrUpdateAppointments $parameters) {
 		return $this->__soapCall('AddOrUpdateAppointments', array(
 			$parameters
 		) , array(
@@ -107,7 +107,7 @@ class Appointment_Service extends MindbodyClient {
 	 * @param GetBookableItems $parameters
 	 * @return GetBookableItemsResponse
 	 */
-	public function GetBookableItems(GetBookableItems $parameters) {
+	public function GetBookableItems(structures\GetBookableItems $parameters) {
 		return $this->__soapCall('GetBookableItems', array(
 			$parameters
 		) , array(
@@ -121,7 +121,7 @@ class Appointment_Service extends MindbodyClient {
 	 * @param GetScheduleItems $parameters
 	 * @return GetScheduleItemsResponse
 	 */
-	public function GetScheduleItems(GetScheduleItems $parameters) {
+	public function GetScheduleItems(structures\GetScheduleItems $parameters) {
 		return $this->__soapCall('GetScheduleItems', array(
 			$parameters
 		) , array(
@@ -135,7 +135,7 @@ class Appointment_Service extends MindbodyClient {
 	 * @param AddOrUpdateAvailabilities $parameters
 	 * @return AddOrUpdateAvailabilitiesResponse
 	 */
-	public function AddOrUpdateAvailabilities(AddOrUpdateAvailabilities $parameters) {
+	public function AddOrUpdateAvailabilities(structures\AddOrUpdateAvailabilities $parameters) {
 		return $this->__soapCall('AddOrUpdateAvailabilities', array(
 			$parameters
 		) , array(
@@ -149,7 +149,7 @@ class Appointment_Service extends MindbodyClient {
 	 * @param GetActiveSessionTimes $parameters
 	 * @return GetActiveSessionTimesResponse
 	 */
-	public function GetActiveSessionTimes(GetActiveSessionTimes $parameters) {
+	public function GetActiveSessionTimes(structures\GetActiveSessionTimes $parameters) {
 		return $this->__soapCall('GetActiveSessionTimes', array(
 			$parameters
 		) , array(
@@ -163,7 +163,7 @@ class Appointment_Service extends MindbodyClient {
 	 * @param GetAppointmentOptions $parameters
 	 * @return GetAppointmentOptionsResponse
 	 */
-	public function GetAppointmentOptions(GetAppointmentOptions $parameters) {
+	public function GetAppointmentOptions(structures\GetAppointmentOptions $parameters) {
 		return $this->__soapCall('GetAppointmentOptions', array(
 			$parameters
 		) , array(

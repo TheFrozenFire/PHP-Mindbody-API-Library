@@ -65,7 +65,7 @@ class Site_Service extends MindbodyClient {
 	 * @param GetSites $parameters
 	 * @return GetSitesResponse
 	 */
-	public function GetSites(GetSites $parameters) {
+	public function GetSites(structures\GetSites $parameters) {
 		return $this->__soapCall('GetSites', array(
 			$parameters
 		) , array(
@@ -79,7 +79,7 @@ class Site_Service extends MindbodyClient {
 	 * @param GetLocations $parameters
 	 * @return GetLocationsResponse
 	 */
-	public function GetLocations(GetLocations $parameters) {
+	public function GetLocations(structures\GetLocations $parameters) {
 		return $this->__soapCall('GetLocations', array(
 			$parameters
 		) , array(
@@ -93,7 +93,7 @@ class Site_Service extends MindbodyClient {
 	 * @param GetActivationCode $parameters
 	 * @return GetActivationCodeResponse
 	 */
-	public function GetActivationCode(GetActivationCode $parameters) {
+	public function GetActivationCode(structures\GetActivationCode $parameters) {
 		return $this->__soapCall('GetActivationCode', array(
 			$parameters
 		) , array(
@@ -107,7 +107,7 @@ class Site_Service extends MindbodyClient {
 	 * @param GetPrograms $parameters
 	 * @return GetProgramsResponse
 	 */
-	public function GetPrograms(GetPrograms $parameters) {
+	public function GetPrograms(structures\GetPrograms $parameters) {
 		return $this->__soapCall('GetPrograms', array(
 			$parameters
 		) , array(
@@ -121,7 +121,7 @@ class Site_Service extends MindbodyClient {
 	 * @param GetSessionTypes $parameters
 	 * @return GetSessionTypesResponse
 	 */
-	public function GetSessionTypes(GetSessionTypes $parameters) {
+	public function GetSessionTypes(structures\GetSessionTypes $parameters) {
 		return $this->__soapCall('GetSessionTypes', array(
 			$parameters
 		) , array(
@@ -135,7 +135,7 @@ class Site_Service extends MindbodyClient {
 	 * @param GetResources $parameters
 	 * @return GetResourcesResponse
 	 */
-	public function GetResources(GetResources $parameters) {
+	public function GetResources(structures\GetResources $parameters) {
 		return $this->__soapCall('GetResources', array(
 			$parameters
 		) , array(
@@ -149,7 +149,7 @@ class Site_Service extends MindbodyClient {
 	 * @param GetRelationships $parameters
 	 * @return GetRelationshipsResponse
 	 */
-	public function GetRelationships(GetRelationships $parameters) {
+	public function GetRelationships(structures\GetRelationships $parameters) {
 		return $this->__soapCall('GetRelationships', array(
 			$parameters
 		) , array(
@@ -163,7 +163,7 @@ class Site_Service extends MindbodyClient {
 	 * @param AddSiteToCredentials $parameters
 	 * @return AddSiteToCredentialsResponse
 	 */
-	public function AddSiteToCredentials(AddSiteToCredentials $parameters) {
+	public function AddSiteToCredentials(structures\AddSiteToCredentials $parameters) {
 		return $this->__soapCall('AddSiteToCredentials', array(
 			$parameters
 		) , array(

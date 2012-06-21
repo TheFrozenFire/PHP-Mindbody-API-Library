@@ -2,7 +2,7 @@
 namespace MindbodyAPI;
 class MindbodyClient extends \SoapClient {
 	public static function request($type, structures\SourceCredentials $sourceCredentials = null) {
-		$requestName = "structures\\{$type}";
+		$requestName = "MindbodyAPI\\structures\\{$type}";
 		$requestRequestName = "{$requestName}Request";
 	
 		if(!class_exists($requestName) || !class_exists($requestRequestName)) return false;

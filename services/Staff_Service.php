@@ -62,7 +62,7 @@ class Staff_Service extends MindbodyClient {
 	 * @param GetStaff $parameters
 	 * @return GetStaffResponse
 	 */
-	public function GetStaff(GetStaff $parameters) {
+	public function GetStaff(structures\GetStaff $parameters) {
 		return $this->__soapCall('GetStaff', array(
 			$parameters
 		) , array(
@@ -76,7 +76,7 @@ class Staff_Service extends MindbodyClient {
 	 * @param GetStaffPermissions $parameters
 	 * @return GetStaffPermissionsResponse
 	 */
-	public function GetStaffPermissions(GetStaffPermissions $parameters) {
+	public function GetStaffPermissions(structures\GetStaffPermissions $parameters) {
 		return $this->__soapCall('GetStaffPermissions', array(
 			$parameters
 		) , array(
@@ -90,7 +90,7 @@ class Staff_Service extends MindbodyClient {
 	 * @param AddOrUpdateStaff $parameters
 	 * @return AddOrUpdateStaffResponse
 	 */
-	public function AddOrUpdateStaff(AddOrUpdateStaff $parameters) {
+	public function AddOrUpdateStaff(structures\AddOrUpdateStaff $parameters) {
 		return $this->__soapCall('AddOrUpdateStaff', array(
 			$parameters
 		) , array(

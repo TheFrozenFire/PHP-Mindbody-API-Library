@@ -42,7 +42,7 @@ class Data_Service extends MindbodyClient {
 	 * @param SelectDataXml $parameters
 	 * @return SelectDataXmlResponse
 	 */
-	public function SelectDataXml(SelectDataXml $parameters) {
+	public function SelectDataXml(structures\SelectDataXml $parameters) {
 		return $this->__soapCall('SelectDataXml', array(
 			$parameters
 		) , array(
@@ -56,7 +56,7 @@ class Data_Service extends MindbodyClient {
 	 * @param SelectDataCSV $parameters
 	 * @return SelectDataCSVResponse
 	 */
-	public function SelectDataCSV(SelectDataCSV $parameters) {
+	public function SelectDataCSV(structures\SelectDataCSV $parameters) {
 		return $this->__soapCall('SelectDataCSV', array(
 			$parameters
 		) , array(
@@ -70,7 +70,7 @@ class Data_Service extends MindbodyClient {
 	 * @param SelectAggregateDataXml $parameters
 	 * @return SelectAggregateDataXmlResponse
 	 */
-	public function SelectAggregateDataXml(SelectAggregateDataXml $parameters) {
+	public function SelectAggregateDataXml(structures\SelectAggregateDataXml $parameters) {
 		return $this->__soapCall('SelectAggregateDataXml', array(
 			$parameters
 		) , array(
@@ -84,7 +84,7 @@ class Data_Service extends MindbodyClient {
 	 * @param SelectAggregateDataCSV $parameters
 	 * @return SelectAggregateDataCSVResponse
 	 */
-	public function SelectAggregateDataCSV(SelectAggregateDataCSV $parameters) {
+	public function SelectAggregateDataCSV(structures\SelectAggregateDataCSV $parameters) {
 		return $this->__soapCall('SelectAggregateDataCSV', array(
 			$parameters
 		) , array(
