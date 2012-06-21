@@ -34,21 +34,21 @@ Here is a very basic usage example for the Site Service class, which should
 print out a full informational listing on locations associated with your
 specified site.
 
-    <?php
-    require("Mindbody.php");
-    
-    $service = new MindbodyAPI\Site_Service();
-    
-    $credentials = new MindbodyAPI\structures\SourceCredentials();
-    $credentials->SourceName = "YourSourceName";
-    $credentials->Password = "YourPassword";
-    $credentials->SiteIDs = array(
-        1234 // Your Site ID(s)
-    );
-    
-    $request = $service::request('GetLocations', $credentials);
-    
-    $locations = $service->GetLocations($request);
-    
-    var_dump($locations);
-    ?>
+```php
+<?php
+require("Mindbody.php");
+
+$service = new MindbodyAPI\Site_Service();
+
+$credentials = new MindbodyAPI\structures\SourceCredentials();
+$credentials->SourceName = "YourSourceName";
+$credentials->Password = "YourPassword";
+$credentials->SiteIDs = array(
+	1234 // Your Site ID(s)
+);
+
+$request = $service::request('GetLocations', $credentials);
+$locations = $service->GetLocations($request);
+
+var_dump($locations);
+```
