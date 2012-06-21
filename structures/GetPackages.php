@@ -1,5 +1,6 @@
 <?php
 class GetPackages {
-  public $Request; // GetPackagesRequest
+	public $Request; // GetPackagesRequest
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class SelectAggregateDataXml {
-  public $Request; // SelectAggregateDataXmlRequest
+	public $Request; // SelectAggregateDataXmlRequest
+	
 }
 ?>

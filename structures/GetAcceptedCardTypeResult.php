@@ -1,5 +1,6 @@
 <?php
 class GetAcceptedCardTypeResult {
-  public $CardTypes; // ArrayOfString
+	public $CardTypes; // ArrayOfString
+	
 }
 ?>

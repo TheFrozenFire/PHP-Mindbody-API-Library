@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateFinderUsers {
-  public $Request; // AddOrUpdateFinderUsersRequest
+	public $Request; // AddOrUpdateFinderUsersRequest
+	
 }
 ?>

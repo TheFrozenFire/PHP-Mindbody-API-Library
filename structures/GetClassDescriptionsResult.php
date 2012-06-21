@@ -1,5 +1,6 @@
 <?php
 class GetClassDescriptionsResult {
-  public $ClassDescriptions; // ArrayOfClassDescription
+	public $ClassDescriptions; // ArrayOfClassDescription
+	
 }
 ?>

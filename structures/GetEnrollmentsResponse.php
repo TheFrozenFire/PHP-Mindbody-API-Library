@@ -1,5 +1,6 @@
 <?php
 class GetEnrollmentsResponse {
-  public $GetEnrollmentsResult; // GetEnrollmentsResult
+	public $GetEnrollmentsResult; // GetEnrollmentsResult
+	
 }
 ?>

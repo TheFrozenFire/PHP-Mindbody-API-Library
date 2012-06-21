@@ -1,5 +1,6 @@
 <?php
 class GetCustomClientFieldsResponse {
-  public $GetCustomClientFieldsResult; // GetCustomClientFieldsResult
+	public $GetCustomClientFieldsResult; // GetCustomClientFieldsResult
+	
 }
 ?>

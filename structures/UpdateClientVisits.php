@@ -1,5 +1,6 @@
 <?php
 class UpdateClientVisits {
-  public $Request; // UpdateClientVisitsRequest
+	public $Request; // UpdateClientVisitsRequest
+	
 }
 ?>

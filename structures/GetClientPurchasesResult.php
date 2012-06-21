@@ -1,5 +1,6 @@
 <?php
 class GetClientPurchasesResult {
-  public $Purchases; // ArrayOfSaleItem
+	public $Purchases; // ArrayOfSaleItem
+	
 }
 ?>

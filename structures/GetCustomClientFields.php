@@ -1,5 +1,6 @@
 <?php
 class GetCustomClientFields {
-  public $Request; // GetCustomClientFieldsRequest
+	public $Request; // GetCustomClientFieldsRequest
+	
 }
 ?>

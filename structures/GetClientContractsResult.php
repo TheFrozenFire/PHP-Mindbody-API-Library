@@ -1,5 +1,6 @@
 <?php
 class GetClientContractsResult {
-  public $Contracts; // ArrayOfClientContract
+	public $Contracts; // ArrayOfClientContract
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateAppointments {
-  public $Request; // AddOrUpdateAppointmentsRequest
+	public $Request; // AddOrUpdateAppointmentsRequest
+	
 }
 ?>

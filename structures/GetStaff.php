@@ -1,5 +1,6 @@
 <?php
 class GetStaff {
-  public $Request; // GetStaffRequest
+	public $Request; // GetStaffRequest
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetClassVisits {
-  public $Request; // GetClassVisitsRequest
+	public $Request; // GetClassVisitsRequest
+	
 }
 ?>

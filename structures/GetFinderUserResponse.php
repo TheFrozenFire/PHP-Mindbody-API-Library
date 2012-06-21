@@ -1,5 +1,6 @@
 <?php
 class GetFinderUserResponse {
-  public $GetFinderUserResult; // GetFinderUserResult
+	public $GetFinderUserResult; // GetFinderUserResult
+	
 }
 ?>

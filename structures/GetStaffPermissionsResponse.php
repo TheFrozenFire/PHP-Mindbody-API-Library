@@ -1,5 +1,6 @@
 <?php
 class GetStaffPermissionsResponse {
-  public $GetStaffPermissionsResult; // GetStaffPermissionsResult
+	public $GetStaffPermissionsResult; // GetStaffPermissionsResult
+	
 }
 ?>

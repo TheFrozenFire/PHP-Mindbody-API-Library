@@ -1,5 +1,6 @@
 <?php
 class SelectAggregateDataXmlResponse {
-  public $SelectAggregateDataXmlResult; // SelectAggregateDataXmlResult
+	public $SelectAggregateDataXmlResult; // SelectAggregateDataXmlResult
+	
 }
 ?>

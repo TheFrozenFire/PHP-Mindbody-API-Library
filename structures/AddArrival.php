@@ -1,5 +1,6 @@
 <?php
 class AddArrival {
-  public $Request; // AddArrivalRequest
+	public $Request; // AddArrivalRequest
+	
 }
 ?>

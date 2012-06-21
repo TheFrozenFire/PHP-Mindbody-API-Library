@@ -1,5 +1,6 @@
 <?php
 class GetClientPurchasesResponse {
-  public $GetClientPurchasesResult; // GetClientPurchasesResult
+	public $GetClientPurchasesResult; // GetClientPurchasesResult
+	
 }
 ?>

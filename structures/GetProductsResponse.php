@@ -1,5 +1,6 @@
 <?php
 class GetProductsResponse {
-  public $GetProductsResult; // GetProductsResult
+	public $GetProductsResult; // GetProductsResult
+	
 }
 ?>

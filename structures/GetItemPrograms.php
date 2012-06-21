@@ -1,5 +1,6 @@
 <?php
 class GetItemPrograms {
-  public $Request; // GetItemProgramsRequest
+	public $Request; // GetItemProgramsRequest
+	
 }
 ?>

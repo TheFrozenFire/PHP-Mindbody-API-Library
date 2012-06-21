@@ -1,10 +1,11 @@
 <?php
 class GetClassDescriptionsRequest {
-  public $ClassDescriptionIDs; // ArrayOfInt
-  public $ProgramIDs; // ArrayOfInt
-  public $StaffIDs; // ArrayOfLong
-  public $LocationIDs; // ArrayOfInt
-  public $StartClassDateTime; // dateTime
-  public $EndClassDateTime; // dateTime
+	public $ClassDescriptionIDs; // ArrayOfInt
+	public $ProgramIDs; // ArrayOfInt
+	public $StaffIDs; // ArrayOfLong
+	public $LocationIDs; // ArrayOfInt
+	public $StartClassDateTime; // dateTime
+	public $EndClassDateTime; // dateTime
+	
 }
 ?>

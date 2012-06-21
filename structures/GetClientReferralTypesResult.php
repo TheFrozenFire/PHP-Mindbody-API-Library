@@ -1,5 +1,6 @@
 <?php
 class GetClientReferralTypesResult {
-  public $ReferralTypes; // ArrayOfString
+	public $ReferralTypes; // ArrayOfString
+	
 }
 ?>

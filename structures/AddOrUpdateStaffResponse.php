@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateStaffResponse {
-  public $AddOrUpdateStaffResult; // AddOrUpdateStaffResult
+	public $AddOrUpdateStaffResult; // AddOrUpdateStaffResult
+	
 }
 ?>

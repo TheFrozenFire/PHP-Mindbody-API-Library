@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateAvailabilitiesResponse {
-  public $AddOrUpdateAvailabilitiesResult; // AddOrUpdateAvailabilitiesResult
+	public $AddOrUpdateAvailabilitiesResult; // AddOrUpdateAvailabilitiesResult
+	
 }
 ?>

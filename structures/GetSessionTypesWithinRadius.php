@@ -1,5 +1,6 @@
 <?php
 class GetSessionTypesWithinRadius {
-  public $Request; // GetSessionTypesWithinRadiusRequest
+	public $Request; // GetSessionTypesWithinRadiusRequest
+	
 }
 ?>

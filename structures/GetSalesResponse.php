@@ -1,5 +1,6 @@
 <?php
 class GetSalesResponse {
-  public $GetSalesResult; // GetSalesResult
+	public $GetSalesResult; // GetSalesResult
+	
 }
 ?>

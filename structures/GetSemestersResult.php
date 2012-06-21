@@ -1,5 +1,6 @@
 <?php
 class GetSemestersResult {
-  public $Semesters; // ArrayOfSemester
+	public $Semesters; // ArrayOfSemester
+	
 }
 ?>

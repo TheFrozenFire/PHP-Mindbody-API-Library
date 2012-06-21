@@ -1,5 +1,6 @@
 <?php
 class GetClientContactLogsResponse {
-  public $GetClientContactLogsResult; // GetClientContactLogsResult
+	public $GetClientContactLogsResult; // GetClientContactLogsResult
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetRelationshipsResponse {
-  public $GetRelationshipsResult; // GetRelationshipsResult
+	public $GetRelationshipsResult; // GetRelationshipsResult
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetSites {
-  public $Request; // GetSitesRequest
+	public $Request; // GetSitesRequest
+	
 }
 ?>

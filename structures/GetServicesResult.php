@@ -1,5 +1,6 @@
 <?php
 class GetServicesResult {
-  public $Services; // ArrayOfService
+	public $Services; // ArrayOfService
+	
 }
 ?>

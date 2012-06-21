@@ -1,5 +1,6 @@
 <?php
 class GetFinderUser {
-  public $Request; // GetFinderUserRequest
+	public $Request; // GetFinderUserRequest
+	
 }
 ?>

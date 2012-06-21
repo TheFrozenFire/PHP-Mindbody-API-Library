@@ -1,5 +1,6 @@
 <?php
 class GetCoursesResult {
-  public $Courses; // ArrayOfCourse
+	public $Courses; // ArrayOfCourse
+	
 }
 ?>

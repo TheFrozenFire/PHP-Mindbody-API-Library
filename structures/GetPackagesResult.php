@@ -1,5 +1,6 @@
 <?php
 class GetPackagesResult {
-  public $Packages; // ArrayOfPackage
+	public $Packages; // ArrayOfPackage
+	
 }
 ?>

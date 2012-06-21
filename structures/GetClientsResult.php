@@ -1,5 +1,6 @@
 <?php
 class GetClientsResult {
-  public $Clients; // ArrayOfClient
+	public $Clients; // ArrayOfClient
+	
 }
 ?>

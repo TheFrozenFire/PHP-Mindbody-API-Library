@@ -1,5 +1,6 @@
 <?php
 class GetClassesResponse {
-  public $GetClassesResult; // GetClassesResult
+	public $GetClassesResult; // GetClassesResult
+	
 }
 ?>

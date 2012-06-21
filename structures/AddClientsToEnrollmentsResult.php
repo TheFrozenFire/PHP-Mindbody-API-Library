@@ -1,5 +1,6 @@
 <?php
 class AddClientsToEnrollmentsResult {
-  public $Enrollments; // ArrayOfClassSchedule
+	public $Enrollments; // ArrayOfClassSchedule
+	
 }
 ?>

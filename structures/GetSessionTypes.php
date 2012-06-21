@@ -1,5 +1,6 @@
 <?php
 class GetSessionTypes {
-  public $Request; // GetSessionTypesRequest
+	public $Request; // GetSessionTypesRequest
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetAcceptedCardTypeResponse {
-  public $GetAcceptedCardTypeResult; // GetAcceptedCardTypeResult
+	public $GetAcceptedCardTypeResult; // GetAcceptedCardTypeResult
+	
 }
 ?>

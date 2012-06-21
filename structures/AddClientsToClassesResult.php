@@ -1,5 +1,6 @@
 <?php
 class AddClientsToClassesResult {
-  public $Classes; // ArrayOfClass
+	public $Classes; // ArrayOfClass
+	
 }
 ?>

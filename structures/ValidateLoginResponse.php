@@ -1,5 +1,6 @@
 <?php
 class ValidateLoginResponse {
-  public $ValidateLoginResult; // ValidateLoginResult
+	public $ValidateLoginResult; // ValidateLoginResult
+	
 }
 ?>

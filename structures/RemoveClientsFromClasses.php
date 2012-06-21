@@ -1,5 +1,6 @@
 <?php
 class RemoveClientsFromClasses {
-  public $Request; // RemoveClientsFromClassesRequest
+	public $Request; // RemoveClientsFromClassesRequest
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetBusinessLocationsWithinRadiusResult {
-  public $Locations; // ArrayOfLocation
+	public $Locations; // ArrayOfLocation
+	
 }
 ?>

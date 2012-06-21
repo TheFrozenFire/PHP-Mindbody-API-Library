@@ -1,5 +1,6 @@
 <?php
 class GetClientAccountBalances {
-  public $Request; // GetClientAccountBalancesRequest
+	public $Request; // GetClientAccountBalancesRequest
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class RecordSet {
-  public $Row; // Row
+	public $Row; // Row
+	
 }
 ?>

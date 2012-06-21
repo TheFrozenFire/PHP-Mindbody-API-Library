@@ -1,5 +1,6 @@
 <?php
 class GetLocations {
-  public $Request; // GetLocationsRequest
+	public $Request; // GetLocationsRequest
+	
 }
 ?>

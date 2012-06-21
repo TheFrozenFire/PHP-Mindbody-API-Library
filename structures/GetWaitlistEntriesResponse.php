@@ -1,5 +1,6 @@
 <?php
 class GetWaitlistEntriesResponse {
-  public $GetWaitlistEntriesResult; // GetWaitlistEntriesResult
+	public $GetWaitlistEntriesResult; // GetWaitlistEntriesResult
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class AddSiteToCredentials {
-  public $Request; // AddSiteToCredentialsRequest
+	public $Request; // AddSiteToCredentialsRequest
+	
 }
 ?>

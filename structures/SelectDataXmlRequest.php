@@ -1,5 +1,6 @@
 <?php
 class SelectDataXmlRequest {
-  public $SelectSql; // string
+	public $SelectSql; // string
+	
 }
 ?>

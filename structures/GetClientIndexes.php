@@ -1,5 +1,6 @@
 <?php
 class GetClientIndexes {
-  public $Request; // GetClientIndexesRequest
+	public $Request; // GetClientIndexesRequest
+	
 }
 ?>

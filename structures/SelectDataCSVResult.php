@@ -1,5 +1,6 @@
 <?php
 class SelectDataCSVResult {
-  public $CSV; // string
+	public $CSV; // string
+	
 }
 ?>

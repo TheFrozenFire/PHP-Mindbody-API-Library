@@ -1,5 +1,6 @@
 <?php
 class GetSitesResponse {
-  public $GetSitesResult; // GetSitesResult
+	public $GetSitesResult; // GetSitesResult
+	
 }
 ?>

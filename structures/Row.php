@@ -1,5 +1,6 @@
 <?php
 class Row {
-  public $Content; // anyType
+	public $Content; // anyType
+	
 }
 ?>

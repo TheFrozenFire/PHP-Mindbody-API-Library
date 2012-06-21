@@ -1,5 +1,6 @@
 <?php
 class GetClientContracts {
-  public $Request; // GetClientContractsRequest
+	public $Request; // GetClientContractsRequest
+	
 }
 ?>

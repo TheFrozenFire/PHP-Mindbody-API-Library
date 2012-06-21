@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateFinderUsersResult {
-  public $FinderUsers; // ArrayOfFinderUser
+	public $FinderUsers; // ArrayOfFinderUser
+	
 }
 ?>

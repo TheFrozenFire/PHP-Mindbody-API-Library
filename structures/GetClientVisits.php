@@ -1,5 +1,6 @@
 <?php
 class GetClientVisits {
-  public $Request; // GetClientVisitsRequest
+	public $Request; // GetClientVisitsRequest
+	
 }
 ?>

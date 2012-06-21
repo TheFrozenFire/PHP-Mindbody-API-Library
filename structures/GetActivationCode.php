@@ -1,5 +1,6 @@
 <?php
 class GetActivationCode {
-  public $Request; // GetActivationCodeRequest
+	public $Request; // GetActivationCodeRequest
+	
 }
 ?>

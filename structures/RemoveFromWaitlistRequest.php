@@ -1,5 +1,6 @@
 <?php
 class RemoveFromWaitlistRequest {
-  public $WaitlistEntryIDs; // ArrayOfInt
+	public $WaitlistEntryIDs; // ArrayOfInt
+	
 }
 ?>

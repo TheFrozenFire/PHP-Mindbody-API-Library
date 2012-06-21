@@ -1,5 +1,6 @@
 <?php
 class UpdateProducts {
-  public $Request; // UpdateProductsRequest
+	public $Request; // UpdateProductsRequest
+	
 }
 ?>

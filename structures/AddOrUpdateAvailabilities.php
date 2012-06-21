@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateAvailabilities {
-  public $Request; // AddOrUpdateAvailabilitiesRequest
+	public $Request; // AddOrUpdateAvailabilitiesRequest
+	
 }
 ?>

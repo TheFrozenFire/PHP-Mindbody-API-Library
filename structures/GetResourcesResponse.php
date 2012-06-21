@@ -1,5 +1,6 @@
 <?php
 class GetResourcesResponse {
-  public $GetResourcesResult; // GetResourcesResult
+	public $GetResourcesResult; // GetResourcesResult
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetFinderUserResult {
-  public $FinderUser; // FinderUser
+	public $FinderUser; // FinderUser
+	
 }
 ?>

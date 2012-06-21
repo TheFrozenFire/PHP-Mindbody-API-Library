@@ -1,5 +1,6 @@
 <?php
 class GetStaffPermissionsRequest {
-  public $StaffID; // long
+	public $StaffID; // long
+	
 }
 ?>

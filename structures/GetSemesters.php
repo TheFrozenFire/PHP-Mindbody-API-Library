@@ -1,5 +1,6 @@
 <?php
 class GetSemesters {
-  public $Request; // GetSemestersRequest
+	public $Request; // GetSemestersRequest
+	
 }
 ?>

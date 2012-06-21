@@ -1,5 +1,6 @@
 <?php
 class GetClientReferralTypesResponse {
-  public $GetClientReferralTypesResult; // GetClientReferralTypesResult
+	public $GetClientReferralTypesResult; // GetClientReferralTypesResult
+	
 }
 ?>

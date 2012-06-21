@@ -1,5 +1,6 @@
 <?php
 class AddSiteToCredentialsResponse {
-  public $AddSiteToCredentialsResult; // AddSiteToCredentialsResult
+	public $AddSiteToCredentialsResult; // AddSiteToCredentialsResult
+	
 }
 ?>

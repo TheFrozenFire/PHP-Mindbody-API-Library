@@ -1,5 +1,6 @@
 <?php
 class GetClassDescriptionsResponse {
-  public $GetClassDescriptionsResult; // GetClassDescriptionsResult
+	public $GetClassDescriptionsResult; // GetClassDescriptionsResult
+	
 }
 ?>

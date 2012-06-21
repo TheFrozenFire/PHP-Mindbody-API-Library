@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateContactLogsResult {
-  public $ContactLogs; // ArrayOfContactLog
+	public $ContactLogs; // ArrayOfContactLog
+	
 }
 ?>

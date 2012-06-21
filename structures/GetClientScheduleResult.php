@@ -1,5 +1,6 @@
 <?php
 class GetClientScheduleResult {
-  public $Visits; // ArrayOfVisit
+	public $Visits; // ArrayOfVisit
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class ClientMembership {
-  public $RestrictedLocations; // ArrayOfLocation
+	public $RestrictedLocations; // ArrayOfLocation
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class SendUserNewPasswordRequest {
-  public $Email; // string
+	public $Email; // string
+	
 }
 ?>

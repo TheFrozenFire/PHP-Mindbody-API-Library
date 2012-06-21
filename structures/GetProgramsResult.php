@@ -1,5 +1,6 @@
 <?php
 class GetProgramsResult {
-  public $Programs; // ArrayOfProgram
+	public $Programs; // ArrayOfProgram
+	
 }
 ?>

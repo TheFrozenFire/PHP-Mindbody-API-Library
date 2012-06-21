@@ -1,5 +1,6 @@
 <?php
 class GetStaffResponse {
-  public $GetStaffResult; // GetStaffResult
+	public $GetStaffResult; // GetStaffResult
+	
 }
 ?>

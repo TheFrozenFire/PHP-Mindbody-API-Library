@@ -1,5 +1,6 @@
 <?php
 class ValidateLogin {
-  public $Request; // ValidateLoginRequest
+	public $Request; // ValidateLoginRequest
+	
 }
 ?>

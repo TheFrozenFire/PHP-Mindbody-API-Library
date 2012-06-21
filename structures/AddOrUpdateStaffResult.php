@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateStaffResult {
-  public $Staff; // ArrayOfStaff
+	public $Staff; // ArrayOfStaff
+	
 }
 ?>

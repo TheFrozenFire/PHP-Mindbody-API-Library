@@ -1,5 +1,6 @@
 <?php
 class UpdateProductsResult {
-  public $Products; // ArrayOfProduct
+	public $Products; // ArrayOfProduct
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetClientServicesResponse {
-  public $GetClientServicesResult; // GetClientServicesResult
+	public $GetClientServicesResult; // GetClientServicesResult
+	
 }
 ?>

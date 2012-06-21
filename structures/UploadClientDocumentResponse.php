@@ -1,5 +1,6 @@
 <?php
 class UploadClientDocumentResponse {
-  public $UploadClientDocumentResult; // UploadClientDocumentResult
+	public $UploadClientDocumentResult; // UploadClientDocumentResult
+	
 }
 ?>

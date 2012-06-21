@@ -1,5 +1,6 @@
 <?php
 class GetClientScheduleResponse {
-  public $GetClientScheduleResult; // GetClientScheduleResult
+	public $GetClientScheduleResult; // GetClientScheduleResult
+	
 }
 ?>

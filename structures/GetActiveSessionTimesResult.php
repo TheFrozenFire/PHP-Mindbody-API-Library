@@ -1,5 +1,6 @@
 <?php
 class GetActiveSessionTimesResult {
-  public $Times; // ArrayOfDateTime
+	public $Times; // ArrayOfDateTime
+	
 }
 ?>

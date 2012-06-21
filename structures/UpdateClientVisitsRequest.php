@@ -1,6 +1,7 @@
 <?php
 class UpdateClientVisitsRequest {
-  public $Visits; // ArrayOfVisit
-  public $Test; // boolean
+	public $Visits; // ArrayOfVisit
+	public $Test; // boolean
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetClientAccountBalancesResponse {
-  public $GetClientAccountBalancesResult; // GetClientAccountBalancesResult
+	public $GetClientAccountBalancesResult; // GetClientAccountBalancesResult
+	
 }
 ?>

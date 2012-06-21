@@ -1,5 +1,6 @@
 <?php
 class GetItemProgramsResponse {
-  public $GetItemProgramsResult; // GetItemProgramsResult
+	public $GetItemProgramsResult; // GetItemProgramsResult
+	
 }
 ?>

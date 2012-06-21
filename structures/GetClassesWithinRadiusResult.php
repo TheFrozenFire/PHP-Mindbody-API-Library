@@ -1,5 +1,6 @@
 <?php
 class GetClassesWithinRadiusResult {
-  public $FinderClasses; // ArrayOfFinderClass
+	public $FinderClasses; // ArrayOfFinderClass
+	
 }
 ?>

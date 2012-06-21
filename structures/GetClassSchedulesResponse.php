@@ -1,5 +1,6 @@
 <?php
 class GetClassSchedulesResponse {
-  public $GetClassSchedulesResult; // GetClassSchedulesResult
+	public $GetClassSchedulesResult; // GetClassSchedulesResult
+	
 }
 ?>

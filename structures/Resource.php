@@ -1,7 +1,8 @@
 <?php
 class Resource {
-  public $Action; // ActionCode
-  public $ID; // int
-  public $Name; // string
+	public $Action; // ActionCode
+	public $ID; // int
+	public $Name; // string
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class SelectDataXmlResponse {
-  public $SelectDataXmlResult; // SelectDataXmlResult
+	public $SelectDataXmlResult; // SelectDataXmlResult
+	
 }
 ?>

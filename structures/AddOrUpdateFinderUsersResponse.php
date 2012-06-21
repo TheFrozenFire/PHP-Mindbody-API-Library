@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateFinderUsersResponse {
-  public $AddOrUpdateFinderUsersResult; // AddOrUpdateFinderUsersResult
+	public $AddOrUpdateFinderUsersResult; // AddOrUpdateFinderUsersResult
+	
 }
 ?>

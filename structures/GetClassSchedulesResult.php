@@ -1,5 +1,6 @@
 <?php
 class GetClassSchedulesResult {
-  public $ClassSchedules; // ArrayOfClassSchedule
+	public $ClassSchedules; // ArrayOfClassSchedule
+	
 }
 ?>

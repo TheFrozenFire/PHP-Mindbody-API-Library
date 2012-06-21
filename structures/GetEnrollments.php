@@ -1,5 +1,6 @@
 <?php
 class GetEnrollments {
-  public $Request; // GetEnrollmentsRequest
+	public $Request; // GetEnrollmentsRequest
+	
 }
 ?>

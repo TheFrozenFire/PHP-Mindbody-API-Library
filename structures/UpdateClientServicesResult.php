@@ -1,5 +1,6 @@
 <?php
 class UpdateClientServicesResult {
-  public $ClientServices; // ArrayOfClientService
+	public $ClientServices; // ArrayOfClientService
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class SelectAggregateDataCSV {
-  public $Request; // SelectAggregateDataCSVRequest
+	public $Request; // SelectAggregateDataCSVRequest
+	
 }
 ?>

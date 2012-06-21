@@ -1,5 +1,6 @@
 <?php
 class GetServices {
-  public $Request; // GetServicesRequest
+	public $Request; // GetServicesRequest
+	
 }
 ?>

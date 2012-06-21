@@ -1,5 +1,6 @@
 <?php
 class GetClientContactLogsResult {
-  public $ContactLogs; // ArrayOfContactLog
+	public $ContactLogs; // ArrayOfContactLog
+	
 }
 ?>

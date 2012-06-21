@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateClientsResponse {
-  public $AddOrUpdateClientsResult; // AddOrUpdateClientsResult
+	public $AddOrUpdateClientsResult; // AddOrUpdateClientsResult
+	
 }
 ?>

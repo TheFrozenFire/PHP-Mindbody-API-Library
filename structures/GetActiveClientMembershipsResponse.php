@@ -1,5 +1,6 @@
 <?php
 class GetActiveClientMembershipsResponse {
-  public $GetActiveClientMembershipsResult; // GetActiveClientMembershipsResult
+	public $GetActiveClientMembershipsResult; // GetActiveClientMembershipsResult
+	
 }
 ?>

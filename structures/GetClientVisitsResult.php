@@ -1,5 +1,6 @@
 <?php
 class GetClientVisitsResult {
-  public $Visits; // ArrayOfVisit
+	public $Visits; // ArrayOfVisit
+	
 }
 ?>

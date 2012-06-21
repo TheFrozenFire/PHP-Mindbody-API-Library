@@ -1,5 +1,6 @@
 <?php
 class GetBookableItemsResult {
-  public $ScheduleItems; // ArrayOfScheduleItem
+	public $ScheduleItems; // ArrayOfScheduleItem
+	
 }
 ?>

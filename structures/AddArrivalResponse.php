@@ -1,5 +1,6 @@
 <?php
 class AddArrivalResponse {
-  public $AddArrivalResult; // AddArrivalResult
+	public $AddArrivalResult; // AddArrivalResult
+	
 }
 ?>

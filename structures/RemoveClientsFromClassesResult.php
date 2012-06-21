@@ -1,5 +1,6 @@
 <?php
 class RemoveClientsFromClassesResult {
-  public $Classes; // ArrayOfClass
+	public $Classes; // ArrayOfClass
+	
 }
 ?>

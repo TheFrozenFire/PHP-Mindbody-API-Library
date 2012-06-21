@@ -1,5 +1,6 @@
 <?php
 class DebitAccountInfo {
-  public $Amount; // decimal
+	public $Amount; // decimal
+	
 }
 ?>

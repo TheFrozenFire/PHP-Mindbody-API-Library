@@ -1,5 +1,6 @@
 <?php
 class FinderCheckoutShoppingCartResponse {
-  public $FinderCheckoutShoppingCartResult; // FinderCheckoutShoppingCartResult
+	public $FinderCheckoutShoppingCartResult; // FinderCheckoutShoppingCartResult
+	
 }
 ?>

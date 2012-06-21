@@ -1,5 +1,6 @@
 <?php
 class CheckoutShoppingCart {
-  public $Request; // CheckoutShoppingCartRequest
+	public $Request; // CheckoutShoppingCartRequest
+	
 }
 ?>

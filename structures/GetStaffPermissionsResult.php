@@ -1,5 +1,6 @@
 <?php
 class GetStaffPermissionsResult {
-  public $Permissions; // ArrayOfPermission
+	public $Permissions; // ArrayOfPermission
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateClientsResult {
-  public $Clients; // ArrayOfClient
+	public $Clients; // ArrayOfClient
+	
 }
 ?>

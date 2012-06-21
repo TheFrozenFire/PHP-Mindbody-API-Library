@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateAppointmentsResult {
-  public $Appointments; // ArrayOfAppointment
+	public $Appointments; // ArrayOfAppointment
+	
 }
 ?>

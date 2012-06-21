@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateAvailabilitiesResult {
-  public $StaffMembers; // ArrayOfStaff
+	public $StaffMembers; // ArrayOfStaff
+	
 }
 ?>

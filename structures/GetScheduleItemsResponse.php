@@ -1,5 +1,6 @@
 <?php
 class GetScheduleItemsResponse {
-  public $GetScheduleItemsResult; // GetScheduleItemsResult
+	public $GetScheduleItemsResult; // GetScheduleItemsResult
+	
 }
 ?>

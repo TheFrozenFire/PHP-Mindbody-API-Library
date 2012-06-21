@@ -1,5 +1,6 @@
 <?php
 class GetStaffAppointmentsResponse {
-  public $GetStaffAppointmentsResult; // GetStaffAppointmentsResult
+	public $GetStaffAppointmentsResult; // GetStaffAppointmentsResult
+	
 }
 ?>

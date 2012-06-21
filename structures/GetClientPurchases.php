@@ -1,5 +1,6 @@
 <?php
 class GetClientPurchases {
-  public $Request; // GetClientPurchasesRequest
+	public $Request; // GetClientPurchasesRequest
+	
 }
 ?>

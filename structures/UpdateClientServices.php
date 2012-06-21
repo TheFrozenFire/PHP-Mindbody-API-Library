@@ -1,5 +1,6 @@
 <?php
 class UpdateClientServices {
-  public $Request; // UpdateClientServicesRequest
+	public $Request; // UpdateClientServicesRequest
+	
 }
 ?>

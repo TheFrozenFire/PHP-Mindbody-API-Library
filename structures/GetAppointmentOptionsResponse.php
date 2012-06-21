@@ -1,5 +1,6 @@
 <?php
 class GetAppointmentOptionsResponse {
-  public $GetAppointmentOptionsResult; // GetAppointmentOptionsResult
+	public $GetAppointmentOptionsResult; // GetAppointmentOptionsResult
+	
 }
 ?>

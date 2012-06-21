@@ -1,5 +1,6 @@
 <?php
 class CompInfo {
-  public $Amount; // decimal
+	public $Amount; // decimal
+	
 }
 ?>

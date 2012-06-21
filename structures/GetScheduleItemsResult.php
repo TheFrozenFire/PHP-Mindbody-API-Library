@@ -1,5 +1,6 @@
 <?php
 class GetScheduleItemsResult {
-  public $StaffMembers; // ArrayOfStaff
+	public $StaffMembers; // ArrayOfStaff
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class GetClassesWithinRadiusResponse {
-  public $GetClassesWithinRadiusResult; // GetClassesWithinRadiusResult
+	public $GetClassesWithinRadiusResult; // GetClassesWithinRadiusResult
+	
 }
 ?>

@@ -1,5 +1,6 @@
 <?php
 class SelectDataXmlResult {
-  public $Results; // RecordSet
+	public $Results; // RecordSet
+	
 }
 ?>

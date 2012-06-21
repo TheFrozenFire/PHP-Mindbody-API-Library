@@ -1,5 +1,6 @@
 <?php
 class AddClientsToClasses {
-  public $Request; // AddClientsToClassesRequest
+	public $Request; // AddClientsToClassesRequest
+	
 }
 ?>

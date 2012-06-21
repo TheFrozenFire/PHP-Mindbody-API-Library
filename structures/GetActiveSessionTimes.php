@@ -1,5 +1,6 @@
 <?php
 class GetActiveSessionTimes {
-  public $Request; // GetActiveSessionTimesRequest
+	public $Request; // GetActiveSessionTimesRequest
+	
 }
 ?>

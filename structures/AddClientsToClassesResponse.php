@@ -1,5 +1,6 @@
 <?php
 class AddClientsToClassesResponse {
-  public $AddClientsToClassesResult; // AddClientsToClassesResult
+	public $AddClientsToClassesResult; // AddClientsToClassesResult
+	
 }
 ?>

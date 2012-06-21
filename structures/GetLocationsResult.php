@@ -1,5 +1,6 @@
 <?php
 class GetLocationsResult {
-  public $Locations; // ArrayOfLocation
+	public $Locations; // ArrayOfLocation
+	
 }
 ?>

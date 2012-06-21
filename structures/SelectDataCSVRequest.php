@@ -1,5 +1,6 @@
 <?php
 class SelectDataCSVRequest {
-  public $SelectSql; // string
+	public $SelectSql; // string
+	
 }
 ?>

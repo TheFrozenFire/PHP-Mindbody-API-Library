@@ -1,5 +1,6 @@
 <?php
 class GetResources {
-  public $Request; // GetResourcesRequest
+	public $Request; // GetResourcesRequest
+	
 }
 ?>

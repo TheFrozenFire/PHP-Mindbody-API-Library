@@ -1,5 +1,6 @@
 <?php
 class SendUserNewPasswordResponse {
-  public $SendUserNewPasswordResult; // SendUserNewPasswordResult
+	public $SendUserNewPasswordResult; // SendUserNewPasswordResult
+	
 }
 ?>

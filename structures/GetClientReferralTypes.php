@@ -1,5 +1,6 @@
 <?php
 class GetClientReferralTypes {
-  public $Request; // GetClientReferralTypesRequest
+	public $Request; // GetClientReferralTypesRequest
+	
 }
 ?>

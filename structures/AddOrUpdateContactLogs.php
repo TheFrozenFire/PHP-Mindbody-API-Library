@@ -1,5 +1,6 @@
 <?php
 class AddOrUpdateContactLogs {
-  public $Request; // AddOrUpdateContactLogsRequest
+	public $Request; // AddOrUpdateContactLogsRequest
+	
 }
 ?>

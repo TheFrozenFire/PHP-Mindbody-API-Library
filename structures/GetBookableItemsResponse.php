@@ -1,5 +1,6 @@
 <?php
 class GetBookableItemsResponse {
-  public $GetBookableItemsResult; // GetBookableItemsResult
+	public $GetBookableItemsResult; // GetBookableItemsResult
+	
 }
 ?>

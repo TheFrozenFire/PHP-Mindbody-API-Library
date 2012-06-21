@@ -1,5 +1,6 @@
 <?php
 class CheckoutShoppingCartResponse {
-  public $CheckoutShoppingCartResult; // CheckoutShoppingCartResult
+	public $CheckoutShoppingCartResult; // CheckoutShoppingCartResult
+	
 }
 ?>

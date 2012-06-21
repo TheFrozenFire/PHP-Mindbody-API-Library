@@ -1,5 +1,6 @@
 <?php
 class GetStaffAppointmentsResult {
-  public $Appointments; // ArrayOfAppointment
+	public $Appointments; // ArrayOfAppointment
+	
 }
 ?>

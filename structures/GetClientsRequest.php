@@ -1,6 +1,7 @@
 <?php
 class GetClientsRequest {
-  public $ClientIDs; // ArrayOfString
-  public $SearchText; // string
+	public $ClientIDs; // ArrayOfString
+	public $SearchText; // string
+	
 }
 ?>
