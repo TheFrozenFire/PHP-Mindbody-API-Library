@@ -1,4 +1,5 @@
 <?php
+chdir(__DIR__."/..");
 function is_includeable($filename, $returnpaths = false) {
 	$include_paths = explode(PATH_SEPARATOR, ini_get('include_path'));
 
