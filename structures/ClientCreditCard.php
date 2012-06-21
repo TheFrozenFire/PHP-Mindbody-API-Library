@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class ClientCreditCard {
   public $CardType; // string
   public $LastFour; // string

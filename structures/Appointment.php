@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Appointment {
   public $Action; // ActionCode
   public $ID; // long

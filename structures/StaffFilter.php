@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class StaffFilter {
   const StaffViewable = 'StaffViewable';
   const AppointmentInstructor = 'AppointmentInstructor';

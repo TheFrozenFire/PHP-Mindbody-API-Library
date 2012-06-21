@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Availability {
   public $ID; // int
   public $Staff; // Staff

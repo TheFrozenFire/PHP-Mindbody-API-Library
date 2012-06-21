@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Semester {
   public $ID; // int
   public $Name; // string

@@ -1,51 +1,52 @@
 <?php
-class Staff_Service extends SoapClient {
+namespace MindbodyAPI;
+class Staff_Service extends \SoapClient {
 
   private static $classmap = array(
-                                    'GetStaff' => 'GetStaff',
-                                    'GetStaffRequest' => 'GetStaffRequest',
-                                    'MBRequest' => 'MBRequest',
-                                    'SourceCredentials' => 'SourceCredentials',
-                                    'UserCredentials' => 'UserCredentials',
-                                    'XMLDetailLevel' => 'XMLDetailLevel',
-                                    'StaffCredentials' => 'StaffCredentials',
-                                    'StaffFilter' => 'StaffFilter',
-                                    'GetStaffResponse' => 'GetStaffResponse',
-                                    'GetStaffResult' => 'GetStaffResult',
-                                    'MBResult' => 'MBResult',
-                                    'StatusCode' => 'StatusCode',
-                                    'Staff' => 'Staff',
-                                    'MBObject' => 'MBObject',
-                                    'Site' => 'Site',
-                                    'Resource' => 'Resource',
-                                    'ActionCode' => 'ActionCode',
-                                    'ClientService' => 'ClientService',
-                                    'Program' => 'Program',
-                                    'ScheduleType' => 'ScheduleType',
-                                    'Rep' => 'Rep',
-                                    'ClientRelationship' => 'ClientRelationship',
-                                    'Client' => 'Client',
-                                    'ClientIndex' => 'ClientIndex',
-                                    'ClientIndexValue' => 'ClientIndexValue',
-                                    'ClientCreditCard' => 'ClientCreditCard',
-                                    'CustomClientField' => 'CustomClientField',
-                                    'Location' => 'Location',
-                                    'Relationship' => 'Relationship',
-                                    'SessionType' => 'SessionType',
-                                    'ScheduleItem' => 'ScheduleItem',
-                                    'Appointment' => 'Appointment',
-                                    'AppointmentStatus' => 'AppointmentStatus',
-                                    'Unavailability' => 'Unavailability',
-                                    'Availability' => 'Availability',
-                                    'GetStaffPermissions' => 'GetStaffPermissions',
-                                    'GetStaffPermissionsRequest' => 'GetStaffPermissionsRequest',
-                                    'GetStaffPermissionsResponse' => 'GetStaffPermissionsResponse',
-                                    'GetStaffPermissionsResult' => 'GetStaffPermissionsResult',
-                                    'Permission' => 'Permission',
-                                    'AddOrUpdateStaff' => 'AddOrUpdateStaff',
-                                    'AddOrUpdateStaffRequest' => 'AddOrUpdateStaffRequest',
-                                    'AddOrUpdateStaffResponse' => 'AddOrUpdateStaffResponse',
-                                    'AddOrUpdateStaffResult' => 'AddOrUpdateStaffResult',
+                                    'GetStaff' => 'MindbodyAPI\structures\GetStaff',
+                                    'GetStaffRequest' => 'MindbodyAPI\structures\GetStaffRequest',
+                                    'MBRequest' => 'MindbodyAPI\structures\MBRequest',
+                                    'SourceCredentials' => 'MindbodyAPI\structures\SourceCredentials',
+                                    'UserCredentials' => 'MindbodyAPI\structures\UserCredentials',
+                                    'XMLDetailLevel' => 'MindbodyAPI\structures\XMLDetailLevel',
+                                    'StaffCredentials' => 'MindbodyAPI\structures\StaffCredentials',
+                                    'StaffFilter' => 'MindbodyAPI\structures\StaffFilter',
+                                    'GetStaffResponse' => 'MindbodyAPI\structures\GetStaffResponse',
+                                    'GetStaffResult' => 'MindbodyAPI\structures\GetStaffResult',
+                                    'MBResult' => 'MindbodyAPI\structures\MBResult',
+                                    'StatusCode' => 'MindbodyAPI\structures\StatusCode',
+                                    'Staff' => 'MindbodyAPI\structures\Staff',
+                                    'MBObject' => 'MindbodyAPI\structures\MBObject',
+                                    'Site' => 'MindbodyAPI\structures\Site',
+                                    'Resource' => 'MindbodyAPI\structures\Resource',
+                                    'ActionCode' => 'MindbodyAPI\structures\ActionCode',
+                                    'ClientService' => 'MindbodyAPI\structures\ClientService',
+                                    'Program' => 'MindbodyAPI\structures\Program',
+                                    'ScheduleType' => 'MindbodyAPI\structures\ScheduleType',
+                                    'Rep' => 'MindbodyAPI\structures\Rep',
+                                    'ClientRelationship' => 'MindbodyAPI\structures\ClientRelationship',
+                                    'Client' => 'MindbodyAPI\structures\Client',
+                                    'ClientIndex' => 'MindbodyAPI\structures\ClientIndex',
+                                    'ClientIndexValue' => 'MindbodyAPI\structures\ClientIndexValue',
+                                    'ClientCreditCard' => 'MindbodyAPI\structures\ClientCreditCard',
+                                    'CustomClientField' => 'MindbodyAPI\structures\CustomClientField',
+                                    'Location' => 'MindbodyAPI\structures\Location',
+                                    'Relationship' => 'MindbodyAPI\structures\Relationship',
+                                    'SessionType' => 'MindbodyAPI\structures\SessionType',
+                                    'ScheduleItem' => 'MindbodyAPI\structures\ScheduleItem',
+                                    'Appointment' => 'MindbodyAPI\structures\Appointment',
+                                    'AppointmentStatus' => 'MindbodyAPI\structures\AppointmentStatus',
+                                    'Unavailability' => 'MindbodyAPI\structures\Unavailability',
+                                    'Availability' => 'MindbodyAPI\structures\Availability',
+                                    'GetStaffPermissions' => 'MindbodyAPI\structures\GetStaffPermissions',
+                                    'GetStaffPermissionsRequest' => 'MindbodyAPI\structures\GetStaffPermissionsRequest',
+                                    'GetStaffPermissionsResponse' => 'MindbodyAPI\structures\GetStaffPermissionsResponse',
+                                    'GetStaffPermissionsResult' => 'MindbodyAPI\structures\GetStaffPermissionsResult',
+                                    'Permission' => 'MindbodyAPI\structures\Permission',
+                                    'AddOrUpdateStaff' => 'MindbodyAPI\structures\AddOrUpdateStaff',
+                                    'AddOrUpdateStaffRequest' => 'MindbodyAPI\structures\AddOrUpdateStaffRequest',
+                                    'AddOrUpdateStaffResponse' => 'MindbodyAPI\structures\AddOrUpdateStaffResponse',
+                                    'AddOrUpdateStaffResult' => 'MindbodyAPI\structures\AddOrUpdateStaffResult',
                                    );
 
   public function Staff_Service($wsdl = "https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL", $options = array()) {
@@ -55,9 +56,7 @@ class Staff_Service extends SoapClient {
       }
     }
     if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-    $directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
-    foreach($options['classmap'] as $key => $value) if(file_exists("{$directory}../structures/{$value}.php")) include_once("{$directory}../structures/{$value}.php");
-    parent::__construct($wsdl, $options);
+	parent::__construct($wsdl, $options);
   }
 
   /**
@@ -103,5 +102,4 @@ class Staff_Service extends SoapClient {
   }
 
 }
-class_alias("Staff_Service", "Staff_x0020_Service");
 ?>

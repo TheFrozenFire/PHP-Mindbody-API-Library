@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Visit {
   public $ID; // long
   public $StartDateTime; // dateTime

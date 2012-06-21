@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class ContactLogComment {
   public $ID; // int
   public $Text; // string

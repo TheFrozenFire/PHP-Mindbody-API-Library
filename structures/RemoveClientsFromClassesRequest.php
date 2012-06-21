@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class RemoveClientsFromClassesRequest {
   public $ClientIDs; // ArrayOfString
   public $ClassIDs; // ArrayOfInt

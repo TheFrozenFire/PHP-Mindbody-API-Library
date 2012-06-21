@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetClassSchedulesRequest {
   public $LocationIDs; // ArrayOfInt
   public $ClassScheduleIDs; // ArrayOfInt

@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetProductsRequest {
   public $ProductIDs; // ArrayOfString
   public $SearchText; // string

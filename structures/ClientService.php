@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class ClientService {
   public $Current; // boolean
   public $Count; // int

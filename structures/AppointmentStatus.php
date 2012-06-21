@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class AppointmentStatus {
   const Booked = 'Booked';
   const Completed = 'Completed';

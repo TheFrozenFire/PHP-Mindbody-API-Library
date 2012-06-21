@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetActiveSessionTimesRequest {
   public $ScheduleType; // ScheduleType
   public $SessionTypeIDs; // ArrayOfInt

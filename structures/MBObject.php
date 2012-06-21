@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class MBObject {
   public $Site; // Site
   public $Messages; // ArrayOfString

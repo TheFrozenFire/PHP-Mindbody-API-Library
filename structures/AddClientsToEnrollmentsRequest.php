@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class AddClientsToEnrollmentsRequest {
   public $ClientIDs; // ArrayOfString
   public $ClassScheduleIDs; // ArrayOfInt

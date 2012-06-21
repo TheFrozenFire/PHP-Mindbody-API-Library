@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Course {
   public $ID; // long
   public $Name; // string

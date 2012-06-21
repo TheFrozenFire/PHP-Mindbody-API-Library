@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetServicesRequest {
   public $ProgramIDs; // ArrayOfInt
   public $SessionTypeIDs; // ArrayOfInt

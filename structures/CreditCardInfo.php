@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class CreditCardInfo {
   public $Action; // ActionCode
   public $CreditCardNumber; // string

@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Site {
   public $ID; // int
   public $Name; // string

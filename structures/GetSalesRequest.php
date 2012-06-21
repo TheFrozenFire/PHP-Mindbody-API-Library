@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetSalesRequest {
   public $SaleID; // long
   public $StartSaleDateTime; // dateTime

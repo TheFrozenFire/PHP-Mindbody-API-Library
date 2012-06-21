@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetStaffAppointmentsRequest {
   public $StaffCredentials; // StaffCredentials
   public $AppointmentIDs; // ArrayOfInt

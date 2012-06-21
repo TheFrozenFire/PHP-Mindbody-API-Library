@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Location {
   public $BusinessID; // int
   public $SiteID; // int

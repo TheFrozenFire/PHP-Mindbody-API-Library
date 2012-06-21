@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class ActionCode {
   const None = 'None';
   const Added = 'Added';

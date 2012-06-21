@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class StatusCode {
   const Success = 'Success';
   const InvalidCredentials = 'InvalidCredentials';

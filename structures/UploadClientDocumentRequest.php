@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class UploadClientDocumentRequest {
   public $ClientID; // string
   public $FileName; // string

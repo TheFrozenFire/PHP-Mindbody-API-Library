@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Payment {
   public $ID; // long
   public $Amount; // decimal

@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class SaleItem {
   public $Sale; // Sale
   public $Description; // string

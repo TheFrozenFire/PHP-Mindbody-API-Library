@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Staff {
   public $Appointments; // ArrayOfAppointment
   public $Unavailabilities; // ArrayOfUnavailability

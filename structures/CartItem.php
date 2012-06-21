@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class CartItem {
   public $Item; // Item
   public $DiscountAmount; // decimal

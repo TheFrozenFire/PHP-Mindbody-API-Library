@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Unavailability {
   public $ID; // int
   public $StartDateTime; // dateTime

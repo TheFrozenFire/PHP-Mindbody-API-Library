@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class AddOrUpdateAvailabilitiesRequest {
   public $UpdateAction; // string
   public $Test; // boolean

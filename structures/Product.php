@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Product {
   public $Price; // decimal
   public $Action; // ActionCode

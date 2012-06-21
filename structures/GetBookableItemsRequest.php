@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetBookableItemsRequest {
   public $SessionTypeIDs; // ArrayOfInt
   public $LocationIDs; // ArrayOfInt

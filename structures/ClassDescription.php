@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class ClassDescription {
   public $ImageURL; // string
   public $Level; // Level

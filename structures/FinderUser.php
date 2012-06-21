@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class FinderUser {
   public $Email; // string
   public $Password; // string

@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class FinderClass {
   public $Organization; // Organization
   public $Site; // Site

@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class CheckoutShoppingCartRequest {
   public $CartID; // string
   public $ClientID; // string

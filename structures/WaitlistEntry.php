@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class WaitlistEntry {
   public $ID; // int
   public $Client; // Client

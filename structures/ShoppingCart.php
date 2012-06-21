@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class ShoppingCart {
   public $Action; // ActionCode
   public $ID; // string

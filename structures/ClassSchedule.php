@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class ClassSchedule {
   public $Classes; // ArrayOfClass
   public $Clients; // ArrayOfClient

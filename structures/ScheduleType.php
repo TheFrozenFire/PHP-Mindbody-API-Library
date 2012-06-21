@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class ScheduleType {
   const All = 'All';
   const DropIn = 'DropIn';

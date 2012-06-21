@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetClassDescriptionsRequest {
   public $ClassDescriptionIDs; // ArrayOfInt
   public $ProgramIDs; // ArrayOfInt

@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetClientContactLogsRequest {
   public $ClientID; // string
   public $StartDate; // dateTime

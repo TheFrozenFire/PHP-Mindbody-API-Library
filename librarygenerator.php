@@ -57,6 +57,7 @@ function split_file($file, $dest) {
 
 if(!class_exists("SoapClient")) die("SOAP is required for this script to function.");
 if(!class_exists("DOMDocument")) die("DOM is required for this script to function.");
+if(!class_exists("ReflectionClass")) die("Reflection is required for this script to function.");
 if(!is_includeable("wsdl2php.php")) die("wsdl2php is required for this script to function.");
 
 if(!ini_get('user_agent')) die("This script requires that your user_agent ini setting be configured. This is due to Mindbody blocking all requests from clients not providing a user_agent header.\nAn example would be: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19'\n");
@@ -116,8 +117,6 @@ foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 	$file = file_get_contents($serviceFile);
 	$constructorcode = <<<EOD
 if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-	\$directory = dirname(__FILE__).DIRECTORY_SEPARATOR;
-	foreach(\$options['classmap'] as \$key => \$value) if(file_exists("{\$directory}../structures/{\$value}.php")) include_once("{\$directory}../structures/{\$value}.php");
 	parent::__construct(\$wsdl, \$options);
 EOD;
 	$file = str_replace("<?php\nclass", "<?php\nnamespace MindbodyAPI;\nclass", $file);
@@ -125,7 +124,20 @@ EOD;
 	$file = str_replace("class {$serviceName} extends SoapClient", "class {$serviceName} extends \\SoapClient", $file);
 	$file = str_replace("parent::__construct(\$wsdl, \$options);", $constructorcode, $file);
 	
+	eval(trim($file, "<?php")); // Oh yes, I did that. Sue me. :P
+	$reflection = new ReflectionClass('MindbodyAPI\\'.$serviceName);
+	$classmapProperty = $reflection->getProperty('classmap');
+	$classmapProperty->setAccessible(true);
+	$classmap = $classmapProperty->getValue();
 	
+	$mapReplacements = array(0 => array(), 1 => array());
+	
+	foreach($classmap as $key => $value) {
+		$mapReplacements[0][] = "'{$key}' => '{$value}'";
+		$mapReplacements[1][] = "'{$key}' => 'MindbodyAPI\structures\\{$value}'";
+	}
+	
+	$file = str_replace($mapReplacements[0], $mapReplacements[1], $file);
 	
 	file_put_contents($serviceFile, $file);
 	rename($serviceFile, "splitteroutput/services/{$serviceName}.php");

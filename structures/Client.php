@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Client {
   public $NewID; // string
   public $AccountBalance; // double

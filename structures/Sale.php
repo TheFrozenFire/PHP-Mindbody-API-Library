@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class Sale {
   public $ID; // long
   public $SaleTime; // dateTime

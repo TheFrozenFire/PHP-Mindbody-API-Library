@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class FinderCheckoutShoppingCartRequest {
   public $Test; // boolean
   public $NoClientEmail; // boolean

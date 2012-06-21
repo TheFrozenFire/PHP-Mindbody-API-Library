@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class GetCoursesRequest {
   public $LocationIDs; // ArrayOfInt
   public $CourseIDs; // ArrayOfLong

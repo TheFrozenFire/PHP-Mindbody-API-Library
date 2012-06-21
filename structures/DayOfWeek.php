@@ -1,4 +1,5 @@
 <?php
+namespace MindbodyAPI\structures;
 class DayOfWeek {
   const Sunday = 'Sunday';
   const Monday = 'Monday';
