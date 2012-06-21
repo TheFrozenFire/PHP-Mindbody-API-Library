@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI;
-class Class_Service extends \SoapClient {
+class Class_Service extends MindbodyClient {
 	private static $classmap = array(
 		'GetClasses' => 'MindbodyAPI\structures\GetClasses',
 		'GetClassesRequest' => 'MindbodyAPI\structures\GetClassesRequest',
@@ -92,7 +92,7 @@ class Class_Service extends \SoapClient {
 		'GetWaitlistEntriesResult' => 'MindbodyAPI\structures\GetWaitlistEntriesResult',
 		'WaitlistEntry' => 'MindbodyAPI\structures\WaitlistEntry',
 	);
-	public function Class_Service($wsdl = "https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;

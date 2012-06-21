@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI;
-class Finder_Service extends \SoapClient {
+class Finder_Service extends MindbodyClient {
 	private static $classmap = array(
 		'GetClassesWithinRadius' => 'MindbodyAPI\structures\GetClassesWithinRadius',
 		'GetClassesWithinRadiusRequest' => 'MindbodyAPI\structures\GetClassesWithinRadiusRequest',
@@ -84,7 +84,7 @@ class Finder_Service extends \SoapClient {
 		'SendUserNewPasswordResponse' => 'MindbodyAPI\structures\SendUserNewPasswordResponse',
 		'SendUserNewPasswordResult' => 'MindbodyAPI\structures\SendUserNewPasswordResult',
 	);
-	public function Finder_Service($wsdl = "https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;

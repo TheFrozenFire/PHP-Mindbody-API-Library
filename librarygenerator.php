@@ -111,6 +111,8 @@ foreach(glob("wsdl2phpoutput/*.php") as $serviceFile) split_file($serviceFile, "
 if(!is_dir("splitteroutput/structures")) mkdir("splitteroutput/structures");
 if(!is_dir("splitteroutput/services")) mkdir("splitteroutput/services");
 
+include_once("MindbodyClient.php");
+
 foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 	$oldServiceName = basename($serviceFile, ".php");
 	$serviceName = str_replace("_x0020", "", $oldServiceName);
@@ -121,7 +123,8 @@ if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Int
 EOD;
 	$file = str_replace("<?php\nclass", "<?php\nnamespace MindbodyAPI;\nclass", $file);
 	$file = str_replace($oldServiceName, $serviceName, $file);
-	$file = str_replace("class {$serviceName} extends SoapClient", "class {$serviceName} extends \\SoapClient", $file);
+	$file = str_replace("class {$serviceName} extends SoapClient", "class {$serviceName} extends MindbodyClient", $file);
+	$file = str_replace("public function {$serviceName}(", "public function __construct(", $file);
 	$file = str_replace("parent::__construct(\$wsdl, \$options);", $constructorcode, $file);
 	
 	eval(trim($file, "<?php")); // Oh yes, I did that. Sue me. :P
@@ -148,6 +151,13 @@ foreach(glob("splitteroutput/*.php") as $structureFile) {
 	file_put_contents($structureFile, $file);
 	rename($structureFile, "splitteroutput/structures/".basename($structureFile));
 }
+
+$bootstrap = "<?php\ninclude_once(__DIR__.\"/MindbodyClient.php\");\n";
+foreach(glob("splitteroutput/*/*.php") as $file) {
+	$file = str_replace("splitteroutput/", "", $file);
+	$bootstrap .= "include_once(__DIR__.\"/{$file}\");\n";
+}
+file_put_contents("splitteroutput/Mindbody.php", $bootstrap);
 
 include_once("PHP/Beautifier.php");
 if(class_exists('PHP_Beautifier')) {	

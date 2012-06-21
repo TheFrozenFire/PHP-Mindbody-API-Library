@@ -22,6 +22,11 @@ Additionally, if you are running the librarygenerator.php script, you must
 have the DOM extension enabled, and you must install
 [WSDL2PHP](http://www.urdalen.no/wsdl2php/) on your system.
 
+**Important:** Please note that the master branch of this repository is now
+**not** compatible with PHP 5.2. If you require PHP 5.2 compatibility, please
+check out the "5.2" branch on this repository. It will remain compatible with
+the latest version of PHP 5.2, but will contain only service updates.
+
 Basic Usage
 -----------
 
@@ -30,21 +35,20 @@ print out a full informational listing on locations associated with your
 specified site.
 
     <?php
-    require("services/Site_Service.php");
+    require("Mindbody.php");
     
-    $service = new Site_Service();
+    $service = new MindbodyAPI\Site_Service();
     
-    $parameters = new GetLocations();
-    $parameters->Request = new GetLocationsRequest();
-    
-    $parameters->Request->SourceCredentials = new SourceCredentials();
-    $parameters->Request->SourceCredentials->SourceName = "YourSourceName";
-    $parameters->Request->SourceCredentials->Password = "YourPassword";
-    $parameters->Request->SourceCredentials->SiteIDs = array(
+    $credentials = new MindbodyAPI\structures\SourceCredentials();
+    $credentials->SourceName = "YourSourceName";
+    $credentials->Password = "YourPassword";
+    $credentials->SiteIDs = array(
         1234 // Your Site ID(s)
     );
     
-    $locations = $service->GetLocations($parameters);
+    $request = $service::request('GetLocations', $credentials);
+    
+    $locations = $service->GetLocations($request);
     
     var_dump($locations);
     ?>

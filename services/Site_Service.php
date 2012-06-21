@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI;
-class Site_Service extends \SoapClient {
+class Site_Service extends MindbodyClient {
 	private static $classmap = array(
 		'GetSites' => 'MindbodyAPI\structures\GetSites',
 		'GetSitesRequest' => 'MindbodyAPI\structures\GetSitesRequest',
@@ -50,7 +50,7 @@ class Site_Service extends \SoapClient {
 		'AddSiteToCredentialsResponse' => 'MindbodyAPI\structures\AddSiteToCredentialsResponse',
 		'AddSiteToCredentialsResult' => 'MindbodyAPI\structures\AddSiteToCredentialsResult',
 	);
-	public function Site_Service($wsdl = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;

@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI;
-class Client_Service extends \SoapClient {
+class Client_Service extends MindbodyClient {
 	private static $classmap = array(
 		'AddArrival' => 'MindbodyAPI\structures\AddArrival',
 		'AddArrivalRequest' => 'MindbodyAPI\structures\AddArrivalRequest',
@@ -122,7 +122,7 @@ class Client_Service extends \SoapClient {
 		'UpdateClientServicesResponse' => 'MindbodyAPI\structures\UpdateClientServicesResponse',
 		'UpdateClientServicesResult' => 'MindbodyAPI\structures\UpdateClientServicesResult',
 	);
-	public function Client_Service($wsdl = "https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;

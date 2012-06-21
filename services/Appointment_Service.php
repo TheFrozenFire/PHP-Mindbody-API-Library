@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI;
-class Appointment_Service extends \SoapClient {
+class Appointment_Service extends MindbodyClient {
 	private static $classmap = array(
 		'GetStaffAppointments' => 'MindbodyAPI\structures\GetStaffAppointments',
 		'GetStaffAppointmentsRequest' => 'MindbodyAPI\structures\GetStaffAppointmentsRequest',
@@ -64,7 +64,7 @@ class Appointment_Service extends \SoapClient {
 		'GetAppointmentOptionsResult' => 'MindbodyAPI\structures\GetAppointmentOptionsResult',
 		'Option' => 'MindbodyAPI\structures\Option',
 	);
-	public function Appointment_Service($wsdl = "https://api.mindbodyonline.com/0_5/AppointmentService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/AppointmentService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;

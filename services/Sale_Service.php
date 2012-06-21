@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI;
-class Sale_Service extends \SoapClient {
+class Sale_Service extends MindbodyClient {
 	private static $classmap = array(
 		'GetAcceptedCardType' => 'MindbodyAPI\structures\GetAcceptedCardType',
 		'GetAcceptedCardTypeRequest' => 'MindbodyAPI\structures\GetAcceptedCardTypeRequest',
@@ -91,7 +91,7 @@ class Sale_Service extends \SoapClient {
 		'UpdateProductsResponse' => 'MindbodyAPI\structures\UpdateProductsResponse',
 		'UpdateProductsResult' => 'MindbodyAPI\structures\UpdateProductsResult',
 	);
-	public function Sale_Service($wsdl = "https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;

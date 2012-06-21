@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI;
-class Data_Service extends \SoapClient {
+class Data_Service extends MindbodyClient {
 	private static $classmap = array(
 		'SelectDataXml' => 'MindbodyAPI\structures\SelectDataXml',
 		'SelectDataXmlRequest' => 'MindbodyAPI\structures\SelectDataXmlRequest',
@@ -27,7 +27,7 @@ class Data_Service extends \SoapClient {
 		'Row' => 'MindbodyAPI\structures\Row',
 		'RecordSet' => 'MindbodyAPI\structures\RecordSet',
 	);
-	public function Data_Service($wsdl = "https://api.mindbodyonline.com/0_5/DataService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/DataService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
