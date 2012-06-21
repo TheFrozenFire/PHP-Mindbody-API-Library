@@ -15,4 +15,13 @@ class MindbodyClient extends \SoapClient {
 		
 		return $request;
 	}
+	
+	public static function credentials($sourcename = null, $password = null, Array $siteids = null) {
+		$credentials = new structures\SourceCredentials;
+		$credentials->SourceName = $sourcename;
+		$credentials->Password = $password;
+		$credentials->SiteIDs = $siteids;
+		
+		return $credentials;
+	}
 }

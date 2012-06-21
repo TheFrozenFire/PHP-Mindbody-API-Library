@@ -40,11 +40,12 @@ require("Mindbody.php");
 
 $service = new MindbodyAPI\Site_Service();
 
-$credentials = new MindbodyAPI\structures\SourceCredentials();
-$credentials->SourceName = "YourSourceName";
-$credentials->Password = "YourPassword";
-$credentials->SiteIDs = array(
-	1234 // Your Site ID(s)
+$credentials = $service::credentials(
+	"YourSourceName",
+	"YourPassword",
+	array(
+		1234 // Your Site ID(s)
+	)
 );
 
 $request = $service::request('GetLocations', $credentials);
