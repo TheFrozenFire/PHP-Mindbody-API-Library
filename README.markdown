@@ -29,22 +29,24 @@ Here is a very basic usage example for the Site Service class, which should
 print out a full informational listing on locations associated with your
 specified site.
 
-    <?php
-    require("services/Site_Service.php");
-    
-    $service = new Site_Service();
-    
-    $parameters = new GetLocations();
-    $parameters->Request = new GetLocationsRequest();
-    
-    $parameters->Request->SourceCredentials = new SourceCredentials();
-    $parameters->Request->SourceCredentials->SourceName = "YourSourceName";
-    $parameters->Request->SourceCredentials->Password = "YourPassword";
-    $parameters->Request->SourceCredentials->SiteIDs = array(
-        1234 // Your Site ID(s)
-    );
-    
-    $locations = $service->GetLocations($parameters);
-    
-    var_dump($locations);
+```php
+<?php
+require("services/Site_Service.php");
+
+$service = new Site_Service();
+
+$parameters = new GetLocations();
+$parameters->Request = new GetLocationsRequest();
+
+$parameters->Request->SourceCredentials = new SourceCredentials();
+$parameters->Request->SourceCredentials->SourceName = "YourSourceName";
+$parameters->Request->SourceCredentials->Password = "YourPassword";
+$parameters->Request->SourceCredentials->SiteIDs = array(
+	1234 // Your Site ID(s)
+);
+
+$locations = $service->GetLocations($parameters);
+
+var_dump($locations);
+```
     ?>
