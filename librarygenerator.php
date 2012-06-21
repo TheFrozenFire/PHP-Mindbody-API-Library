@@ -123,6 +123,7 @@ foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 	$aliascode = <<<EOD
 class_alias("{$serviceName}", "{$oldServiceName}");
 ?>
+
 EOD;
 	$file = str_replace($oldServiceName, $serviceName, $file);
 	$file = str_replace("parent::__construct(\$wsdl, \$options);", $constructorcode, $file);
