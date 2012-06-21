@@ -49,4 +49,3 @@ $locations = $service->GetLocations($parameters);
 
 var_dump($locations);
 ```
-    ?>
