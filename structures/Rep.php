@@ -1,7 +1,8 @@
 <?php
 namespace MindbodyAPI\structures;
 class Rep {
-  public $ID; // int
-  public $Staff; // Staff
+	public $ID; // int
+	public $Staff; // Staff
+	
 }
 ?>

@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetLocationsResponse {
-  public $GetLocationsResult; // GetLocationsResult
+	public $GetLocationsResult; // GetLocationsResult
+	
 }
 ?>

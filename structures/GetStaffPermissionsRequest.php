@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetStaffPermissionsRequest {
-  public $StaffID; // long
+	public $StaffID; // long
+	
 }
 ?>

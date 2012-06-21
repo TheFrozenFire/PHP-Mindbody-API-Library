@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetAppointmentOptions {
-  public $Request; // GetAppointmentOptionsRequest
+	public $Request; // GetAppointmentOptionsRequest
+	
 }
 ?>

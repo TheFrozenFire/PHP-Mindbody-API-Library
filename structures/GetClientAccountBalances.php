@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientAccountBalances {
-  public $Request; // GetClientAccountBalancesRequest
+	public $Request; // GetClientAccountBalancesRequest
+	
 }
 ?>

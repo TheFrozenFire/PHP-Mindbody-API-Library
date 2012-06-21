@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class UpdateProductsResult {
-  public $Products; // ArrayOfProduct
+	public $Products; // ArrayOfProduct
+	
 }
 ?>

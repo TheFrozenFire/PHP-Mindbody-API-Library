@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClassDescriptionsResult {
-  public $ClassDescriptions; // ArrayOfClassDescription
+	public $ClassDescriptions; // ArrayOfClassDescription
+	
 }
 ?>

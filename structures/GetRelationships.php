@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetRelationships {
-  public $Request; // GetRelationshipsRequest
+	public $Request; // GetRelationshipsRequest
+	
 }
 ?>

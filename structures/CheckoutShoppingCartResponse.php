@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class CheckoutShoppingCartResponse {
-  public $CheckoutShoppingCartResult; // CheckoutShoppingCartResult
+	public $CheckoutShoppingCartResult; // CheckoutShoppingCartResult
+	
 }
 ?>

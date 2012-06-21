@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientsResult {
-  public $Clients; // ArrayOfClient
+	public $Clients; // ArrayOfClient
+	
 }
 ?>

@@ -1,7 +1,8 @@
 <?php
 namespace MindbodyAPI\structures;
 class Tip {
-  public $Amount; // decimal
-  public $StaffID; // long
+	public $Amount; // decimal
+	public $StaffID; // long
+	
 }
 ?>

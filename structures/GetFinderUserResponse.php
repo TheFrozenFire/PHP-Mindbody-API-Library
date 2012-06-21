@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetFinderUserResponse {
-  public $GetFinderUserResult; // GetFinderUserResult
+	public $GetFinderUserResult; // GetFinderUserResult
+	
 }
 ?>

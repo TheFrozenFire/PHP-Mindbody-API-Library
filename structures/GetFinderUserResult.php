@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetFinderUserResult {
-  public $FinderUser; // FinderUser
+	public $FinderUser; // FinderUser
+	
 }
 ?>

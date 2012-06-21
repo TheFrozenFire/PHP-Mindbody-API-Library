@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddOrUpdateAvailabilitiesResponse {
-  public $AddOrUpdateAvailabilitiesResult; // AddOrUpdateAvailabilitiesResult
+	public $AddOrUpdateAvailabilitiesResult; // AddOrUpdateAvailabilitiesResult
+	
 }
 ?>

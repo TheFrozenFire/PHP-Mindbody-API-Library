@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetProgramsResult {
-  public $Programs; // ArrayOfProgram
+	public $Programs; // ArrayOfProgram
+	
 }
 ?>

@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientAccountBalancesResult {
-  public $Clients; // ArrayOfClient
+	public $Clients; // ArrayOfClient
+	
 }
 ?>

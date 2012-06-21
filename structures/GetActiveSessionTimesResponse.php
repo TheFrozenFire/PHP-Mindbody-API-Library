@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetActiveSessionTimesResponse {
-  public $GetActiveSessionTimesResult; // GetActiveSessionTimesResult
+	public $GetActiveSessionTimesResult; // GetActiveSessionTimesResult
+	
 }
 ?>

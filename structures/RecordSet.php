@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class RecordSet {
-  public $Row; // Row
+	public $Row; // Row
+	
 }
 ?>

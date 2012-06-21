@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetSessionTypesWithinRadiusResult {
-  public $FinderAppointments; // ArrayOfFinderAppointment
+	public $FinderAppointments; // ArrayOfFinderAppointment
+	
 }
 ?>

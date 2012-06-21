@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClassesWithinRadiusResult {
-  public $FinderClasses; // ArrayOfFinderClass
+	public $FinderClasses; // ArrayOfFinderClass
+	
 }
 ?>

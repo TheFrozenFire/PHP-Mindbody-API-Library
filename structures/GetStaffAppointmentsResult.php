@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetStaffAppointmentsResult {
-  public $Appointments; // ArrayOfAppointment
+	public $Appointments; // ArrayOfAppointment
+	
 }
 ?>

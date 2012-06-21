@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddOrUpdateContactLogsResult {
-  public $ContactLogs; // ArrayOfContactLog
+	public $ContactLogs; // ArrayOfContactLog
+	
 }
 ?>

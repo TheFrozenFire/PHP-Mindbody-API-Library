@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddOrUpdateFinderUsers {
-  public $Request; // AddOrUpdateFinderUsersRequest
+	public $Request; // AddOrUpdateFinderUsersRequest
+	
 }
 ?>

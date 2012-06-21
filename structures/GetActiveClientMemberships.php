@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetActiveClientMemberships {
-  public $Request; // GetActiveClientMembershipsRequest
+	public $Request; // GetActiveClientMembershipsRequest
+	
 }
 ?>

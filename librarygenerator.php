@@ -148,4 +148,19 @@ foreach(glob("splitteroutput/*.php") as $structureFile) {
 	file_put_contents($structureFile, $file);
 	rename($structureFile, "splitteroutput/structures/".basename($structureFile));
 }
+
+include_once("PHP/Beautifier.php");
+if(class_exists('PHP_Beautifier')) {	
+	$beautifier = new PHP_Beautifier();
+	$beautifier->addFilter('ArrayNested');
+	$beautifier->setIndentChar("\t");
+	$beautifier->setIndentNumber(1);
+	
+	foreach(glob("splitteroutput/*/*.php") as $file) {
+		$beautifier->setInputFile($file);
+		$beautifier->setOutputFile($file);
+		$beautifier->process();
+		$beautifier->save();
+	}
+}
 ?>

@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetSessionTypesResult {
-  public $SessionTypes; // ArrayOfSessionType
+	public $SessionTypes; // ArrayOfSessionType
+	
 }
 ?>

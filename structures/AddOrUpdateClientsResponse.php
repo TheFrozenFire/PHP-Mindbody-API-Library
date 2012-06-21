@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddOrUpdateClientsResponse {
-  public $AddOrUpdateClientsResult; // AddOrUpdateClientsResult
+	public $AddOrUpdateClientsResult; // AddOrUpdateClientsResult
+	
 }
 ?>

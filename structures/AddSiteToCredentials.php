@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddSiteToCredentials {
-  public $Request; // AddSiteToCredentialsRequest
+	public $Request; // AddSiteToCredentialsRequest
+	
 }
 ?>

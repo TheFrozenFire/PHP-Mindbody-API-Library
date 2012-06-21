@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetBookableItemsResult {
-  public $ScheduleItems; // ArrayOfScheduleItem
+	public $ScheduleItems; // ArrayOfScheduleItem
+	
 }
 ?>

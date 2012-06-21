@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetAcceptedCardTypeResponse {
-  public $GetAcceptedCardTypeResult; // GetAcceptedCardTypeResult
+	public $GetAcceptedCardTypeResult; // GetAcceptedCardTypeResult
+	
 }
 ?>

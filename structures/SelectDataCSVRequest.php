@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class SelectDataCSVRequest {
-  public $SelectSql; // string
+	public $SelectSql; // string
+	
 }
 ?>

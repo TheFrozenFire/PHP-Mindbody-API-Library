@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetRelationshipsResult {
-  public $Relationships; // ArrayOfRelationship
+	public $Relationships; // ArrayOfRelationship
+	
 }
 ?>

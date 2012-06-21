@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetPackagesResult {
-  public $Packages; // ArrayOfPackage
+	public $Packages; // ArrayOfPackage
+	
 }
 ?>

@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class CompInfo {
-  public $Amount; // decimal
+	public $Amount; // decimal
+	
 }
 ?>

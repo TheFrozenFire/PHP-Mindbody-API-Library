@@ -1,6 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetSales {
-  public $Request; // GetSalesRequest
+	public $Request; // GetSalesRequest
+	
 }
 ?>
