@@ -1,6 +1,7 @@
 <?php
 class Visit {
 	public $ID; // long
+	public $ClassID; // int
 	public $StartDateTime; // dateTime
 	public $EndDateTime; // dateTime
 	public $Name; // string

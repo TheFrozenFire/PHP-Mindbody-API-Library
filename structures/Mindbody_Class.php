@@ -15,6 +15,7 @@ class Mindbody_Class {
 	public $Active; // boolean
 	public $IsWaitlistAvailable; // boolean
 	public $IsEnrolled; // boolean
+	public $HideCancel; // boolean
 	public $Action; // ActionCode
 	public $ID; // int
 	public $IsAvailable; // boolean
