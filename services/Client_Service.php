@@ -121,6 +121,10 @@ class Client_Service extends MindbodyClient {
 		'UpdateClientServicesRequest' => 'MindbodyAPI\structures\UpdateClientServicesRequest',
 		'UpdateClientServicesResponse' => 'MindbodyAPI\structures\UpdateClientServicesResponse',
 		'UpdateClientServicesResult' => 'MindbodyAPI\structures\UpdateClientServicesResult',
+		'SendUserNewPassword' => 'MindbodyAPI\structures\SendUserNewPassword',
+		'ClientSendUserNewPasswordRequest' => 'MindbodyAPI\structures\ClientSendUserNewPasswordRequest',
+		'SendUserNewPasswordResponse' => 'MindbodyAPI\structures\SendUserNewPasswordResponse',
+		'ClientSendUserNewPasswordResult' => 'MindbodyAPI\structures\ClientSendUserNewPasswordResult',
 	);
 	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -406,6 +410,20 @@ class Client_Service extends MindbodyClient {
 	 */
 	public function UpdateClientServices(structures\UpdateClientServices $parameters) {
 		return $this->__soapCall('UpdateClientServices', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Sends the user a new password.
+	 *
+	 * @param SendUserNewPassword $parameters
+	 * @return SendUserNewPasswordResponse
+	 */
+	public function SendUserNewPassword(structures\SendUserNewPassword $parameters) {
+		return $this->__soapCall('SendUserNewPassword', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

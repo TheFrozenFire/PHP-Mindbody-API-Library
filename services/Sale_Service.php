@@ -48,16 +48,21 @@ class Sale_Service extends MindbodyClient {
 		'Size' => 'MindbodyAPI\structures\Size',
 		'Color' => 'MindbodyAPI\structures\Color',
 		'Item' => 'MindbodyAPI\structures\Item',
-		'Package' => 'MindbodyAPI\structures\Package',
-		'Service' => 'MindbodyAPI\structures\Service',
 		'Product' => 'MindbodyAPI\structures\Product',
+		'Service' => 'MindbodyAPI\structures\Service',
+		'Package' => 'MindbodyAPI\structures\Package',
 		'Tip' => 'MindbodyAPI\structures\Tip',
 		'PaymentInfo' => 'MindbodyAPI\structures\PaymentInfo',
-		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
-		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
-		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
-		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
+		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
 		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
+		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
+		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
+		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
+		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
+		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
+		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
+		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
+		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
 		'CheckoutShoppingCartResponse' => 'MindbodyAPI\structures\CheckoutShoppingCartResponse',
 		'CheckoutShoppingCartResult' => 'MindbodyAPI\structures\CheckoutShoppingCartResult',
 		'GetSales' => 'MindbodyAPI\structures\GetSales',
@@ -66,10 +71,6 @@ class Sale_Service extends MindbodyClient {
 		'GetSalesResult' => 'MindbodyAPI\structures\GetSalesResult',
 		'Sale' => 'MindbodyAPI\structures\Sale',
 		'Payment' => 'MindbodyAPI\structures\Payment',
-		'GetItemPrograms' => 'MindbodyAPI\structures\GetItemPrograms',
-		'GetItemProgramsRequest' => 'MindbodyAPI\structures\GetItemProgramsRequest',
-		'GetItemProgramsResponse' => 'MindbodyAPI\structures\GetItemProgramsResponse',
-		'GetItemProgramsResult' => 'MindbodyAPI\structures\GetItemProgramsResult',
 		'GetServices' => 'MindbodyAPI\structures\GetServices',
 		'GetServicesRequest' => 'MindbodyAPI\structures\GetServicesRequest',
 		'GetServicesResponse' => 'MindbodyAPI\structures\GetServicesResponse',
@@ -90,6 +91,14 @@ class Sale_Service extends MindbodyClient {
 		'UpdateProductsRequest' => 'MindbodyAPI\structures\UpdateProductsRequest',
 		'UpdateProductsResponse' => 'MindbodyAPI\structures\UpdateProductsResponse',
 		'UpdateProductsResult' => 'MindbodyAPI\structures\UpdateProductsResult',
+		'RedeemSpaFinderWellnessCard' => 'MindbodyAPI\structures\RedeemSpaFinderWellnessCard',
+		'RedeemSpaFinderWellnessCardRequest' => 'MindbodyAPI\structures\RedeemSpaFinderWellnessCardRequest',
+		'RedeemSpaFinderWellnessCardResponse' => 'MindbodyAPI\structures\RedeemSpaFinderWellnessCardResponse',
+		'RedeemSpaFinderWellnessCardResult' => 'MindbodyAPI\structures\RedeemSpaFinderWellnessCardResult',
+		'GetCustomPaymentMethods' => 'MindbodyAPI\structures\GetCustomPaymentMethods',
+		'GetCustomPaymentMethodsRequest' => 'MindbodyAPI\structures\GetCustomPaymentMethodsRequest',
+		'GetCustomPaymentMethodsResponse' => 'MindbodyAPI\structures\GetCustomPaymentMethodsResponse',
+		'GetCustomPaymentMethodsResult' => 'MindbodyAPI\structures\GetCustomPaymentMethodsResult',
 	);
 	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -136,20 +145,6 @@ class Sale_Service extends MindbodyClient {
 	 */
 	public function GetSales(structures\GetSales $parameters) {
 		return $this->__soapCall('GetSales', array(
-			$parameters
-		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
-			'soapaction' => ''
-		));
-	}
-	/**
-	 * Gets a list of programs that have consumer items available for sale.
-	 *
-	 * @param GetItemPrograms $parameters
-	 * @return GetItemProgramsResponse
-	 */
-	public function GetItemPrograms(structures\GetItemPrograms $parameters) {
-		return $this->__soapCall('GetItemPrograms', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
@@ -220,6 +215,34 @@ class Sale_Service extends MindbodyClient {
 	 */
 	public function UpdateProducts(structures\UpdateProducts $parameters) {
 		return $this->__soapCall('UpdateProducts', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Redeem a Spa Finder Gift Card.
+	 *
+	 * @param RedeemSpaFinderWellnessCard $parameters
+	 * @return RedeemSpaFinderWellnessCardResponse
+	 */
+	public function RedeemSpaFinderWellnessCard(structures\RedeemSpaFinderWellnessCard $parameters) {
+		return $this->__soapCall('RedeemSpaFinderWellnessCard', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Gets a list of Custom Payment Methods.
+	 *
+	 * @param GetCustomPaymentMethods $parameters
+	 * @return GetCustomPaymentMethodsResponse
+	 */
+	public function GetCustomPaymentMethods(structures\GetCustomPaymentMethods $parameters) {
+		return $this->__soapCall('GetCustomPaymentMethods', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

@@ -49,22 +49,28 @@ class Finder_Service extends MindbodyClient {
 		'GetBusinessLocationsWithinRadiusResult' => 'MindbodyAPI\structures\GetBusinessLocationsWithinRadiusResult',
 		'FinderCheckoutShoppingCart' => 'MindbodyAPI\structures\FinderCheckoutShoppingCart',
 		'FinderCheckoutShoppingCartRequest' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartRequest',
+		'SpaFinderWellnessCard' => 'MindbodyAPI\structures\SpaFinderWellnessCard',
 		'PaymentInfo' => 'MindbodyAPI\structures\PaymentInfo',
-		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
-		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
-		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
-		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
+		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
 		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
+		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
+		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
+		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
+		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
+		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
+		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
+		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
+		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
 		'FinderCheckoutShoppingCartResponse' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartResponse',
 		'FinderCheckoutShoppingCartResult' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartResult',
 		'ShoppingCart' => 'MindbodyAPI\structures\ShoppingCart',
 		'CartItem' => 'MindbodyAPI\structures\CartItem',
 		'Item' => 'MindbodyAPI\structures\Item',
-		'Package' => 'MindbodyAPI\structures\Package',
-		'Service' => 'MindbodyAPI\structures\Service',
 		'Product' => 'MindbodyAPI\structures\Product',
 		'Color' => 'MindbodyAPI\structures\Color',
 		'Size' => 'MindbodyAPI\structures\Size',
+		'Service' => 'MindbodyAPI\structures\Service',
+		'Package' => 'MindbodyAPI\structures\Package',
 		'Tip' => 'MindbodyAPI\structures\Tip',
 		'Class' => 'MindbodyAPI\structures\Class',
 		'Visit' => 'MindbodyAPI\structures\Visit',
@@ -79,10 +85,10 @@ class Finder_Service extends MindbodyClient {
 		'GetFinderUserRequest' => 'MindbodyAPI\structures\GetFinderUserRequest',
 		'GetFinderUserResponse' => 'MindbodyAPI\structures\GetFinderUserResponse',
 		'GetFinderUserResult' => 'MindbodyAPI\structures\GetFinderUserResult',
-		'SendUserNewPassword' => 'MindbodyAPI\structures\SendUserNewPassword',
-		'SendUserNewPasswordRequest' => 'MindbodyAPI\structures\SendUserNewPasswordRequest',
-		'SendUserNewPasswordResponse' => 'MindbodyAPI\structures\SendUserNewPasswordResponse',
-		'SendUserNewPasswordResult' => 'MindbodyAPI\structures\SendUserNewPasswordResult',
+		'SendFinderUserNewPassword' => 'MindbodyAPI\structures\SendFinderUserNewPassword',
+		'SendFinderUserNewPasswordRequest' => 'MindbodyAPI\structures\SendFinderUserNewPasswordRequest',
+		'SendFinderUserNewPasswordResponse' => 'MindbodyAPI\structures\SendFinderUserNewPasswordResponse',
+		'SendFinderUserNewPasswordResult' => 'MindbodyAPI\structures\SendFinderUserNewPasswordResult',
 	);
 	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -179,13 +185,13 @@ class Finder_Service extends MindbodyClient {
 		));
 	}
 	/**
-	 * Sends the user a new password.
+	 * Sends the finder user a new password.
 	 *
-	 * @param SendUserNewPassword $parameters
-	 * @return SendUserNewPasswordResponse
+	 * @param SendFinderUserNewPassword $parameters
+	 * @return SendFinderUserNewPasswordResponse
 	 */
-	public function SendUserNewPassword(structures\SendUserNewPassword $parameters) {
-		return $this->__soapCall('SendUserNewPassword', array(
+	public function SendFinderUserNewPassword(structures\SendFinderUserNewPassword $parameters) {
+		return $this->__soapCall('SendFinderUserNewPassword', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

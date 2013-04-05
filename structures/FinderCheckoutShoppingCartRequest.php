@@ -11,6 +11,7 @@ class FinderCheckoutShoppingCartRequest {
 	public $SearchLatitude; // double
 	public $SearchLongitude; // double
 	public $SaveCCInfo; // boolean
+	public $SpaFinderWellnessCard; // SpaFinderWellnessCard
 	public $PaymentInfo; // PaymentInfo
 	
 }

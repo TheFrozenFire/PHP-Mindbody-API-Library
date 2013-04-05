@@ -5,6 +5,7 @@ class RemoveClientsFromClassesRequest {
 	public $ClassIDs; // ArrayOfInt
 	public $Test; // boolean
 	public $SendEmail; // boolean
+	public $LateCancel; // boolean
 	
 }
 ?>
