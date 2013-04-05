@@ -24,4 +24,15 @@ class MindbodyClient extends \SoapClient {
 		
 		return $credentials;
 	}
+	
+	public function __soapCall($function_name, $arguments, $options = array(), $input_headers = array(), &$output_headers = array()) {
+		$result = parent::__soapCall($function_name, $arguments, $options, $input_headers, $output_headers);
+		
+		$expectedResultType = "{$function_name}Result";
+		
+		if(isset($result->$expectedResultType))
+			return $result->$expectedResultType;
+		
+		return $result;
+	}
 }
