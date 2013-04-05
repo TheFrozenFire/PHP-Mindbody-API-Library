@@ -14,6 +14,11 @@ class Client {
 	public $ClientRelationships; // ArrayOfClientRelationship
 	public $Reps; // ArrayOfRep
 	public $CustomClientFields; // ArrayOfCustomClientField
+	public $LiabilityRelease; // boolean
+	public $EmergencyContactInfoName; // string
+	public $EmergencyContactInfoRelationship; // string
+	public $EmergencyContactInfoPhone; // string
+	public $EmergencyContactInfoEmail; // string
 	public $Action; // ActionCode
 	public $ID; // string
 	public $FirstName; // string

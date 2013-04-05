@@ -44,10 +44,6 @@ class Site_Service extends SoapClient {
 		'GetRelationshipsResponse' => 'GetRelationshipsResponse',
 		'GetRelationshipsResult' => 'GetRelationshipsResult',
 		'Relationship' => 'Relationship',
-		'AddSiteToCredentials' => 'AddSiteToCredentials',
-		'AddSiteToCredentialsRequest' => 'AddSiteToCredentialsRequest',
-		'AddSiteToCredentialsResponse' => 'AddSiteToCredentialsResponse',
-		'AddSiteToCredentialsResult' => 'AddSiteToCredentialsResult',
 	);
 	public function Site_Service($wsdl = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -152,20 +148,6 @@ class Site_Service extends SoapClient {
 	 */
 	public function GetRelationships(GetRelationships $parameters) {
 		return $this->__soapCall('GetRelationships', array(
-			$parameters
-		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
-			'soapaction' => ''
-		));
-	}
-	/**
-	 * Adds a site to the credentials.
-	 *
-	 * @param AddSiteToCredentials $parameters
-	 * @return AddSiteToCredentialsResponse
-	 */
-	public function AddSiteToCredentials(AddSiteToCredentials $parameters) {
-		return $this->__soapCall('AddSiteToCredentials', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

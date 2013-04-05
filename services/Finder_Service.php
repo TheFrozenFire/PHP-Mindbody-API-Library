@@ -26,9 +26,9 @@ class Finder_Service extends SoapClient {
 		'Staff' => 'Staff',
 		'Appointment' => 'Appointment',
 		'ScheduleItem' => 'ScheduleItem',
+		'Unavailability' => 'Unavailability',
 		'Availability' => 'Availability',
 		'SessionType' => 'SessionType',
-		'Unavailability' => 'Unavailability',
 		'AppointmentStatus' => 'AppointmentStatus',
 		'Client' => 'Client',
 		'ClientIndex' => 'ClientIndex',
@@ -48,22 +48,28 @@ class Finder_Service extends SoapClient {
 		'GetBusinessLocationsWithinRadiusResult' => 'GetBusinessLocationsWithinRadiusResult',
 		'FinderCheckoutShoppingCart' => 'FinderCheckoutShoppingCart',
 		'FinderCheckoutShoppingCartRequest' => 'FinderCheckoutShoppingCartRequest',
+		'SpaFinderWellnessCard' => 'SpaFinderWellnessCard',
 		'PaymentInfo' => 'PaymentInfo',
+		'CashInfo' => 'CashInfo',
 		'TrackDataInfo' => 'TrackDataInfo',
-		'CreditCardInfo' => 'CreditCardInfo',
-		'DebitAccountInfo' => 'DebitAccountInfo',
-		'CompInfo' => 'CompInfo',
 		'StoredCardInfo' => 'StoredCardInfo',
+		'CreditCardInfo' => 'CreditCardInfo',
+		'CustomPaymentInfo' => 'CustomPaymentInfo',
+		'DebitAccountInfo' => 'DebitAccountInfo',
+		'GiftCardInfo' => 'GiftCardInfo',
+		'EncryptedTrackDataInfo' => 'EncryptedTrackDataInfo',
+		'CheckInfo' => 'CheckInfo',
+		'CompInfo' => 'CompInfo',
 		'FinderCheckoutShoppingCartResponse' => 'FinderCheckoutShoppingCartResponse',
 		'FinderCheckoutShoppingCartResult' => 'FinderCheckoutShoppingCartResult',
 		'ShoppingCart' => 'ShoppingCart',
 		'CartItem' => 'CartItem',
 		'Item' => 'Item',
-		'Package' => 'Package',
-		'Service' => 'Service',
 		'Product' => 'Product',
 		'Color' => 'Color',
 		'Size' => 'Size',
+		'Service' => 'Service',
+		'Package' => 'Package',
 		'Tip' => 'Tip',
 		'Class' => 'Mindbody_Class',
 		'Visit' => 'Visit',
@@ -78,10 +84,10 @@ class Finder_Service extends SoapClient {
 		'GetFinderUserRequest' => 'GetFinderUserRequest',
 		'GetFinderUserResponse' => 'GetFinderUserResponse',
 		'GetFinderUserResult' => 'GetFinderUserResult',
-		'SendUserNewPassword' => 'SendUserNewPassword',
-		'SendUserNewPasswordRequest' => 'SendUserNewPasswordRequest',
-		'SendUserNewPasswordResponse' => 'SendUserNewPasswordResponse',
-		'SendUserNewPasswordResult' => 'SendUserNewPasswordResult',
+		'SendFinderUserNewPassword' => 'SendFinderUserNewPassword',
+		'SendFinderUserNewPasswordRequest' => 'SendFinderUserNewPasswordRequest',
+		'SendFinderUserNewPasswordResponse' => 'SendFinderUserNewPasswordResponse',
+		'SendFinderUserNewPasswordResult' => 'SendFinderUserNewPasswordResult',
 	);
 	public function Finder_Service($wsdl = "https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -180,13 +186,13 @@ class Finder_Service extends SoapClient {
 		));
 	}
 	/**
-	 * Sends the user a new password.
+	 * Sends the finder user a new password.
 	 *
-	 * @param SendUserNewPassword $parameters
-	 * @return SendUserNewPasswordResponse
+	 * @param SendFinderUserNewPassword $parameters
+	 * @return SendFinderUserNewPasswordResponse
 	 */
-	public function SendUserNewPassword(SendUserNewPassword $parameters) {
-		return $this->__soapCall('SendUserNewPassword', array(
+	public function SendFinderUserNewPassword(SendFinderUserNewPassword $parameters) {
+		return $this->__soapCall('SendFinderUserNewPassword', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

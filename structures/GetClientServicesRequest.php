@@ -1,6 +1,7 @@
 <?php
 class GetClientServicesRequest {
 	public $ClientID; // string
+	public $ClassID; // int
 	public $ProgramIDs; // ArrayOfInt
 	public $SessionTypeIDs; // ArrayOfInt
 	public $LocationIDs; // ArrayOfInt

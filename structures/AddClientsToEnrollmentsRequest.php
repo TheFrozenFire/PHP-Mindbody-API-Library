@@ -6,6 +6,7 @@ class AddClientsToEnrollmentsRequest {
 	public $EnrollDateForward; // dateTime
 	public $EnrollOpen; // ArrayOfDateTime
 	public $Test; // boolean
+	public $SendEmail; // boolean
 	public $Waitlist; // boolean
 	
 }

@@ -14,6 +14,7 @@ class Staff {
 	public $Country; // string
 	public $PostalCode; // string
 	public $ForeignZip; // string
+	public $LoginLocations; // ArrayOfLocation
 	public $Action; // ActionCode
 	public $ID; // long
 	public $Name; // string

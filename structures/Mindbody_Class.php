@@ -8,6 +8,7 @@ class Mindbody_Class {
 	public $MaxCapacity; // int
 	public $WebCapacity; // int
 	public $TotalBooked; // int
+	public $TotalBookedWaitlist; // int
 	public $WebBooked; // int
 	public $SemesterID; // int
 	public $IsCanceled; // boolean

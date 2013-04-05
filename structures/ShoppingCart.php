@@ -1,5 +1,6 @@
 <?php
 class ShoppingCart {
+	public $AuthCode; // string
 	public $Action; // ActionCode
 	public $ID; // string
 	public $CartItems; // ArrayOfCartItem

@@ -1,6 +1,7 @@
 <?php
 class MBResult {
 	public $Status; // StatusCode
+	public $ErrorCode; // int
 	public $Message; // string
 	public $XMLDetail; // XMLDetailLevel
 	public $ResultCount; // int

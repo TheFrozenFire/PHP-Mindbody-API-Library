@@ -7,6 +7,8 @@ class GetServicesRequest {
 	public $ClassScheduleID; // int
 	public $SellOnline; // boolean
 	public $LocationID; // int
+	public $HideRelatedPrograms; // boolean
+	public $StaffID; // long
 	
 }
 ?>

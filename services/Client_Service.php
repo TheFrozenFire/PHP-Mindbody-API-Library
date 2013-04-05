@@ -29,10 +29,10 @@ class Client_Service extends SoapClient {
 		'Staff' => 'Staff',
 		'Appointment' => 'Appointment',
 		'ScheduleItem' => 'ScheduleItem',
+		'Unavailability' => 'Unavailability',
 		'Availability' => 'Availability',
 		'SessionType' => 'SessionType',
 		'Location' => 'Location',
-		'Unavailability' => 'Unavailability',
 		'AppointmentStatus' => 'AppointmentStatus',
 		'Resource' => 'Resource',
 		'CustomClientField' => 'CustomClientField',
@@ -120,6 +120,10 @@ class Client_Service extends SoapClient {
 		'UpdateClientServicesRequest' => 'UpdateClientServicesRequest',
 		'UpdateClientServicesResponse' => 'UpdateClientServicesResponse',
 		'UpdateClientServicesResult' => 'UpdateClientServicesResult',
+		'SendUserNewPassword' => 'SendUserNewPassword',
+		'ClientSendUserNewPasswordRequest' => 'ClientSendUserNewPasswordRequest',
+		'SendUserNewPasswordResponse' => 'SendUserNewPasswordResponse',
+		'ClientSendUserNewPasswordResult' => 'ClientSendUserNewPasswordResult',
 	);
 	public function Client_Service($wsdl = "https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -407,6 +411,20 @@ class Client_Service extends SoapClient {
 	 */
 	public function UpdateClientServices(UpdateClientServices $parameters) {
 		return $this->__soapCall('UpdateClientServices', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Sends the user a new password.
+	 *
+	 * @param SendUserNewPassword $parameters
+	 * @return SendUserNewPasswordResponse
+	 */
+	public function SendUserNewPassword(SendUserNewPassword $parameters) {
+		return $this->__soapCall('SendUserNewPassword', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
