@@ -12,6 +12,8 @@
 
     },
     "autoload": {
-        "psr-0": {}
+        "psr-0": {
+            "MindbodyAPI": "MindbodyAPI/"
+        }
     }
 }
