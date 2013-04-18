@@ -112,7 +112,7 @@ foreach(glob("wsdl2phpoutput/*.php") as $serviceFile) split_file($serviceFile, "
 if(!is_dir("splitteroutput/structures")) mkdir("splitteroutput/structures");
 if(!is_dir("splitteroutput/services")) mkdir("splitteroutput/services");
 
-include_once("MindbodyClient.php");
+include_once("MindbodyAPI/MindbodyClient.php");
 
 foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 	$oldServiceName = basename($serviceFile, ".php");

@@ -1,6 +1,6 @@
 <?php
-namespace MindbodyAPI;
-class Sale_Service extends MindbodyClient {
+namespace MindbodyAPI\services;
+class Sale_Service extends \MindbodyAPI\MindbodyClient {
 	private static $classmap = array(
 		'GetAcceptedCardType' => 'MindbodyAPI\structures\GetAcceptedCardType',
 		'GetAcceptedCardTypeRequest' => 'MindbodyAPI\structures\GetAcceptedCardTypeRequest',
@@ -53,16 +53,16 @@ class Sale_Service extends MindbodyClient {
 		'Package' => 'MindbodyAPI\structures\Package',
 		'Tip' => 'MindbodyAPI\structures\Tip',
 		'PaymentInfo' => 'MindbodyAPI\structures\PaymentInfo',
+		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
+		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
+		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
 		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
 		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
 		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
-		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
+		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
 		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
 		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
-		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
-		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
 		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
-		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
 		'CheckoutShoppingCartResponse' => 'MindbodyAPI\structures\CheckoutShoppingCartResponse',
 		'CheckoutShoppingCartResult' => 'MindbodyAPI\structures\CheckoutShoppingCartResult',
 		'GetSales' => 'MindbodyAPI\structures\GetSales',

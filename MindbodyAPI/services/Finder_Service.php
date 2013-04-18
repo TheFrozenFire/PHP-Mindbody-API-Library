@@ -1,6 +1,6 @@
 <?php
-namespace MindbodyAPI;
-class Finder_Service extends MindbodyClient {
+namespace MindbodyAPI\services;
+class Finder_Service extends \MindbodyAPI\MindbodyClient {
 	private static $classmap = array(
 		'GetClassesWithinRadius' => 'MindbodyAPI\structures\GetClassesWithinRadius',
 		'GetClassesWithinRadiusRequest' => 'MindbodyAPI\structures\GetClassesWithinRadiusRequest',
@@ -51,16 +51,16 @@ class Finder_Service extends MindbodyClient {
 		'FinderCheckoutShoppingCartRequest' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartRequest',
 		'SpaFinderWellnessCard' => 'MindbodyAPI\structures\SpaFinderWellnessCard',
 		'PaymentInfo' => 'MindbodyAPI\structures\PaymentInfo',
+		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
+		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
+		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
 		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
 		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
 		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
-		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
+		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
 		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
 		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
-		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
-		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
 		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
-		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
 		'FinderCheckoutShoppingCartResponse' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartResponse',
 		'FinderCheckoutShoppingCartResult' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartResult',
 		'ShoppingCart' => 'MindbodyAPI\structures\ShoppingCart',

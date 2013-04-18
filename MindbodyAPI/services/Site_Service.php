@@ -1,6 +1,6 @@
 <?php
-namespace MindbodyAPI;
-class Site_Service extends MindbodyClient {
+namespace MindbodyAPI\services;
+class Site_Service extends \MindbodyAPI\MindbodyClient {
 	private static $classmap = array(
 		'GetSites' => 'MindbodyAPI\structures\GetSites',
 		'GetSitesRequest' => 'MindbodyAPI\structures\GetSitesRequest',

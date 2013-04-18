@@ -1,6 +1,6 @@
 <?php
-namespace MindbodyAPI;
-class Client_Service extends MindbodyClient {
+namespace MindbodyAPI\services;
+class Client_Service extends \MindbodyAPI\MindbodyClient {
 	private static $classmap = array(
 		'AddArrival' => 'MindbodyAPI\structures\AddArrival',
 		'AddArrivalRequest' => 'MindbodyAPI\structures\AddArrivalRequest',
