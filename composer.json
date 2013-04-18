@@ -10,5 +10,8 @@
     ],
     "require": {
 
+    },
+    "autoload": {
+        "psr-0": {}
     }
 }
