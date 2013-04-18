@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI\services;
-class Appointment_Service extends \MindbodyAPI\MindbodyClient {
+class AppointmentService extends \MindbodyAPI\MindbodyClient {
 	private static $classmap = array(
 		'GetStaffAppointments' => 'MindbodyAPI\structures\GetStaffAppointments',
 		'GetStaffAppointmentsRequest' => 'MindbodyAPI\structures\GetStaffAppointmentsRequest',

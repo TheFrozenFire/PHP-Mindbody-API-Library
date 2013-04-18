@@ -2,7 +2,7 @@
 namespace MindbodyAPI;
 class MindbodyClient extends \SoapClient {
 	public static function service($name) {
-		$class = "services\\{$name}";
+		$class = "MindbodyAPI\\services\\{$name}";
 		
 		return new $class;
 	}

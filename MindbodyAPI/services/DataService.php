@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI\services;
-class Data_Service extends \MindbodyAPI\MindbodyClient {
+class DataService extends \MindbodyAPI\MindbodyClient {
 	private static $classmap = array(
 		'SelectDataXml' => 'MindbodyAPI\structures\SelectDataXml',
 		'SelectDataXmlRequest' => 'MindbodyAPI\structures\SelectDataXmlRequest',

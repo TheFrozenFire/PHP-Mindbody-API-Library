@@ -38,7 +38,7 @@ specified site.
 <?php
 require("Mindbody.php");
 
-$service = new MindbodyAPI\Site_Service();
+$service = MindbodyAPI\MindbodyClient::service("SiteService");
 
 $credentials = $service::credentials(
 	"YourSourceName",
