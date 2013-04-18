@@ -38,18 +38,26 @@ class MindbodyClient_Test extends PHPUnit_Framework_TestCase {
 	 */
 	public function testServiceFunctions($serviceName) {
 		$service = \MindbodyAPI\MindbodyClient::service($serviceName);
-		
+		$reflector = new ReflectionClass($service);
+				
 		$functions = $service->__getFunctions();
 		foreach($functions as $functionSpec) {
 			preg_match('/(\w+) (\w+)/', $functionSpec, $functionSpecParsed);
 	
-			$functionName = $functionSpecParsed[2];
-			$functionRequest = "\\MindbodyAPI\\structures\\{$functionSpecParsed[2]}Request";
-			$functionResponse = "\\MindbodyAPI\\structures\\{$functionSpecParsed[1]}";
+			$functionName = "\\MindbodyAPI\\structures\\{$functionSpecParsed[2]}";
 			
+			$this->assertTrue(class_exists($functionName), "{$serviceName} {$functionName} does not exist");
+			$functionInstance = new $functionName;
+			$this->assertInstanceOf($functionName, $functionInstance);
+			
+			/*
+			TODO: Test request type. Cannot do so reliably right now, because we don't typehint it
 			$this->assertTrue(class_exists($functionRequest), "{$serviceName} {$functionRequest} does not exist");
 			$requestInstance = new $functionRequest;
 			$this->assertInstanceOf($functionRequest, $requestInstance);
+			*/
+			
+			$functionResponse = "\\MindbodyAPI\\structures\\{$functionSpecParsed[1]}";
 			
 			$this->assertTrue(class_exists($functionResponse), "{$serviceName} {$functionResponse} does not exist");
 			$responseInstance = new $functionResponse;
