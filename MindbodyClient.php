@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI;
 class MindbodyClient extends \SoapClient {
-	public static function request($type, structures\SourceCredentials $sourceCredentials = null) {
+	public static function request($type, structures\SourceCredentials $sourceCredentials = null, structures\UserCredentials $userCredentials = null) {
 		$requestName = "MindbodyAPI\\structures\\{$type}";
 		$requestRequestName = "{$requestName}Request";
 	
@@ -13,12 +13,24 @@ class MindbodyClient extends \SoapClient {
 		else
 			$request->Request->SourceCredentials = new structures\SourceCredentials();
 		
+		if($userCredentials)
+			$request->Request->UserCredentials = $userCredentials;
+		
 		return $request;
 	}
 	
 	public static function credentials($sourcename = null, $password = null, Array $siteids = null) {
 		$credentials = new structures\SourceCredentials;
 		$credentials->SourceName = $sourcename;
+		$credentials->Password = $password;
+		$credentials->SiteIDs = $siteids;
+		
+		return $credentials;
+	}
+	
+	public static function userCredentials($username, $password, Array $siteids = null) {
+		$credentials = new structures\UserCredentials;
+		$credentials->Username = $username;
 		$credentials->Password = $password;
 		$credentials->SiteIDs = $siteids;
 		
