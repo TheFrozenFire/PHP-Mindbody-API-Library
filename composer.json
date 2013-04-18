@@ -11,9 +11,12 @@
     "require": {
 
     },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*@stable"
+    },
     "autoload": {
         "psr-0": {
-            "MindbodyAPI": "/"
+            "MindbodyAPI": ""
         }
     }
 }

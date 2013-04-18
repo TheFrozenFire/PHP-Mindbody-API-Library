@@ -12,7 +12,7 @@ class ClassService extends \MindbodyAPI\MindbodyClient {
 		'GetClassesResult' => 'MindbodyAPI\structures\GetClassesResult',
 		'MBResult' => 'MindbodyAPI\structures\MBResult',
 		'StatusCode' => 'MindbodyAPI\structures\StatusCode',
-		'Class' => 'MindbodyAPI\structures\Mindbody_Class',
+		'Class' => 'MindbodyAPI\structures\MindbodyClass',
 		'MBObject' => 'MindbodyAPI\structures\MBObject',
 		'Site' => 'MindbodyAPI\structures\Site',
 		'ClassDescription' => 'MindbodyAPI\structures\ClassDescription',

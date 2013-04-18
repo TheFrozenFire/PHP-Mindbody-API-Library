@@ -72,7 +72,7 @@ class FinderService extends \MindbodyAPI\MindbodyClient {
 		'Service' => 'MindbodyAPI\structures\Service',
 		'Package' => 'MindbodyAPI\structures\Package',
 		'Tip' => 'MindbodyAPI\structures\Tip',
-		'Class' => 'MindbodyAPI\structures\Class',
+		'Class' => 'MindbodyAPI\structures\MindbodyClass',
 		'Visit' => 'MindbodyAPI\structures\Visit',
 		'ClassDescription' => 'MindbodyAPI\structures\ClassDescription',
 		'Level' => 'MindbodyAPI\structures\Level',

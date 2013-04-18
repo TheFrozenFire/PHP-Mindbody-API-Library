@@ -1,5 +1,5 @@
-test.php
-splitteroutput
-wsdl2phpoutput
-
+/test.php
+/splitteroutput
+/wsdl2phpoutput
 /vendor/
+/composer.lock

@@ -1,6 +1,6 @@
 <?php
 namespace MindbodyAPI\structures;
-class Mindbody_Class {
+class MindbodyClass {
 	public $ClassScheduleID; // int
 	public $Visits; // ArrayOfVisit
 	public $Clients; // ArrayOfClient

@@ -18,7 +18,7 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 		'MBObject' => 'MindbodyAPI\structures\MBObject',
 		'Site' => 'MindbodyAPI\structures\Site',
 		'ClassSchedule' => 'MindbodyAPI\structures\ClassSchedule',
-		'Class' => 'MindbodyAPI\structures\Class',
+		'Class' => 'MindbodyAPI\structures\MindbodyClass',
 		'Visit' => 'MindbodyAPI\structures\Visit',
 		'Staff' => 'MindbodyAPI\structures\Staff',
 		'Appointment' => 'MindbodyAPI\structures\Appointment',

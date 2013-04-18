@@ -94,12 +94,10 @@ if(file_exists("wsdl2phpoutput/Class_x0020_Service.php")) {
 	if(strpos($file, "class Class {")) {
 		$file = str_replace(
 			array(
-				"class Class {",
-				"'Class' => 'Class',"
+				"class Class {"
 			),
 			array(
-				"class Mindbody_Class {",
-				"'Class' => 'Mindbody_Class',"
+				"class MindbodyClass {"
 			),
 			$file
 		);
@@ -138,8 +136,10 @@ EOD;
 	
 	foreach($classmap as $key => $value) {
 		$mapReplacements[0][] = "'{$key}' => '{$value}'";
+		$mapReplacements[0][] = "'Class' => 'Class',";
 		$mapReplacements[0][] = "public function {$value}({$value}";
 		$mapReplacements[1][] = "'{$key}' => 'MindbodyAPI\structures\\{$value}'";
+		$mapReplacements[1][] = "'Class' => 'MindbodyAPI\structures\\MindbodyClass',";
 		$mapReplacements[1][] = "public function {$value}(structures\\{$value}";
 	}
 	
