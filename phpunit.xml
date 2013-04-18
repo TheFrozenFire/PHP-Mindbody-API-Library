@@ -10,6 +10,6 @@
     <php>
         <env name="MindbodySourceName" value="" />
         <env name="MindbodyKey" value="" />
-        <env name="MindbodySiteIDs" value="-99" />
+        <env name="MindbodySiteIDs" value="" />
     </php>
 </phpunit>
