@@ -1,0 +1,14 @@
+{
+    "name": "thefrozenfire/mindbodyapi",
+    "description": "PHP library for interacting with the Mindbody Online API",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Justin Martin",
+            "email": "frozenfire@thefrozenfire.com"
+        }
+    ],
+    "require": {
+
+    }
+}
