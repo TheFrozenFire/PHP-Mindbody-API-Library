@@ -45,7 +45,10 @@ class MindbodyClient extends \SoapClient {
 		return $credentials;
 	}
 	
-	public static function structure($type, Traversable $propMap = null) {
+	public static function structure($type, $propMap = null) {
+		if($propMap && !(is_array($propMap) || is_object($propMap)))
+			throw new UnexpectedValueException("\$propMap must be an array or an object");
+	
 		if(isset(static::$classmap[$type])) {
 			$structure = new static::$classmap[$type]();
 			if(!empty($propMap))

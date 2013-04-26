@@ -1,5 +1,6 @@
 <?php
 namespace MindbodyAPI\services;
+use MindbodyAPI\structures;
 class SaleService extends \MindbodyAPI\MindbodyClient {
 	public static $classmap = array(
 		'GetAcceptedCardType' => 'MindbodyAPI\structures\GetAcceptedCardType',
@@ -48,21 +49,21 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 		'Size' => 'MindbodyAPI\structures\Size',
 		'Color' => 'MindbodyAPI\structures\Color',
 		'Item' => 'MindbodyAPI\structures\Item',
+		'Tip' => 'MindbodyAPI\structures\Tip',
 		'Product' => 'MindbodyAPI\structures\Product',
 		'Service' => 'MindbodyAPI\structures\Service',
 		'Package' => 'MindbodyAPI\structures\Package',
-		'Tip' => 'MindbodyAPI\structures\Tip',
 		'PaymentInfo' => 'MindbodyAPI\structures\PaymentInfo',
-		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
-		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
-		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
-		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
-		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
-		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
-		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
-		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
-		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
 		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
+		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
+		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
+		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
+		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
+		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
+		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
+		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
+		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
+		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
 		'CheckoutShoppingCartResponse' => 'MindbodyAPI\structures\CheckoutShoppingCartResponse',
 		'CheckoutShoppingCartResult' => 'MindbodyAPI\structures\CheckoutShoppingCartResult',
 		'GetSales' => 'MindbodyAPI\structures\GetSales',

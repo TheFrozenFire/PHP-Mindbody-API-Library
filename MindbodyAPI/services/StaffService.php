@@ -1,5 +1,6 @@
 <?php
 namespace MindbodyAPI\services;
+use MindbodyAPI\structures;
 class StaffService extends \MindbodyAPI\MindbodyClient {
 	public static $classmap = array(
 		'GetStaff' => 'MindbodyAPI\structures\GetStaff',

@@ -112,7 +112,7 @@ if(!is_dir("splitteroutput/services")) mkdir("splitteroutput/services");
 
 include_once("MindbodyAPI/MindbodyClient.php");
 
-foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
+foreach(array_merge(glob("splitteroutput/*_x0020_*.php"), array("splitteroutput/DataService.php")) as $serviceFile) {
 	$oldServiceName = basename($serviceFile, ".php");
 	$serviceName = str_replace("_x0020_", "", $oldServiceName);
 	$file = file_get_contents($serviceFile);
@@ -120,7 +120,7 @@ foreach(glob("splitteroutput/*_x0020_*.php") as $serviceFile) {
 if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
 	parent::__construct(\$wsdl, \$options);
 EOD;
-	$file = str_replace("<?php\nclass", "<?php\nnamespace MindbodyAPI\services;\nclass", $file);
+	$file = str_replace("<?php\nclass", "<?php\nnamespace MindbodyAPI\\services;use MindbodyAPI\\structures;\nclass", $file);
 	$file = str_replace($oldServiceName, $serviceName, $file);
 	$file = str_replace("class {$serviceName} extends SoapClient", "class {$serviceName} extends \MindbodyAPI\MindbodyClient", $file);
 	$file = str_replace("public function {$serviceName}(", "public function __construct(", $file);
