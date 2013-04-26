@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI;
 class MindbodyClient extends \SoapClient {
-	private static $classmap = array();
+	public static $classmap = array();
 
 	public static function service($name) {
 		$class = "MindbodyAPI\\services\\{$name}";
