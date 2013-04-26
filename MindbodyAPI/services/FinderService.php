@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\services;
 class FinderService extends \MindbodyAPI\MindbodyClient {
-	private static $classmap = array(
+	public static $classmap = array(
 		'GetClassesWithinRadius' => 'MindbodyAPI\structures\GetClassesWithinRadius',
 		'GetClassesWithinRadiusRequest' => 'MindbodyAPI\structures\GetClassesWithinRadiusRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',

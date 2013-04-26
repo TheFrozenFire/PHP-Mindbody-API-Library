@@ -26,7 +26,7 @@ class MindbodyClient_Test extends PHPUnit_Framework_TestCase {
 		
 		foreach($classmap as $type => $class) {
 			$this->assertTrue(class_exists($class), "{$class} type does not exist");
-			$typeInstance = new $class;
+			$typeInstance = $service::structure($type);
 			$this->assertInstanceOf($class, $typeInstance);
 		}
 	}

@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\services;
 class SaleService extends \MindbodyAPI\MindbodyClient {
-	private static $classmap = array(
+	public static $classmap = array(
 		'GetAcceptedCardType' => 'MindbodyAPI\structures\GetAcceptedCardType',
 		'GetAcceptedCardTypeRequest' => 'MindbodyAPI\structures\GetAcceptedCardTypeRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',

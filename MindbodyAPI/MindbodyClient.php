@@ -1,6 +1,8 @@
 <?php
 namespace MindbodyAPI;
 class MindbodyClient extends \SoapClient {
+	private static $classmap = array();
+
 	public static function service($name) {
 		$class = "MindbodyAPI\\services\\{$name}";
 		
@@ -41,6 +43,19 @@ class MindbodyClient extends \SoapClient {
 		$credentials->SiteIDs = $siteids;
 		
 		return $credentials;
+	}
+	
+	public static function structure($type, Traversable $propMap = null) {
+		if(isset(static::$classmap[$type])) {
+			$structure = new static::$classmap[$type]();
+			if(!empty($propMap))
+				foreach($propMap as $name => $value) {
+					if(property_exists($structure, $name))
+						$structure->$name = $value;
+				}
+			return $structure;
+		} else
+			throw new UnexpectedValueException("{$type} is not a valid type associated with ".get_called_class());
 	}
 	
 	public function __soapCall($function_name, $arguments, $options = array(), $input_headers = array(), &$output_headers = array()) {

@@ -125,11 +125,11 @@ EOD;
 	$file = str_replace("class {$serviceName} extends SoapClient", "class {$serviceName} extends \MindbodyAPI\MindbodyClient", $file);
 	$file = str_replace("public function {$serviceName}(", "public function __construct(", $file);
 	$file = str_replace("parent::__construct(\$wsdl, \$options);", $constructorcode, $file);
+	$file = str_replace("private static \$classmap = array(", "public static \$classmap = array(", $file);
 	
 	eval(trim($file, "<?php")); // Oh yes, I did that. Sue me. :P
 	$reflection = new ReflectionClass('MindbodyAPI\\services\\'.$serviceName);
 	$classmapProperty = $reflection->getProperty('classmap');
-	$classmapProperty->setAccessible(true);
 	$classmap = $classmapProperty->getValue();
 	
 	$mapReplacements = array(0 => array(), 1 => array());
