@@ -18,15 +18,11 @@ class MindbodyClient_Test extends PHPUnit_Framework_TestCase {
 	public function testServiceTypes($serviceName) {
 		$service = \MindbodyAPI\MindbodyClient::service($serviceName);
 		
-		$reflector = new ReflectionClass($service);
-		$classmap = $reflector->getStaticProperties();
-		$classmap = $classmap["classmap"];
+		$this->assertTrue(is_array($service::$classmap), "Classmap is not an array");
 		
-		$this->assertTrue(is_array($classmap), "Classmap is not an array");
-		
-		foreach($classmap as $type => $class) {
+		foreach($service::$classmap as $type => $class) {
 			$this->assertTrue(class_exists($class), "{$class} type does not exist");
-			$typeInstance = $service::structure($type);
+			$typeInstance = $service::structure($type, get_class_vars($class));
 			$this->assertInstanceOf($class, $typeInstance);
 		}
 	}
