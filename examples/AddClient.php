@@ -12,6 +12,9 @@ $credentials = $service::credentials( // Put your source credentials here.
 $userCredentials = $service::userCredentials( // API sandbox test credentials
 	"Siteowner",
 	"apitest1234",
+	array(
+		"-99"
+	)
 );
 
 // By including staff credentials, we enter Business Mode, which has less restrictive required fields
