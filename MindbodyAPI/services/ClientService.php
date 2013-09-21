@@ -72,6 +72,19 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		'UploadClientDocumentRequest' => 'MindbodyAPI\structures\UploadClientDocumentRequest',
 		'UploadClientDocumentResponse' => 'MindbodyAPI\structures\UploadClientDocumentResponse',
 		'UploadClientDocumentResult' => 'MindbodyAPI\structures\UploadClientDocumentResult',
+		'GetClientFormulaNotes' => 'MindbodyAPI\structures\GetClientFormulaNotes',
+		'GetClientFormulaNotesRequest' => 'MindbodyAPI\structures\GetClientFormulaNotesRequest',
+		'GetClientFormulaNotesResponse' => 'MindbodyAPI\structures\GetClientFormulaNotesResponse',
+		'GetClientFormulaNotesResult' => 'MindbodyAPI\structures\GetClientFormulaNotesResult',
+		'FormulaNote' => 'MindbodyAPI\structures\FormulaNote',
+		'AddClientFormulaNote' => 'MindbodyAPI\structures\AddClientFormulaNote',
+		'AddClientFormulaNoteRequest' => 'MindbodyAPI\structures\AddClientFormulaNoteRequest',
+		'AddClientFormulaNoteResponse' => 'MindbodyAPI\structures\AddClientFormulaNoteResponse',
+		'AddClientFormulaNoteResult' => 'MindbodyAPI\structures\AddClientFormulaNoteResult',
+		'DeleteClientFormulaNote' => 'MindbodyAPI\structures\DeleteClientFormulaNote',
+		'DeleteCientFormulaNoteRequest' => 'MindbodyAPI\structures\DeleteCientFormulaNoteRequest',
+		'DeleteClientFormulaNoteResponse' => 'MindbodyAPI\structures\DeleteClientFormulaNoteResponse',
+		'DeleteClientFormulaNoteResult' => 'MindbodyAPI\structures\DeleteClientFormulaNoteResult',
 		'GetClientReferralTypes' => 'MindbodyAPI\structures\GetClientReferralTypes',
 		'GetClientReferralTypesRequest' => 'MindbodyAPI\structures\GetClientReferralTypesRequest',
 		'GetClientReferralTypesResponse' => 'MindbodyAPI\structures\GetClientReferralTypesResponse',
@@ -134,6 +147,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 			}
 		}
 		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
+		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/ClientService.asmx';
 		parent::__construct($wsdl, $options);
 	}
 	/**
@@ -256,6 +270,48 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 	 */
 	public function UploadClientDocument(structures\UploadClientDocument $parameters) {
 		return $this->__soapCall('UploadClientDocument', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Gets a list of client formula notes.
+	 *
+	 * @param GetClientFormulaNotes $parameters
+	 * @return GetClientFormulaNotesResponse
+	 */
+	public function GetClientFormulaNotes(structures\GetClientFormulaNotes $parameters) {
+		return $this->__soapCall('GetClientFormulaNotes', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Adds a formula note to a client.
+	 *
+	 * @param AddClientFormulaNote $parameters
+	 * @return AddClientFormulaNoteResponse
+	 */
+	public function AddClientFormulaNote(structures\AddClientFormulaNote $parameters) {
+		return $this->__soapCall('AddClientFormulaNote', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Deletes a formula note to a client.
+	 *
+	 * @param DeleteClientFormulaNote $parameters
+	 * @return DeleteClientFormulaNoteResponse
+	 */
+	public function DeleteClientFormulaNote(structures\DeleteClientFormulaNote $parameters) {
+		return $this->__soapCall('DeleteClientFormulaNote', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

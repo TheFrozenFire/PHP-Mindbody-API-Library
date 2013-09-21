@@ -47,6 +47,10 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 		'AddOrUpdateStaffRequest' => 'MindbodyAPI\structures\AddOrUpdateStaffRequest',
 		'AddOrUpdateStaffResponse' => 'MindbodyAPI\structures\AddOrUpdateStaffResponse',
 		'AddOrUpdateStaffResult' => 'MindbodyAPI\structures\AddOrUpdateStaffResult',
+		'GetStaffImgURL' => 'MindbodyAPI\structures\GetStaffImgURL',
+		'GetStaffImgURLRequest' => 'MindbodyAPI\structures\GetStaffImgURLRequest',
+		'GetStaffImgURLResponse' => 'MindbodyAPI\structures\GetStaffImgURLResponse',
+		'GetStaffImgURLResult' => 'MindbodyAPI\structures\GetStaffImgURLResult',
 	);
 	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -55,6 +59,7 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 			}
 		}
 		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
+		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/StaffService.asmx';
 		parent::__construct($wsdl, $options);
 	}
 	/**
@@ -93,6 +98,20 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 	 */
 	public function AddOrUpdateStaff(structures\AddOrUpdateStaff $parameters) {
 		return $this->__soapCall('AddOrUpdateStaff', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Gets a staff member's image URL if it exists.
+	 *
+	 * @param GetStaffImgURL $parameters
+	 * @return GetStaffImgURLResponse
+	 */
+	public function GetStaffImgURL(structures\GetStaffImgURL $parameters) {
+		return $this->__soapCall('GetStaffImgURL', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

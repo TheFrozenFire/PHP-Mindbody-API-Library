@@ -7,6 +7,7 @@ class GetProductsRequest {
 	public $CategoryIDs; // ArrayOfInt
 	public $SubCategoryIDs; // ArrayOfInt
 	public $SellOnline; // boolean
+	public $LocationID; // int
 	
 }
 ?>

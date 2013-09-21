@@ -50,20 +50,20 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 		'Color' => 'MindbodyAPI\structures\Color',
 		'Item' => 'MindbodyAPI\structures\Item',
 		'Tip' => 'MindbodyAPI\structures\Tip',
-		'Product' => 'MindbodyAPI\structures\Product',
-		'Service' => 'MindbodyAPI\structures\Service',
 		'Package' => 'MindbodyAPI\structures\Package',
+		'Service' => 'MindbodyAPI\structures\Service',
+		'Product' => 'MindbodyAPI\structures\Product',
 		'PaymentInfo' => 'MindbodyAPI\structures\PaymentInfo',
-		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
-		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
-		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
-		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
 		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
-		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
-		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
 		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
+		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
+		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
+		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
 		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
+		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
 		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
+		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
+		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
 		'CheckoutShoppingCartResponse' => 'MindbodyAPI\structures\CheckoutShoppingCartResponse',
 		'CheckoutShoppingCartResult' => 'MindbodyAPI\structures\CheckoutShoppingCartResult',
 		'GetSales' => 'MindbodyAPI\structures\GetSales',
@@ -108,6 +108,7 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 			}
 		}
 		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
+		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/SaleService.asmx';
 		parent::__construct($wsdl, $options);
 	}
 	/**
