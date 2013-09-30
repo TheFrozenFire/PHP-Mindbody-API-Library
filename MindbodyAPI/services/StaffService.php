@@ -59,6 +59,7 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 			}
 		}
 		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
+		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/StaffService.asmx';
 		parent::__construct($wsdl, $options);
 	}
 	/**

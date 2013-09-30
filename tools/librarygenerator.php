@@ -115,9 +115,11 @@ include_once("MindbodyAPI/MindbodyClient.php");
 foreach(array_merge(glob("splitteroutput/*_x0020_*.php"), array("splitteroutput/DataService.php")) as $serviceFile) {
 	$oldServiceName = basename($serviceFile, ".php");
 	$serviceName = str_replace("_x0020_", "", $oldServiceName);
+	$endpoint = 'https://api.mindbodyonline.com/0_5/' . $serviceName . '.asmx';
 	$file = file_get_contents($serviceFile);
 	$constructorcode = <<<EOD
 if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
+	if(!isset(\$options['location'])) \$options['location'] = '$endpoint';
 	parent::__construct(\$wsdl, \$options);
 EOD;
 	$file = str_replace("<?php\nclass", "<?php\nnamespace MindbodyAPI\\services;use MindbodyAPI\\structures;\nclass", $file);
