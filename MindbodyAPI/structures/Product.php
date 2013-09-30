@@ -2,6 +2,8 @@
 namespace MindbodyAPI\structures;
 class Product {
 	public $Price; // decimal
+	public $TaxIncluded; // decimal
+	public $TaxRate; // decimal
 	public $Action; // ActionCode
 	public $ID; // string
 	public $GroupID; // int

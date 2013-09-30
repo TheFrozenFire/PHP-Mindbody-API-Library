@@ -46,6 +46,16 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		'GetRelationshipsResponse' => 'MindbodyAPI\structures\GetRelationshipsResponse',
 		'GetRelationshipsResult' => 'MindbodyAPI\structures\GetRelationshipsResult',
 		'Relationship' => 'MindbodyAPI\structures\Relationship',
+		'GetResourceSchedule' => 'MindbodyAPI\structures\GetResourceSchedule',
+		'GetResourceScheduleRequest' => 'MindbodyAPI\structures\GetResourceScheduleRequest',
+		'GetResourceScheduleResponse' => 'MindbodyAPI\structures\GetResourceScheduleResponse',
+		'GetResourceScheduleResult' => 'MindbodyAPI\structures\GetResourceScheduleResult',
+		'ReserveResource' => 'MindbodyAPI\structures\ReserveResource',
+		'ReserveResourceRequest' => 'MindbodyAPI\structures\ReserveResourceRequest',
+		'ReserveResourceResponse' => 'MindbodyAPI\structures\ReserveResourceResponse',
+		'ReserveResourceResult' => 'MindbodyAPI\structures\ReserveResourceResult',
+		'Row' => 'MindbodyAPI\structures\Row',
+		'RecordSet' => 'MindbodyAPI\structures\RecordSet',
 	);
 	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -148,6 +158,34 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 	 */
 	public function GetRelationships(structures\GetRelationships $parameters) {
 		return $this->__soapCall('GetRelationships', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Gets all resources schedule.
+	 *
+	 * @param GetResourceSchedule $parameters
+	 * @return GetResourceScheduleResponse
+	 */
+	public function GetResourceSchedule(structures\GetResourceSchedule $parameters) {
+		return $this->__soapCall('GetResourceSchedule', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Reserves a resource.
+	 *
+	 * @param ReserveResource $parameters
+	 * @return ReserveResourceResponse
+	 */
+	public function ReserveResource(structures\ReserveResource $parameters) {
+		return $this->__soapCall('ReserveResource', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

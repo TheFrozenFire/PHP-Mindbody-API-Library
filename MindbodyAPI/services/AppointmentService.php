@@ -75,7 +75,7 @@ class AppointmentService extends \MindbodyAPI\MindbodyClient {
 		parent::__construct($wsdl, $options);
 	}
 	/**
-	 * Gets a list of appointments that a given staff memeber is instructing.
+	 * Gets a list of appointments that a given staff member is instructing.
 	 *
 	 * @param GetStaffAppointments $parameters
 	 * @return GetStaffAppointmentsResponse
