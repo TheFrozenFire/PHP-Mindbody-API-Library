@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-
+        "ext-soap": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*@stable"
