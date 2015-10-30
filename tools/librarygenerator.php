@@ -80,7 +80,7 @@ if(!is_dir("wsdl2phpoutput")) {
 chdir("wsdl2phpoutput");
 
 foreach($services as $service) {
-	$result = shell_exec("wsdl2php {$service}");
+	$result = shell_exec("wsdl2php -i {$service}");
 	if(!strpos($result, "Writing")) die("Failed to fetch {$service}.");
 }
 
@@ -131,8 +131,7 @@ EOD;
 	
 	eval(trim($file, "<?php")); // Oh yes, I did that. Sue me. :P
 	$reflection = new ReflectionClass('MindbodyAPI\\services\\'.$serviceName);
-	$classmapProperty = $reflection->getProperty('classmap');
-	$classmap = $classmapProperty->getValue();
+	$classmap = $reflection->getDefaultProperties()['classmap'];
 	
 	$mapReplacements = array(0 => array(), 1 => array());
 	
