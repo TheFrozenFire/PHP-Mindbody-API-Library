@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class FinderService extends \SoapClient {
+class FinderService extends \MindbodyAPI\MindbodyClient {
 	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL";
 	private $classmap = array(
 		'GetClassesWithinRadius' => 'MindbodyAPI\structures\GetClassesWithinRadius',

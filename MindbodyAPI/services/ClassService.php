@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class ClassService extends \SoapClient {
+class ClassService extends \MindbodyAPI\MindbodyClient {
 	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL";
 	private $classmap = array(
 		'GetClasses' => 'MindbodyAPI\structures\GetClasses',

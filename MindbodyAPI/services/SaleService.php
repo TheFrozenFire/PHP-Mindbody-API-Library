@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class SaleService extends \SoapClient {
+class SaleService extends \MindbodyAPI\MindbodyClient {
 	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL";
 	private $classmap = array(
 		'GetAcceptedCardType' => 'MindbodyAPI\structures\GetAcceptedCardType',
