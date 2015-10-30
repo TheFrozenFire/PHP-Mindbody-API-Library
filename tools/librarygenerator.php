@@ -124,7 +124,7 @@ if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Int
 EOD;
 	$file = str_replace("<?php\nclass", "<?php\nnamespace MindbodyAPI\\services;use MindbodyAPI\\structures;\nclass", $file);
 	$file = str_replace($oldServiceName, $serviceName, $file);
-	$file = str_replace("class {$serviceName} extends SoapClient", "class {$serviceName} extends \MindbodyAPI\MindbodyClient", $file);
+	$file = str_replace("class {$serviceName} extends \SoapClient", "class {$serviceName} extends \MindbodyAPI\MindbodyClient", $file);
 	$file = str_replace("public function {$serviceName}(", "public function __construct(", $file);
 	$file = str_replace("parent::__construct(\$wsdl, \$options);", $constructorcode, $file);
 	$file = str_replace("private static \$classmap = array(", "public static \$classmap = array(", $file);
