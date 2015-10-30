@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class UpdateClientServicesRequest {
-	public $ClientServices; // ArrayOfClientService
-	public $Test; // boolean
-	
+class UpdateClientServicesRequest extends MBRequest {
+	/** @var ClientService[] */
+	public $ClientServices;
+	/** @var boolean */
+	public $Test;
 }
 ?>

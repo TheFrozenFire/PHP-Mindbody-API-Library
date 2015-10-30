@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class Tip {
-	public $Amount; // decimal
-	public $StaffID; // long
-	
+class Tip extends Item {
+	/** @var decimal */
+	public $Amount;
+	/** @var long */
+	public $StaffID;
 }
 ?>

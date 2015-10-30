@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetSessionTypesWithinRadiusResult {
-	public $FinderAppointments; // ArrayOfFinderAppointment
-	
+class GetSessionTypesWithinRadiusResult extends MBResult {
+	/** @var FinderAppointment[] */
+	public $FinderAppointments;
 }
 ?>

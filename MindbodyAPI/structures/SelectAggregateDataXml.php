@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class SelectAggregateDataXml {
-	public $Request; // SelectAggregateDataXmlRequest
-	
+	/** @var SelectAggregateDataXmlRequest */
+	public $Request;
 }
 ?>

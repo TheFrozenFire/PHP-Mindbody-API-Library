@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetWaitlistEntriesResponse {
-	public $GetWaitlistEntriesResult; // GetWaitlistEntriesResult
-	
+	/** @var GetWaitlistEntriesResult */
+	public $GetWaitlistEntriesResult;
 }
 ?>

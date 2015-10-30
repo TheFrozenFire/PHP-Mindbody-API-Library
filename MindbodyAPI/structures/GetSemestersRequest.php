@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetSemestersRequest {
-	public $SemesterIDs; // ArrayOfInt
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	
+class GetSemestersRequest extends MBRequest {
+	/** @var Int[] */
+	public $SemesterIDs;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
 }
 ?>

@@ -1,12 +1,21 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddClientsToClassesRequest {
-	public $ClientIDs; // ArrayOfString
-	public $ClassIDs; // ArrayOfInt
-	public $Test; // boolean
-	public $RequirePayment; // boolean
-	public $Waitlist; // boolean
-	public $SendEmail; // boolean
-	
+class AddClientsToClassesRequest extends MBRequest {
+	/** @var String[] */
+	public $ClientIDs;
+	/** @var Int[] */
+	public $ClassIDs;
+	/** @var boolean */
+	public $Test;
+	/** @var boolean */
+	public $RequirePayment;
+	/** @var boolean */
+	public $Waitlist;
+	/** @var boolean */
+	public $SendEmail;
+	/** @var int */
+	public $WaitlistEntryID;
+	/** @var int */
+	public $ClientServiceID;
 }
 ?>

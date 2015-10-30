@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class SendUserNewPassword {
-	public $Request; // ClientSendUserNewPasswordRequest
-	
+	/** @var ClientSendUserNewPasswordRequest */
+	public $Request;
 }
 ?>

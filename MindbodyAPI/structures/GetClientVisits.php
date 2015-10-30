@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientVisits {
-	public $Request; // GetClientVisitsRequest
-	
+	/** @var GetClientVisitsRequest */
+	public $Request;
 }
 ?>

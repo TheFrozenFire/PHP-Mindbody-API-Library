@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetRelationshipsRequest {
+class GetRelationshipsRequest extends MBRequest {
 }
 ?>

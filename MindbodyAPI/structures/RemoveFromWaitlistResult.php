@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class RemoveFromWaitlistResult {
+class RemoveFromWaitlistResult extends MBResult {
 }
 ?>

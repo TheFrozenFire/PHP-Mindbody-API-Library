@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetSessionTypesWithinRadius {
-	public $Request; // GetSessionTypesWithinRadiusRequest
-	
+	/** @var GetSessionTypesWithinRadiusRequest */
+	public $Request;
 }
 ?>

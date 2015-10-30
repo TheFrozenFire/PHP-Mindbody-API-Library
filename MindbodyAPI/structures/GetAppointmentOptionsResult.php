@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetAppointmentOptionsResult {
-	public $Options; // ArrayOfOption
-	
+class GetAppointmentOptionsResult extends MBResult {
+	/** @var Option[] */
+	public $Options;
 }
 ?>

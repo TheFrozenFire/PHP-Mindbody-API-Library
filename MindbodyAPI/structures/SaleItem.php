@@ -1,14 +1,21 @@
 <?php
 namespace MindbodyAPI\structures;
-class SaleItem {
-	public $Sale; // Sale
-	public $Description; // string
-	public $Price; // decimal
-	public $AmountPaid; // decimal
-	public $Discount; // decimal
-	public $Tax; // decimal
-	public $Returned; // boolean
-	public $Quantity; // int
-	
+class SaleItem extends MBObject {
+	/** @var Sale */
+	public $Sale;
+	/** @var string */
+	public $Description;
+	/** @var decimal */
+	public $Price;
+	/** @var decimal */
+	public $AmountPaid;
+	/** @var decimal */
+	public $Discount;
+	/** @var decimal */
+	public $Tax;
+	/** @var boolean */
+	public $Returned;
+	/** @var int */
+	public $Quantity;
 }
 ?>

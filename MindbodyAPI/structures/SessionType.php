@@ -1,11 +1,17 @@
 <?php
 namespace MindbodyAPI\structures;
-class SessionType {
-	public $DefaultTimeLength; // int
-	public $ProgramID; // int
-	public $Action; // ActionCode
-	public $ID; // int
-	public $Name; // string
-	
+class SessionType extends MBObject {
+	/** @var int */
+	public $DefaultTimeLength;
+	/** @var int */
+	public $ProgramID;
+	/** @var int */
+	public $NumDeducted;
+	/** @var ActionCode */
+	public $Action;
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
 }
 ?>

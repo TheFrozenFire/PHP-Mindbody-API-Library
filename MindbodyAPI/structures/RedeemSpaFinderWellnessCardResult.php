@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class RedeemSpaFinderWellnessCardResult {
+class RedeemSpaFinderWellnessCardResult extends MBResult {
 }
 ?>

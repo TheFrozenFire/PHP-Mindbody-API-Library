@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClassVisitsRequest {
-	public $ClassID; // int
-	
+class GetClassVisitsRequest extends MBRequest {
+	/** @var int */
+	public $ClassID;
 }
 ?>

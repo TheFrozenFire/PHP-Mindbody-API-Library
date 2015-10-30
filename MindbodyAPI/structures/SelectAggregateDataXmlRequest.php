@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class SelectAggregateDataXmlRequest {
-	public $SelectSql; // string
-	
+class SelectAggregateDataXmlRequest extends MBRequest {
+	/** @var string */
+	public $SelectSql;
 }
 ?>

@@ -1,10 +1,13 @@
 <?php
 namespace MindbodyAPI\structures;
-class Unavailability {
-	public $ID; // int
-	public $StartDateTime; // dateTime
-	public $EndDateTime; // dateTime
-	public $Description; // string
-	
+class Unavailability extends ScheduleItem {
+	/** @var int */
+	public $ID;
+	/** @var dateTime */
+	public $StartDateTime;
+	/** @var dateTime */
+	public $EndDateTime;
+	/** @var string */
+	public $Description;
 }
 ?>

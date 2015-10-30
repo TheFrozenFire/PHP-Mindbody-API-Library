@@ -1,19 +1,43 @@
 <?php
 namespace MindbodyAPI\structures;
 class Site {
-	public $ID; // int
-	public $Name; // string
-	public $Description; // string
-	public $LogoURL; // string
-	public $PageColor1; // string
-	public $PageColor2; // string
-	public $PageColor3; // string
-	public $PageColor4; // string
-	public $AcceptsVisa; // boolean
-	public $AcceptsDiscover; // boolean
-	public $AcceptsMasterCard; // boolean
-	public $AcceptsAmericanExpress; // boolean
-	public $ContactEmail; // string
-	
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var string */
+	public $Description;
+	/** @var string */
+	public $LogoURL;
+	/** @var string */
+	public $PageColor1;
+	/** @var string */
+	public $PageColor2;
+	/** @var string */
+	public $PageColor3;
+	/** @var string */
+	public $PageColor4;
+	/** @var boolean */
+	public $AcceptsVisa;
+	/** @var boolean */
+	public $AcceptsDiscover;
+	/** @var boolean */
+	public $AcceptsMasterCard;
+	/** @var boolean */
+	public $AcceptsAmericanExpress;
+	/** @var string */
+	public $ContactEmail;
+	/** @var boolean */
+	public $ESA;
+	/** @var boolean */
+	public $TotalWOD;
+	/** @var boolean */
+	public $TaxInclusivePrices;
+	/** @var boolean */
+	public $SMSPackageEnabled;
+	/** @var boolean */
+	public $AllowsDashboardAccess;
+	/** @var string */
+	public $PricingLevel;
 }
 ?>

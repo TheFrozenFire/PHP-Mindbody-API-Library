@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class UpdateProductsRequest {
-	public $Products; // ArrayOfProduct
-	public $Test; // boolean
-	
+class UpdateProductsRequest extends MBRequest {
+	/** @var Product[] */
+	public $Products;
+	/** @var boolean */
+	public $Test;
 }
 ?>

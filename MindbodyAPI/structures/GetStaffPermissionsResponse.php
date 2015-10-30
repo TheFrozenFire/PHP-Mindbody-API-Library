@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetStaffPermissionsResponse {
-	public $GetStaffPermissionsResult; // GetStaffPermissionsResult
-	
+	/** @var GetStaffPermissionsResult */
+	public $GetStaffPermissionsResult;
 }
 ?>

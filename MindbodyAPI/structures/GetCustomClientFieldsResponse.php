@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetCustomClientFieldsResponse {
-	public $GetCustomClientFieldsResult; // GetCustomClientFieldsResult
-	
+	/** @var GetCustomClientFieldsResult */
+	public $GetCustomClientFieldsResult;
 }
 ?>

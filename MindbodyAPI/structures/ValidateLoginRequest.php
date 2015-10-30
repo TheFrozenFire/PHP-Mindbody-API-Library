@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class ValidateLoginRequest {
-	public $Username; // string
-	public $Password; // string
-	
+class ValidateLoginRequest extends MBRequest {
+	/** @var string */
+	public $Username;
+	/** @var string */
+	public $Password;
 }
 ?>

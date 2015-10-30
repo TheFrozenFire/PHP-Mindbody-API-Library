@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class DeleteClientFormulaNoteResult {
-	public $FormulaNote; // FormulaNote
-	
+class DeleteClientFormulaNoteResult extends MBResult {
+	/** @var FormulaNote */
+	public $FormulaNote;
 }
 ?>

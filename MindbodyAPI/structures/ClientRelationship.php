@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class ClientRelationship {
-	public $RelatedClient; // Client
-	public $Relationship; // Relationship
-	public $RelationshipName; // string
-	
+class ClientRelationship extends MBObject {
+	/** @var Client */
+	public $RelatedClient;
+	/** @var Relationship */
+	public $Relationship;
+	/** @var string */
+	public $RelationshipName;
 }
 ?>

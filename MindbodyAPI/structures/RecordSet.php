@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class RecordSet {
-	public $Row; // Row
-	
+	/** @var Row */
+	public $Row;
 }
 ?>

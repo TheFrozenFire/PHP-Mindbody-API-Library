@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
 class Organization {
-	public $ID; // int
-	public $Name; // string
-	
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
 }
 ?>

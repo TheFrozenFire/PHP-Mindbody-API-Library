@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetEnrollmentsResponse {
-	public $GetEnrollmentsResult; // GetEnrollmentsResult
-	
+	/** @var GetEnrollmentsResult */
+	public $GetEnrollmentsResult;
 }
 ?>

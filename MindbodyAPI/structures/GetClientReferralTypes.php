@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientReferralTypes {
-	public $Request; // GetClientReferralTypesRequest
-	
+	/** @var GetClientReferralTypesRequest */
+	public $Request;
 }
 ?>

@@ -1,10 +1,13 @@
 <?php
 namespace MindbodyAPI\structures;
-class ContactLogComment {
-	public $ID; // int
-	public $Text; // string
-	public $CreatedBy; // Staff
-	public $CreatedDateTime; // dateTime
-	
+class ContactLogComment extends MBObject {
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Text;
+	/** @var Staff */
+	public $CreatedBy;
+	/** @var dateTime */
+	public $CreatedDateTime;
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetPackagesResult {
-	public $Packages; // ArrayOfPackage
-	
+class GetPackagesResult extends MBResult {
+	/** @var Package[] */
+	public $Packages;
 }
 ?>

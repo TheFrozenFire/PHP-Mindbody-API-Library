@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetLocations {
-	public $Request; // GetLocationsRequest
-	
+	/** @var GetLocationsRequest */
+	public $Request;
 }
 ?>

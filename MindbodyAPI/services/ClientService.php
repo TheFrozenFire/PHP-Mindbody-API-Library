@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class ClientService extends \MindbodyAPI\MindbodyClient {
-	public static $classmap = array(
+class ClientService extends \SoapClient {
+	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL";
+	private $classmap = array(
 		'AddArrival' => 'MindbodyAPI\structures\AddArrival',
 		'AddArrivalRequest' => 'MindbodyAPI\structures\AddArrivalRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',
@@ -37,6 +38,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		'Location' => 'MindbodyAPI\structures\Location',
 		'AppointmentStatus' => 'MindbodyAPI\structures\AppointmentStatus',
 		'Resource' => 'MindbodyAPI\structures\Resource',
+		'ProviderIDUpdate' => 'MindbodyAPI\structures\ProviderIDUpdate',
 		'CustomClientField' => 'MindbodyAPI\structures\CustomClientField',
 		'AddOrUpdateClientsResponse' => 'MindbodyAPI\structures\AddOrUpdateClientsResponse',
 		'AddOrUpdateClientsResult' => 'MindbodyAPI\structures\AddOrUpdateClientsResult',
@@ -140,15 +142,16 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		'SendUserNewPasswordResponse' => 'MindbodyAPI\structures\SendUserNewPasswordResponse',
 		'ClientSendUserNewPasswordResult' => 'MindbodyAPI\structures\ClientSendUserNewPasswordResult',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL", $options = array()) {
-		foreach (self::$classmap as $key => $value) {
+	public function __construct($wsdl = null, $options = array()) {
+		foreach ($this->classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
-		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/ClientService.asmx';
-		parent::__construct($wsdl, $options);
+		if (isset($options['headers'])) {
+			$this->__setSoapHeaders($options['headers']);
+		}
+		parent::__construct($wsdl ? : self::WSDL_FILE, $options);
 	}
 	/**
 	 * Adds an arrival record for the given client.

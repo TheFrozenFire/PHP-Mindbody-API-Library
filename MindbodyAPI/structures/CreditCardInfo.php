@@ -1,18 +1,29 @@
 <?php
 namespace MindbodyAPI\structures;
-class CreditCardInfo {
-	public $CVV; // string
-	public $Action; // ActionCode
-	public $CreditCardNumber; // string
-	public $Amount; // decimal
-	public $ExpMonth; // string
-	public $ExpYear; // string
-	public $BillingName; // string
-	public $BillingAddress; // string
-	public $BillingCity; // string
-	public $BillingState; // string
-	public $BillingPostalCode; // string
-	public $SaveInfo; // boolean
-	
+class CreditCardInfo extends PaymentInfo {
+	/** @var string */
+	public $CVV;
+	/** @var ActionCode */
+	public $Action;
+	/** @var string */
+	public $CreditCardNumber;
+	/** @var decimal */
+	public $Amount;
+	/** @var string */
+	public $ExpMonth;
+	/** @var string */
+	public $ExpYear;
+	/** @var string */
+	public $BillingName;
+	/** @var string */
+	public $BillingAddress;
+	/** @var string */
+	public $BillingCity;
+	/** @var string */
+	public $BillingState;
+	/** @var string */
+	public $BillingPostalCode;
+	/** @var boolean */
+	public $SaveInfo;
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class Item {
+class Item extends MBObject {
 }
 ?>

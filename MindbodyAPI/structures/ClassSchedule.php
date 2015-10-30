@@ -1,27 +1,51 @@
 <?php
 namespace MindbodyAPI\structures;
-class ClassSchedule {
-	public $Classes; // ArrayOfClass
-	public $Clients; // ArrayOfClient
-	public $Course; // Course
-	public $SemesterID; // int
-	public $IsAvailable; // boolean
-	public $Action; // ActionCode
-	public $ID; // int
-	public $ClassDescription; // ClassDescription
-	public $DaySunday; // boolean
-	public $DayMonday; // boolean
-	public $DayTuesday; // boolean
-	public $DayWednesday; // boolean
-	public $DayThursday; // boolean
-	public $DayFriday; // boolean
-	public $DaySaturday; // boolean
-	public $StartTime; // dateTime
-	public $EndTime; // dateTime
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	public $Staff; // Staff
-	public $Location; // Location
-	
+class ClassSchedule extends MBObject {
+	/** @var Class[] */
+	public $Classes;
+	/** @var Client[] */
+	public $Clients;
+	/** @var Course */
+	public $Course;
+	/** @var int */
+	public $SemesterID;
+	/** @var boolean */
+	public $IsAvailable;
+	/** @var ActionCode */
+	public $Action;
+	/** @var int */
+	public $ID;
+	/** @var ClassDescription */
+	public $ClassDescription;
+	/** @var boolean */
+	public $DaySunday;
+	/** @var boolean */
+	public $DayMonday;
+	/** @var boolean */
+	public $DayTuesday;
+	/** @var boolean */
+	public $DayWednesday;
+	/** @var boolean */
+	public $DayThursday;
+	/** @var boolean */
+	public $DayFriday;
+	/** @var boolean */
+	public $DaySaturday;
+	/** @var boolean */
+	public $AllowOpenEnrollment;
+	/** @var boolean */
+	public $AllowDateForwardEnrollment;
+	/** @var dateTime */
+	public $StartTime;
+	/** @var dateTime */
+	public $EndTime;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
+	/** @var Staff */
+	public $Staff;
+	/** @var Location */
+	public $Location;
 }
 ?>

@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetStaffImgURLResult {
-	public $ImageURL; // string
-	public $MobileImageURL; // string
-	
+class GetStaffImgURLResult extends MBResult {
+	/** @var string */
+	public $ImageURL;
+	/** @var string */
+	public $MobileImageURL;
 }
 ?>

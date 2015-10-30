@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddOrUpdateContactLogsRequest {
-	public $UpdateAction; // string
-	public $Test; // boolean
-	public $ContactLogs; // ArrayOfContactLog
-	
+class AddOrUpdateContactLogsRequest extends MBRequest {
+	/** @var string */
+	public $UpdateAction;
+	/** @var boolean */
+	public $Test;
+	/** @var ContactLog[] */
+	public $ContactLogs;
 }
 ?>

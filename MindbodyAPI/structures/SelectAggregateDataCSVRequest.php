@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class SelectAggregateDataCSVRequest {
-	public $SelectSql; // string
-	
+class SelectAggregateDataCSVRequest extends MBRequest {
+	/** @var string */
+	public $SelectSql;
 }
 ?>

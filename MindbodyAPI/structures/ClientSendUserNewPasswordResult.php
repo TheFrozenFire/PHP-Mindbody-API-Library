@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class ClientSendUserNewPasswordResult {
+class ClientSendUserNewPasswordResult extends MBResult {
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientContactLogsResult {
-	public $ContactLogs; // ArrayOfContactLog
-	
+class GetClientContactLogsResult extends MBResult {
+	/** @var ContactLog[] */
+	public $ContactLogs;
 }
 ?>

@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class SaleService extends \MindbodyAPI\MindbodyClient {
-	public static $classmap = array(
+class SaleService extends \SoapClient {
+	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL";
+	private $classmap = array(
 		'GetAcceptedCardType' => 'MindbodyAPI\structures\GetAcceptedCardType',
 		'GetAcceptedCardTypeRequest' => 'MindbodyAPI\structures\GetAcceptedCardTypeRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',
@@ -42,6 +43,7 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 		'CustomClientField' => 'MindbodyAPI\structures\CustomClientField',
 		'ClientService' => 'MindbodyAPI\structures\ClientService',
 		'Resource' => 'MindbodyAPI\structures\Resource',
+		'ProviderIDUpdate' => 'MindbodyAPI\structures\ProviderIDUpdate',
 		'ClassDescription' => 'MindbodyAPI\structures\ClassDescription',
 		'Level' => 'MindbodyAPI\structures\Level',
 		'Course' => 'MindbodyAPI\structures\Course',
@@ -49,21 +51,21 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 		'Size' => 'MindbodyAPI\structures\Size',
 		'Color' => 'MindbodyAPI\structures\Color',
 		'Item' => 'MindbodyAPI\structures\Item',
-		'Tip' => 'MindbodyAPI\structures\Tip',
 		'Package' => 'MindbodyAPI\structures\Package',
 		'Service' => 'MindbodyAPI\structures\Service',
 		'Product' => 'MindbodyAPI\structures\Product',
+		'Tip' => 'MindbodyAPI\structures\Tip',
 		'PaymentInfo' => 'MindbodyAPI\structures\PaymentInfo',
-		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
+		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
+		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
+		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
 		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
 		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
-		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
-		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
-		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
+		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
 		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
 		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
-		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
-		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
+		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
+		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
 		'CheckoutShoppingCartResponse' => 'MindbodyAPI\structures\CheckoutShoppingCartResponse',
 		'CheckoutShoppingCartResult' => 'MindbodyAPI\structures\CheckoutShoppingCartResult',
 		'GetSales' => 'MindbodyAPI\structures\GetSales',
@@ -100,16 +102,25 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 		'GetCustomPaymentMethodsRequest' => 'MindbodyAPI\structures\GetCustomPaymentMethodsRequest',
 		'GetCustomPaymentMethodsResponse' => 'MindbodyAPI\structures\GetCustomPaymentMethodsResponse',
 		'GetCustomPaymentMethodsResult' => 'MindbodyAPI\structures\GetCustomPaymentMethodsResult',
+		'ReturnSale' => 'MindbodyAPI\structures\ReturnSale',
+		'ReturnSaleRequest' => 'MindbodyAPI\structures\ReturnSaleRequest',
+		'ReturnSaleResponse' => 'MindbodyAPI\structures\ReturnSaleResponse',
+		'ReturnSaleResult' => 'MindbodyAPI\structures\ReturnSaleResult',
+		'UpdateSaleDate' => 'MindbodyAPI\structures\UpdateSaleDate',
+		'UpdateSaleDateRequest' => 'MindbodyAPI\structures\UpdateSaleDateRequest',
+		'UpdateSaleDateResponse' => 'MindbodyAPI\structures\UpdateSaleDateResponse',
+		'UpdateSaleDateResult' => 'MindbodyAPI\structures\UpdateSaleDateResult',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL", $options = array()) {
-		foreach (self::$classmap as $key => $value) {
+	public function __construct($wsdl = null, $options = array()) {
+		foreach ($this->classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
-		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/SaleService.asmx';
-		parent::__construct($wsdl, $options);
+		if (isset($options['headers'])) {
+			$this->__setSoapHeaders($options['headers']);
+		}
+		parent::__construct($wsdl ? : self::WSDL_FILE, $options);
 	}
 	/**
 	 * Gets a list of card types that the site accepts.
@@ -245,6 +256,34 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 	 */
 	public function GetCustomPaymentMethods(structures\GetCustomPaymentMethods $parameters) {
 		return $this->__soapCall('GetCustomPaymentMethods', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Return a sale used in business mode
+	 *
+	 * @param ReturnSale $parameters
+	 * @return ReturnSaleResponse
+	 */
+	public function ReturnSale(structures\ReturnSale $parameters) {
+		return $this->__soapCall('ReturnSale', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Modify sale date in business mode
+	 *
+	 * @param UpdateSaleDate $parameters
+	 * @return UpdateSaleDateResponse
+	 */
+	public function UpdateSaleDate(structures\UpdateSaleDate $parameters) {
+		return $this->__soapCall('UpdateSaleDate', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

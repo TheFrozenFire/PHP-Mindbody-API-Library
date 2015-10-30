@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientReferralTypesRequest {
+class GetClientReferralTypesRequest extends MBRequest {
 }
 ?>

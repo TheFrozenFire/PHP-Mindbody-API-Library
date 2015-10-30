@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetBusinessLocationsWithinRadiusResponse {
-	public $GetBusinessLocationsWithinRadiusResult; // GetBusinessLocationsWithinRadiusResult
-	
+	/** @var GetBusinessLocationsWithinRadiusResult */
+	public $GetBusinessLocationsWithinRadiusResult;
 }
 ?>

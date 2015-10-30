@@ -1,11 +1,15 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddOrUpdateFinderUsersRequest {
-	public $UpdateAction; // string
-	public $Test; // boolean
-	public $NoClientEmail; // boolean
-	public $PartnerID; // int
-	public $FinderUsers; // ArrayOfFinderUser
-	
+class AddOrUpdateFinderUsersRequest extends MBRequest {
+	/** @var string */
+	public $UpdateAction;
+	/** @var boolean */
+	public $Test;
+	/** @var boolean */
+	public $NoClientEmail;
+	/** @var int */
+	public $PartnerID;
+	/** @var FinderUser[] */
+	public $FinderUsers;
 }
 ?>

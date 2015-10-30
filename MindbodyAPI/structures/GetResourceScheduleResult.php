@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetResourceScheduleResult {
-	public $Results; // RecordSet
-	
+class GetResourceScheduleResult extends MBResult {
+	/** @var RecordSet */
+	public $Results;
 }
 ?>

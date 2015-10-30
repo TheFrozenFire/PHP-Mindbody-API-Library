@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class FinderService extends \MindbodyAPI\MindbodyClient {
-	public static $classmap = array(
+class FinderService extends \SoapClient {
+	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL";
+	private $classmap = array(
 		'GetClassesWithinRadius' => 'MindbodyAPI\structures\GetClassesWithinRadius',
 		'GetClassesWithinRadiusRequest' => 'MindbodyAPI\structures\GetClassesWithinRadiusRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',
@@ -39,6 +40,7 @@ class FinderService extends \MindbodyAPI\MindbodyClient {
 		'ClientRelationship' => 'MindbodyAPI\structures\ClientRelationship',
 		'Relationship' => 'MindbodyAPI\structures\Relationship',
 		'CustomClientField' => 'MindbodyAPI\structures\CustomClientField',
+		'ProviderIDUpdate' => 'MindbodyAPI\structures\ProviderIDUpdate',
 		'GetSessionTypesWithinRadius' => 'MindbodyAPI\structures\GetSessionTypesWithinRadius',
 		'GetSessionTypesWithinRadiusRequest' => 'MindbodyAPI\structures\GetSessionTypesWithinRadiusRequest',
 		'GetSessionTypesWithinRadiusResponse' => 'MindbodyAPI\structures\GetSessionTypesWithinRadiusResponse',
@@ -52,27 +54,27 @@ class FinderService extends \MindbodyAPI\MindbodyClient {
 		'FinderCheckoutShoppingCartRequest' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartRequest',
 		'SpaFinderWellnessCard' => 'MindbodyAPI\structures\SpaFinderWellnessCard',
 		'PaymentInfo' => 'MindbodyAPI\structures\PaymentInfo',
-		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
+		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
+		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
+		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
 		'DebitAccountInfo' => 'MindbodyAPI\structures\DebitAccountInfo',
 		'GiftCardInfo' => 'MindbodyAPI\structures\GiftCardInfo',
-		'CompInfo' => 'MindbodyAPI\structures\CompInfo',
-		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
-		'StoredCardInfo' => 'MindbodyAPI\structures\StoredCardInfo',
+		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
 		'EncryptedTrackDataInfo' => 'MindbodyAPI\structures\EncryptedTrackDataInfo',
 		'CustomPaymentInfo' => 'MindbodyAPI\structures\CustomPaymentInfo',
-		'TrackDataInfo' => 'MindbodyAPI\structures\TrackDataInfo',
-		'CheckInfo' => 'MindbodyAPI\structures\CheckInfo',
+		'CashInfo' => 'MindbodyAPI\structures\CashInfo',
+		'CreditCardInfo' => 'MindbodyAPI\structures\CreditCardInfo',
 		'FinderCheckoutShoppingCartResponse' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartResponse',
 		'FinderCheckoutShoppingCartResult' => 'MindbodyAPI\structures\FinderCheckoutShoppingCartResult',
 		'ShoppingCart' => 'MindbodyAPI\structures\ShoppingCart',
 		'CartItem' => 'MindbodyAPI\structures\CartItem',
 		'Item' => 'MindbodyAPI\structures\Item',
-		'Tip' => 'MindbodyAPI\structures\Tip',
 		'Package' => 'MindbodyAPI\structures\Package',
 		'Service' => 'MindbodyAPI\structures\Service',
 		'Product' => 'MindbodyAPI\structures\Product',
 		'Color' => 'MindbodyAPI\structures\Color',
 		'Size' => 'MindbodyAPI\structures\Size',
+		'Tip' => 'MindbodyAPI\structures\Tip',
 		'Class' => 'MindbodyAPI\structures\MindbodyClass',
 		'Visit' => 'MindbodyAPI\structures\Visit',
 		'ClassDescription' => 'MindbodyAPI\structures\ClassDescription',
@@ -91,15 +93,16 @@ class FinderService extends \MindbodyAPI\MindbodyClient {
 		'SendFinderUserNewPasswordResponse' => 'MindbodyAPI\structures\SendFinderUserNewPasswordResponse',
 		'SendFinderUserNewPasswordResult' => 'MindbodyAPI\structures\SendFinderUserNewPasswordResult',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL", $options = array()) {
-		foreach (self::$classmap as $key => $value) {
+	public function __construct($wsdl = null, $options = array()) {
+		foreach ($this->classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
-		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/FinderService.asmx';
-		parent::__construct($wsdl, $options);
+		if (isset($options['headers'])) {
+			$this->__setSoapHeaders($options['headers']);
+		}
+		parent::__construct($wsdl ? : self::WSDL_FILE, $options);
 	}
 	/**
 	 * Gets finder classes within a given radius.

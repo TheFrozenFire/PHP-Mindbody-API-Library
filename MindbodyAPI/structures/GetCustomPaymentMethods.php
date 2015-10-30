@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetCustomPaymentMethods {
-	public $Request; // GetCustomPaymentMethodsRequest
-	
+	/** @var GetCustomPaymentMethodsRequest */
+	public $Request;
 }
 ?>

@@ -1,13 +1,19 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientContactLogsRequest {
-	public $ClientID; // string
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	public $StaffIDs; // ArrayOfLong
-	public $ShowSystemGenerated; // boolean
-	public $TypeIDs; // ArrayOfInt
-	public $SubtypeIDs; // ArrayOfInt
-	
+class GetClientContactLogsRequest extends MBRequest {
+	/** @var string */
+	public $ClientID;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
+	/** @var Long[] */
+	public $StaffIDs;
+	/** @var boolean */
+	public $ShowSystemGenerated;
+	/** @var Int[] */
+	public $TypeIDs;
+	/** @var Int[] */
+	public $SubtypeIDs;
 }
 ?>

@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddClientFormulaNoteRequest {
-	public $ClientID; // string
-	public $AppointmentID; // long
-	public $Note; // string
-	
+class AddClientFormulaNoteRequest extends MBRequest {
+	/** @var string */
+	public $ClientID;
+	/** @var long */
+	public $AppointmentID;
+	/** @var string */
+	public $Note;
 }
 ?>

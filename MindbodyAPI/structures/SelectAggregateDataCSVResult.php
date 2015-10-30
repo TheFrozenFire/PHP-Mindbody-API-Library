@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class SelectAggregateDataCSVResult {
-	public $CSV; // string
-	
+class SelectAggregateDataCSVResult extends MBResult {
+	/** @var string */
+	public $CSV;
 }
 ?>

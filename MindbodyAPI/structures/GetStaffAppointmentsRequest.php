@@ -1,13 +1,19 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetStaffAppointmentsRequest {
-	public $StaffCredentials; // StaffCredentials
-	public $AppointmentIDs; // ArrayOfInt
-	public $LocationIDs; // ArrayOfInt
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	public $StaffIDs; // ArrayOfLong
-	public $ClientIDs; // ArrayOfString
-	
+class GetStaffAppointmentsRequest extends MBRequest {
+	/** @var StaffCredentials */
+	public $StaffCredentials;
+	/** @var Int[] */
+	public $AppointmentIDs;
+	/** @var Int[] */
+	public $LocationIDs;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
+	/** @var Long[] */
+	public $StaffIDs;
+	/** @var String[] */
+	public $ClientIDs;
 }
 ?>

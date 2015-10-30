@@ -1,15 +1,23 @@
 <?php
 namespace MindbodyAPI\structures;
-class Service {
-	public $Price; // decimal
-	public $OnlinePrice; // decimal
-	public $TaxIncluded; // decimal
-	public $TaxRate; // decimal
-	public $ProductID; // double
-	public $Action; // ActionCode
-	public $ID; // string
-	public $Name; // string
-	public $Count; // int
-	
+class Service extends Item {
+	/** @var decimal */
+	public $Price;
+	/** @var decimal */
+	public $OnlinePrice;
+	/** @var decimal */
+	public $TaxIncluded;
+	/** @var decimal */
+	public $TaxRate;
+	/** @var double */
+	public $ProductID;
+	/** @var ActionCode */
+	public $Action;
+	/** @var string */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var int */
+	public $Count;
 }
 ?>

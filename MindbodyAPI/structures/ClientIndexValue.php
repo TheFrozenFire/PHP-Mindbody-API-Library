@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class ClientIndexValue {
-	public $Action; // ActionCode
-	public $ID; // int
-	public $Name; // string
-	
+class ClientIndexValue extends MBObject {
+	/** @var ActionCode */
+	public $Action;
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
 }
 ?>

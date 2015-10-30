@@ -1,12 +1,17 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetStaffRequest {
-	public $StaffIDs; // ArrayOfLong
-	public $StaffCredentials; // StaffCredentials
-	public $Filters; // ArrayOfStaffFilter
-	public $SessionTypeID; // int
-	public $StartDateTime; // dateTime
-	public $LocationID; // int
-	
+class GetStaffRequest extends MBRequest {
+	/** @var Long[] */
+	public $StaffIDs;
+	/** @var StaffCredentials */
+	public $StaffCredentials;
+	/** @var StaffFilter[] */
+	public $Filters;
+	/** @var int */
+	public $SessionTypeID;
+	/** @var dateTime */
+	public $StartDateTime;
+	/** @var int */
+	public $LocationID;
 }
 ?>

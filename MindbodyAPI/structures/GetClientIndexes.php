@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientIndexes {
-	public $Request; // GetClientIndexesRequest
-	
+	/** @var GetClientIndexesRequest */
+	public $Request;
 }
 ?>

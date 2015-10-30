@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddOrUpdateContactLogsResult {
-	public $ContactLogs; // ArrayOfContactLog
-	
+class AddOrUpdateContactLogsResult extends MBResult {
+	/** @var ContactLog[] */
+	public $ContactLogs;
 }
 ?>

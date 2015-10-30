@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetProgramsResult {
-	public $Programs; // ArrayOfProgram
-	
+class GetProgramsResult extends MBResult {
+	/** @var Program[] */
+	public $Programs;
 }
 ?>

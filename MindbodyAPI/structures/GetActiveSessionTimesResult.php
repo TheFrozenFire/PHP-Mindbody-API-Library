@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetActiveSessionTimesResult {
-	public $Times; // ArrayOfDateTime
-	
+class GetActiveSessionTimesResult extends MBResult {
+	/** @var DateTime[] */
+	public $Times;
 }
 ?>

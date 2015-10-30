@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetRequiredClientFieldsResult {
-	public $RequiredClientFields; // ArrayOfString
-	
+class GetRequiredClientFieldsResult extends MBResult {
+	/** @var String[] */
+	public $RequiredClientFields;
 }
 ?>

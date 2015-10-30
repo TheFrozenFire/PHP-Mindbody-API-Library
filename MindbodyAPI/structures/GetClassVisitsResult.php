@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClassVisitsResult {
-	public $Class; // Class
-	
+class GetClassVisitsResult extends MBResult {
+	/** @var Class */
+	public $Class;
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetLocationsRequest {
+class GetLocationsRequest extends MBRequest {
 }
 ?>

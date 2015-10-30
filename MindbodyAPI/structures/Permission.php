@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
 class Permission {
-	public $DisplayName; // string
-	public $Name; // string
-	public $Value; // string
-	
+	/** @var string */
+	public $DisplayName;
+	/** @var string */
+	public $Name;
+	/** @var string */
+	public $Value;
 }
 ?>

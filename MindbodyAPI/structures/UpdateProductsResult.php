@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class UpdateProductsResult {
-	public $Products; // ArrayOfProduct
-	
+class UpdateProductsResult extends MBResult {
+	/** @var Product[] */
+	public $Products;
 }
 ?>

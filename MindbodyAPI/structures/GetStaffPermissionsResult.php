@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetStaffPermissionsResult {
-	public $Permissions; // ArrayOfPermission
-	
+class GetStaffPermissionsResult extends MBResult {
+	/** @var Permission[] */
+	public $Permissions;
 }
 ?>

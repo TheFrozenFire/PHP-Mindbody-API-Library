@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class DeleteClientFormulaNote {
-	public $Request; // DeleteCientFormulaNoteRequest
-	
+	/** @var DeleteCientFormulaNoteRequest */
+	public $Request;
 }
 ?>

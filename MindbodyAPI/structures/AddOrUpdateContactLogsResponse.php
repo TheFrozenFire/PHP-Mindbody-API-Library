@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddOrUpdateContactLogsResponse {
-	public $AddOrUpdateContactLogsResult; // AddOrUpdateContactLogsResult
-	
+	/** @var AddOrUpdateContactLogsResult */
+	public $AddOrUpdateContactLogsResult;
 }
 ?>

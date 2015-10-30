@@ -1,17 +1,27 @@
 <?php
 namespace MindbodyAPI\structures;
-class CartItem {
-	public $Item; // Item
-	public $DiscountAmount; // decimal
-	public $Appointments; // ArrayOfAppointment
-	public $EnrollmentIDs; // ArrayOfInt
-	public $ClassIDs; // ArrayOfInt
-	public $CourseIDs; // ArrayOfLong
-	public $VisitIDs; // ArrayOfLong
-	public $AppointmentIDs; // ArrayOfLong
-	public $Action; // ActionCode
-	public $ID; // int
-	public $Quantity; // int
-	
+class CartItem extends MBObject {
+	/** @var Item */
+	public $Item;
+	/** @var decimal */
+	public $DiscountAmount;
+	/** @var Appointment[] */
+	public $Appointments;
+	/** @var Int[] */
+	public $EnrollmentIDs;
+	/** @var Int[] */
+	public $ClassIDs;
+	/** @var Long[] */
+	public $CourseIDs;
+	/** @var Long[] */
+	public $VisitIDs;
+	/** @var Long[] */
+	public $AppointmentIDs;
+	/** @var ActionCode */
+	public $Action;
+	/** @var int */
+	public $ID;
+	/** @var int */
+	public $Quantity;
 }
 ?>

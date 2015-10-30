@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class ReserveResourceResult {
+class ReserveResourceResult extends MBResult {
 }
 ?>

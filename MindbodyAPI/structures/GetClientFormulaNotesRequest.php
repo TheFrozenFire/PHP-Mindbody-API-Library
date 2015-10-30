@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientFormulaNotesRequest {
-	public $ClientID; // string
-	public $AppointmentID; // long
-	
+class GetClientFormulaNotesRequest extends MBRequest {
+	/** @var string */
+	public $ClientID;
+	/** @var long */
+	public $AppointmentID;
 }
 ?>

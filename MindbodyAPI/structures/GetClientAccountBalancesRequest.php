@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientAccountBalancesRequest {
-	public $ClientIDs; // ArrayOfString
-	public $BalanceDate; // dateTime
-	public $ClassID; // long
-	
+class GetClientAccountBalancesRequest extends MBRequest {
+	/** @var String[] */
+	public $ClientIDs;
+	/** @var dateTime */
+	public $BalanceDate;
+	/** @var long */
+	public $ClassID;
 }
 ?>

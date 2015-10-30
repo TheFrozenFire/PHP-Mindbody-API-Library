@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class UploadClientDocumentResult {
-	public $FileSize; // long
-	public $FileName; // string
-	
+class UploadClientDocumentResult extends MBResult {
+	/** @var long */
+	public $FileSize;
+	/** @var string */
+	public $FileName;
 }
 ?>

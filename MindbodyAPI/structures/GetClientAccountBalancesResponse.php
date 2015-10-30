@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientAccountBalancesResponse {
-	public $GetClientAccountBalancesResult; // GetClientAccountBalancesResult
-	
+	/** @var GetClientAccountBalancesResult */
+	public $GetClientAccountBalancesResult;
 }
 ?>

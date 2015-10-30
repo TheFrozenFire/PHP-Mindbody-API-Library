@@ -1,12 +1,17 @@
 <?php
 namespace MindbodyAPI\structures;
 class Sale {
-	public $ID; // long
-	public $SaleTime; // dateTime
-	public $SaleDate; // dateTime
-	public $SaleDateTime; // dateTime
-	public $Location; // Location
-	public $Payments; // ArrayOfPayment
-	
+	/** @var long */
+	public $ID;
+	/** @var dateTime */
+	public $SaleTime;
+	/** @var dateTime */
+	public $SaleDate;
+	/** @var dateTime */
+	public $SaleDateTime;
+	/** @var Location */
+	public $Location;
+	/** @var Payment[] */
+	public $Payments;
 }
 ?>

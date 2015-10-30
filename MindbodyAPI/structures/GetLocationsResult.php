@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetLocationsResult {
-	public $Locations; // ArrayOfLocation
-	
+class GetLocationsResult extends MBResult {
+	/** @var Location[] */
+	public $Locations;
 }
 ?>

@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class ContactLogType {
-	public $ID; // int
-	public $Name; // string
-	public $Subtypes; // ArrayOfContactLogSubtype
-	
+class ContactLogType extends MBObject {
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var ContactLogSubtype[] */
+	public $Subtypes;
 }
 ?>

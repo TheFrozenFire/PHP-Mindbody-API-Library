@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class SiteService extends \MindbodyAPI\MindbodyClient {
-	public static $classmap = array(
+class SiteService extends \SoapClient {
+	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL";
+	private $classmap = array(
 		'GetSites' => 'MindbodyAPI\structures\GetSites',
 		'GetSitesRequest' => 'MindbodyAPI\structures\GetSitesRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',
@@ -54,18 +55,29 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		'ReserveResourceRequest' => 'MindbodyAPI\structures\ReserveResourceRequest',
 		'ReserveResourceResponse' => 'MindbodyAPI\structures\ReserveResourceResponse',
 		'ReserveResourceResult' => 'MindbodyAPI\structures\ReserveResourceResult',
+		'GetMobileProviders' => 'MindbodyAPI\structures\GetMobileProviders',
+		'GetMobileProvidersRequest' => 'MindbodyAPI\structures\GetMobileProvidersRequest',
+		'GetMobileProvidersResponse' => 'MindbodyAPI\structures\GetMobileProvidersResponse',
+		'GetMobileProvidersResult' => 'MindbodyAPI\structures\GetMobileProvidersResult',
+		'MobileProvider' => 'MindbodyAPI\structures\MobileProvider',
+		'GetProspectStages' => 'MindbodyAPI\structures\GetProspectStages',
+		'GetProspectStagesRequest' => 'MindbodyAPI\structures\GetProspectStagesRequest',
+		'GetProspectStagesResponse' => 'MindbodyAPI\structures\GetProspectStagesResponse',
+		'GetProspectStagesResult' => 'MindbodyAPI\structures\GetProspectStagesResult',
+		'ProspectStage' => 'MindbodyAPI\structures\ProspectStage',
 		'Row' => 'MindbodyAPI\structures\Row',
 		'RecordSet' => 'MindbodyAPI\structures\RecordSet',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL", $options = array()) {
-		foreach (self::$classmap as $key => $value) {
+	public function __construct($wsdl = null, $options = array()) {
+		foreach ($this->classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
-		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/SiteService.asmx';
-		parent::__construct($wsdl, $options);
+		if (isset($options['headers'])) {
+			$this->__setSoapHeaders($options['headers']);
+		}
+		parent::__construct($wsdl ? : self::WSDL_FILE, $options);
 	}
 	/**
 	 * Gets a list of sites.
@@ -187,6 +199,34 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 	 */
 	public function ReserveResource(structures\ReserveResource $parameters) {
 		return $this->__soapCall('ReserveResource', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Gets a list of active mobile providers.
+	 *
+	 * @param GetMobileProviders $parameters
+	 * @return GetMobileProvidersResponse
+	 */
+	public function GetMobileProviders(structures\GetMobileProviders $parameters) {
+		return $this->__soapCall('GetMobileProviders', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Gets a list of prospect stages for a site.
+	 *
+	 * @param GetProspectStages $parameters
+	 * @return GetProspectStagesResponse
+	 */
+	public function GetProspectStages(structures\GetProspectStages $parameters) {
+		return $this->__soapCall('GetProspectStages', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

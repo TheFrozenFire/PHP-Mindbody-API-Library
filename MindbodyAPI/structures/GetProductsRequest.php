@@ -1,13 +1,19 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetProductsRequest {
-	public $ProductIDs; // ArrayOfString
-	public $SearchText; // string
-	public $SearchDomain; // string
-	public $CategoryIDs; // ArrayOfInt
-	public $SubCategoryIDs; // ArrayOfInt
-	public $SellOnline; // boolean
-	public $LocationID; // int
-	
+class GetProductsRequest extends MBRequest {
+	/** @var String[] */
+	public $ProductIDs;
+	/** @var string */
+	public $SearchText;
+	/** @var string */
+	public $SearchDomain;
+	/** @var Int[] */
+	public $CategoryIDs;
+	/** @var Int[] */
+	public $SubCategoryIDs;
+	/** @var boolean */
+	public $SellOnline;
+	/** @var int */
+	public $LocationID;
 }
 ?>

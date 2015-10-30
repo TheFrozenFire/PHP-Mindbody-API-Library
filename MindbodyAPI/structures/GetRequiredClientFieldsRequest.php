@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetRequiredClientFieldsRequest {
+class GetRequiredClientFieldsRequest extends MBRequest {
 }
 ?>

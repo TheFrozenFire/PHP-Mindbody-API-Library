@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetWaitlistEntriesResult {
-	public $WaitlistEntries; // ArrayOfWaitlistEntry
-	
+class GetWaitlistEntriesResult extends MBResult {
+	/** @var WaitlistEntry[] */
+	public $WaitlistEntries;
 }
 ?>

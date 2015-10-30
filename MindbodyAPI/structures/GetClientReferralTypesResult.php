@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientReferralTypesResult {
-	public $ReferralTypes; // ArrayOfString
-	
+class GetClientReferralTypesResult extends MBResult {
+	/** @var String[] */
+	public $ReferralTypes;
 }
 ?>

@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class ClientSendUserNewPasswordRequest {
-	public $UserEmail; // string
-	public $UserFirstName; // string
-	public $UserLastName; // string
-	
+class ClientSendUserNewPasswordRequest extends MBRequest {
+	/** @var string */
+	public $UserEmail;
+	/** @var string */
+	public $UserFirstName;
+	/** @var string */
+	public $UserLastName;
 }
 ?>

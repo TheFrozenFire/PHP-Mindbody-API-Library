@@ -1,13 +1,19 @@
 <?php
 namespace MindbodyAPI\structures;
 class Semester {
-	public $ID; // int
-	public $Name; // string
-	public $Description; // string
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	public $MultiRegistrationDiscount; // decimal
-	public $MultiRegistrationDeadline; // dateTime
-	
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var string */
+	public $Description;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
+	/** @var decimal */
+	public $MultiRegistrationDiscount;
+	/** @var dateTime */
+	public $MultiRegistrationDeadline;
 }
 ?>

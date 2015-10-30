@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientIndexesResult {
-	public $ClientIndexes; // ArrayOfClientIndex
-	
+class GetClientIndexesResult extends MBResult {
+	/** @var ClientIndex[] */
+	public $ClientIndexes;
 }
 ?>

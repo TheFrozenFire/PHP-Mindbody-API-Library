@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetBookableItemsResult {
-	public $ScheduleItems; // ArrayOfScheduleItem
-	
+class GetBookableItemsResult extends MBResult {
+	/** @var ScheduleItem[] */
+	public $ScheduleItems;
 }
 ?>

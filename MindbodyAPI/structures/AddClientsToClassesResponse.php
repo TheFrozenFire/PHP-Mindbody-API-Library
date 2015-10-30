@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddClientsToClassesResponse {
-	public $AddClientsToClassesResult; // AddClientsToClassesResult
-	
+	/** @var AddClientsToClassesResult */
+	public $AddClientsToClassesResult;
 }
 ?>

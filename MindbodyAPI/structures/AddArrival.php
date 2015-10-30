@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddArrival {
-	public $Request; // AddArrivalRequest
-	
+	/** @var AddArrivalRequest */
+	public $Request;
 }
 ?>

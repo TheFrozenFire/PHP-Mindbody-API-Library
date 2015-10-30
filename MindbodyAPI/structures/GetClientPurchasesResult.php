@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientPurchasesResult {
-	public $Purchases; // ArrayOfSaleItem
-	
+class GetClientPurchasesResult extends MBResult {
+	/** @var SaleItem[] */
+	public $Purchases;
 }
 ?>

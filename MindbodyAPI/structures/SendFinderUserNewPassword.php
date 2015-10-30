@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class SendFinderUserNewPassword {
-	public $Request; // SendFinderUserNewPasswordRequest
-	
+	/** @var SendFinderUserNewPasswordRequest */
+	public $Request;
 }
 ?>

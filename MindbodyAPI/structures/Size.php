@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class Size {
-	public $Action; // ActionCode
-	public $ID; // int
-	public $Name; // string
-	
+class Size extends MBObject {
+	/** @var ActionCode */
+	public $Action;
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
 }
 ?>

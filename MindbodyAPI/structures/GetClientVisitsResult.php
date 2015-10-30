@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientVisitsResult {
-	public $Visits; // ArrayOfVisit
-	
+class GetClientVisitsResult extends MBResult {
+	/** @var Visit[] */
+	public $Visits;
 }
 ?>

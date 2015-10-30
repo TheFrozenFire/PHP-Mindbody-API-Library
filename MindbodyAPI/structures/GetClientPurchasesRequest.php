@@ -1,9 +1,13 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientPurchasesRequest {
-	public $ClientID; // string
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	
+class GetClientPurchasesRequest extends MBRequest {
+	/** @var string */
+	public $ClientID;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
+	/** @var int */
+	public $SaleID;
 }
 ?>

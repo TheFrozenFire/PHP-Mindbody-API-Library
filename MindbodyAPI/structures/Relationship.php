@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
 class Relationship {
-	public $ID; // int
-	public $RelationshipName1; // string
-	public $RelationshipName2; // string
-	
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $RelationshipName1;
+	/** @var string */
+	public $RelationshipName2;
 }
 ?>

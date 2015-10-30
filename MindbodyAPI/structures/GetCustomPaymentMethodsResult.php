@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetCustomPaymentMethodsResult {
-	public $PaymentMethods; // ArrayOfCustomPaymentInfo
-	
+class GetCustomPaymentMethodsResult extends MBResult {
+	/** @var CustomPaymentInfo[] */
+	public $PaymentMethods;
 }
 ?>

@@ -1,16 +1,25 @@
 <?php
 namespace MindbodyAPI\structures;
-class ClientService {
-	public $Current; // boolean
-	public $Count; // int
-	public $Remaining; // int
-	public $Action; // ActionCode
-	public $ID; // long
-	public $Name; // string
-	public $PaymentDate; // dateTime
-	public $ActiveDate; // dateTime
-	public $ExpirationDate; // dateTime
-	public $Program; // Program
-	
+class ClientService extends MBObject {
+	/** @var boolean */
+	public $Current;
+	/** @var int */
+	public $Count;
+	/** @var int */
+	public $Remaining;
+	/** @var ActionCode */
+	public $Action;
+	/** @var long */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var dateTime */
+	public $PaymentDate;
+	/** @var dateTime */
+	public $ActiveDate;
+	/** @var dateTime */
+	public $ExpirationDate;
+	/** @var Program */
+	public $Program;
 }
 ?>

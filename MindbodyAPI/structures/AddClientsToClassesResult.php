@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddClientsToClassesResult {
-	public $Classes; // ArrayOfClass
-	
+class AddClientsToClassesResult extends MBResult {
+	/** @var Class[] */
+	public $Classes;
 }
 ?>

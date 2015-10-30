@@ -1,15 +1,23 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientServicesRequest {
-	public $ClientID; // string
-	public $ClassID; // int
-	public $ProgramIDs; // ArrayOfInt
-	public $SessionTypeIDs; // ArrayOfInt
-	public $LocationIDs; // ArrayOfInt
-	public $VisitCount; // int
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	public $ShowActiveOnly; // boolean
-	
+class GetClientServicesRequest extends MBRequest {
+	/** @var string */
+	public $ClientID;
+	/** @var int */
+	public $ClassID;
+	/** @var Int[] */
+	public $ProgramIDs;
+	/** @var Int[] */
+	public $SessionTypeIDs;
+	/** @var Int[] */
+	public $LocationIDs;
+	/** @var int */
+	public $VisitCount;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
+	/** @var boolean */
+	public $ShowActiveOnly;
 }
 ?>

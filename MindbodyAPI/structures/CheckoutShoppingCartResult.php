@@ -1,10 +1,13 @@
 <?php
 namespace MindbodyAPI\structures;
-class CheckoutShoppingCartResult {
-	public $ShoppingCart; // ShoppingCart
-	public $Classes; // ArrayOfClass
-	public $Appointments; // ArrayOfAppointment
-	public $Enrollments; // ArrayOfClassSchedule
-	
+class CheckoutShoppingCartResult extends MBResult {
+	/** @var ShoppingCart */
+	public $ShoppingCart;
+	/** @var Class[] */
+	public $Classes;
+	/** @var Appointment[] */
+	public $Appointments;
+	/** @var ClassSchedule[] */
+	public $Enrollments;
 }
 ?>

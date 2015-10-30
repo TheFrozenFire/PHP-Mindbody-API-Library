@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetFinderUserRequest {
-	public $Email; // string
-	public $Password; // string
-	public $PartnerID; // int
-	
+class GetFinderUserRequest extends MBRequest {
+	/** @var string */
+	public $Email;
+	/** @var string */
+	public $Password;
+	/** @var int */
+	public $PartnerID;
 }
 ?>

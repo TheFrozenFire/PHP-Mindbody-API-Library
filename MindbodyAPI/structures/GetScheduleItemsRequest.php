@@ -1,11 +1,15 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetScheduleItemsRequest {
-	public $LocationIDs; // ArrayOfInt
-	public $StaffIDs; // ArrayOfLong
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	public $IgnorePrepFinishTimes; // boolean
-	
+class GetScheduleItemsRequest extends MBRequest {
+	/** @var Int[] */
+	public $LocationIDs;
+	/** @var Long[] */
+	public $StaffIDs;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
+	/** @var boolean */
+	public $IgnorePrepFinishTimes;
 }
 ?>

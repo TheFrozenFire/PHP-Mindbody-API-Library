@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddClientsToEnrollments {
-	public $Request; // AddClientsToEnrollmentsRequest
-	
+	/** @var AddClientsToEnrollmentsRequest */
+	public $Request;
 }
 ?>

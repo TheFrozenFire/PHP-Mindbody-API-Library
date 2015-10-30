@@ -1,11 +1,15 @@
 <?php
 namespace MindbodyAPI\structures;
-class FormulaNote {
-	public $ID; // long
-	public $ClientID; // string
-	public $Note; // string
-	public $EntryDateTime; // dateTime
-	public $AppointmentID; // long
-	
+class FormulaNote extends MBObject {
+	/** @var long */
+	public $ID;
+	/** @var string */
+	public $ClientID;
+	/** @var string */
+	public $Note;
+	/** @var dateTime */
+	public $EntryDateTime;
+	/** @var long */
+	public $AppointmentID;
 }
 ?>

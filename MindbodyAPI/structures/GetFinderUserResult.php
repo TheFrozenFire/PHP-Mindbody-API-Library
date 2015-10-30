@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetFinderUserResult {
-	public $FinderUser; // FinderUser
-	
+class GetFinderUserResult extends MBResult {
+	/** @var FinderUser */
+	public $FinderUser;
 }
 ?>

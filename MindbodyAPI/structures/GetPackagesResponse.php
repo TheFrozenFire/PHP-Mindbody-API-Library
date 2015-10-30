@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetPackagesResponse {
-	public $GetPackagesResult; // GetPackagesResult
-	
+	/** @var GetPackagesResult */
+	public $GetPackagesResult;
 }
 ?>

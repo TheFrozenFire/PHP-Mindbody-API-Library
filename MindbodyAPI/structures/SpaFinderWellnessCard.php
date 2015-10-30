@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
 class SpaFinderWellnessCard {
-	public $ID; // string
-	public $Amount; // decimal
-	
+	/** @var string */
+	public $ID;
+	/** @var decimal */
+	public $Amount;
 }
 ?>

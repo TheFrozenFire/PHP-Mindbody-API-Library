@@ -1,10 +1,13 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetResourcesRequest {
-	public $SessionTypeIDs; // ArrayOfInt
-	public $LocationID; // int
-	public $StartDateTime; // dateTime
-	public $EndDateTime; // dateTime
-	
+class GetResourcesRequest extends MBRequest {
+	/** @var Int[] */
+	public $SessionTypeIDs;
+	/** @var int */
+	public $LocationID;
+	/** @var dateTime */
+	public $StartDateTime;
+	/** @var dateTime */
+	public $EndDateTime;
 }
 ?>

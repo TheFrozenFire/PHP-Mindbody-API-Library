@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetSitesResult {
-	public $Sites; // ArrayOfSite
-	
+class GetSitesResult extends MBResult {
+	/** @var Site[] */
+	public $Sites;
 }
 ?>

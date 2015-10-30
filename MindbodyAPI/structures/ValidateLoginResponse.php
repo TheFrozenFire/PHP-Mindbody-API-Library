@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class ValidateLoginResponse {
-	public $ValidateLoginResult; // ValidateLoginResult
-	
+	/** @var ValidateLoginResult */
+	public $ValidateLoginResult;
 }
 ?>

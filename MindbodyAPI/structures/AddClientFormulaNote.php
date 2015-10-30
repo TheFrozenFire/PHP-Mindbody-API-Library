@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddClientFormulaNote {
-	public $Request; // AddClientFormulaNoteRequest
-	
+	/** @var AddClientFormulaNoteRequest */
+	public $Request;
 }
 ?>

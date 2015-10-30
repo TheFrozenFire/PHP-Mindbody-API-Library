@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientIndexesRequest {
+class GetClientIndexesRequest extends MBRequest {
 }
 ?>

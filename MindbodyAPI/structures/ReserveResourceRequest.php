@@ -1,14 +1,21 @@
 <?php
 namespace MindbodyAPI\structures;
-class ReserveResourceRequest {
-	public $ResourceID; // int
-	public $ClientID; // int
-	public $StaffID; // int
-	public $StartDateTime; // dateTime
-	public $EndDateTime; // dateTime
-	public $LocationID; // int
-	public $ProgramID; // int
-	public $Notes; // string
-	
+class ReserveResourceRequest extends MBRequest {
+	/** @var int */
+	public $ResourceID;
+	/** @var int */
+	public $ClientID;
+	/** @var int */
+	public $StaffID;
+	/** @var dateTime */
+	public $StartDateTime;
+	/** @var dateTime */
+	public $EndDateTime;
+	/** @var int */
+	public $LocationID;
+	/** @var int */
+	public $ProgramID;
+	/** @var string */
+	public $Notes;
 }
 ?>

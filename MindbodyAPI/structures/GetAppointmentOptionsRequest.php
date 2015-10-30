@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetAppointmentOptionsRequest {
+class GetAppointmentOptionsRequest extends MBRequest {
 }
 ?>

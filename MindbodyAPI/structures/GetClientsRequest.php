@@ -1,8 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientsRequest {
-	public $ClientIDs; // ArrayOfString
-	public $SearchText; // string
-	
+class GetClientsRequest extends MBRequest {
+	/** @var String[] */
+	public $ClientIDs;
+	/** @var string */
+	public $SearchText;
+	/** @var boolean */
+	public $IsProspect;
 }
 ?>

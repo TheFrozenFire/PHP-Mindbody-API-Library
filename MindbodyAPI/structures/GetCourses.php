@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetCourses {
-	public $Request; // GetCoursesRequest
-	
+	/** @var GetCoursesRequest */
+	public $Request;
 }
 ?>

@@ -1,22 +1,37 @@
 <?php
 namespace MindbodyAPI\structures;
-class Visit {
-	public $ID; // long
-	public $ClassID; // int
-	public $AppointmentID; // int
-	public $AppointmentGenderPreference; // string
-	public $StartDateTime; // dateTime
-	public $LateCancelled; // boolean
-	public $EndDateTime; // dateTime
-	public $Name; // string
-	public $Staff; // Staff
-	public $Location; // Location
-	public $Client; // Client
-	public $WebSignup; // boolean
-	public $Action; // ActionCode
-	public $SignedIn; // boolean
-	public $MakeUp; // boolean
-	public $Service; // ClientService
-	
+class Visit extends MBObject {
+	/** @var long */
+	public $ID;
+	/** @var int */
+	public $ClassID;
+	/** @var int */
+	public $AppointmentID;
+	/** @var string */
+	public $AppointmentGenderPreference;
+	/** @var dateTime */
+	public $StartDateTime;
+	/** @var boolean */
+	public $LateCancelled;
+	/** @var dateTime */
+	public $EndDateTime;
+	/** @var string */
+	public $Name;
+	/** @var Staff */
+	public $Staff;
+	/** @var Location */
+	public $Location;
+	/** @var Client */
+	public $Client;
+	/** @var boolean */
+	public $WebSignup;
+	/** @var ActionCode */
+	public $Action;
+	/** @var boolean */
+	public $SignedIn;
+	/** @var boolean */
+	public $MakeUp;
+	/** @var ClientService */
+	public $Service;
 }
 ?>

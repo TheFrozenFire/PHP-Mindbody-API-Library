@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetScheduleItems {
-	public $Request; // GetScheduleItemsRequest
-	
+	/** @var GetScheduleItemsRequest */
+	public $Request;
 }
 ?>

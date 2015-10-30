@@ -1,18 +1,29 @@
 <?php
 namespace MindbodyAPI\structures;
-class Product {
-	public $Price; // decimal
-	public $TaxIncluded; // decimal
-	public $TaxRate; // decimal
-	public $Action; // ActionCode
-	public $ID; // string
-	public $GroupID; // int
-	public $Name; // string
-	public $OnlinePrice; // decimal
-	public $ShortDesc; // string
-	public $LongDesc; // string
-	public $Color; // Color
-	public $Size; // Size
-	
+class Product extends Item {
+	/** @var decimal */
+	public $Price;
+	/** @var decimal */
+	public $TaxIncluded;
+	/** @var decimal */
+	public $TaxRate;
+	/** @var ActionCode */
+	public $Action;
+	/** @var string */
+	public $ID;
+	/** @var int */
+	public $GroupID;
+	/** @var string */
+	public $Name;
+	/** @var decimal */
+	public $OnlinePrice;
+	/** @var string */
+	public $ShortDesc;
+	/** @var string */
+	public $LongDesc;
+	/** @var Color */
+	public $Color;
+	/** @var Size */
+	public $Size;
 }
 ?>

@@ -1,10 +1,13 @@
 <?php
 namespace MindbodyAPI\structures;
 class FinderSessionType {
-	public $ID; // int
-	public $Name; // string
-	public $Length; // int
-	public $Description; // string
-	
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var int */
+	public $Length;
+	/** @var string */
+	public $Description;
 }
 ?>

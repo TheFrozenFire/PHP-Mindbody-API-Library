@@ -1,17 +1,29 @@
 <?php
 namespace MindbodyAPI\structures;
-class ClassDescription {
-	public $ImageURL; // string
-	public $Level; // Level
-	public $Action; // ActionCode
-	public $ID; // int
-	public $Name; // string
-	public $Description; // string
-	public $Prereq; // string
-	public $Notes; // string
-	public $LastUpdated; // dateTime
-	public $Program; // Program
-	public $SessionType; // SessionType
-	
+class ClassDescription extends MBObject {
+	/** @var string */
+	public $ImageURL;
+	/** @var Level */
+	public $Level;
+	/** @var ActionCode */
+	public $Action;
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var string */
+	public $Description;
+	/** @var string */
+	public $Prereq;
+	/** @var string */
+	public $Notes;
+	/** @var dateTime */
+	public $LastUpdated;
+	/** @var Program */
+	public $Program;
+	/** @var SessionType */
+	public $SessionType;
+	/** @var boolean */
+	public $Active;
 }
 ?>

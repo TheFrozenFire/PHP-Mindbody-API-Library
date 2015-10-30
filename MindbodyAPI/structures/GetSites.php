@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetSites {
-	public $Request; // GetSitesRequest
-	
+	/** @var GetSitesRequest */
+	public $Request;
 }
 ?>

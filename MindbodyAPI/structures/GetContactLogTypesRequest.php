@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetContactLogTypesRequest {
+class GetContactLogTypesRequest extends MBRequest {
 }
 ?>

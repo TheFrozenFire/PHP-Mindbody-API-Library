@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetPackagesRequest {
-	public $PackageIDs; // ArrayOfInt
-	public $SellOnline; // boolean
-	
+class GetPackagesRequest extends MBRequest {
+	/** @var Int[] */
+	public $PackageIDs;
+	/** @var boolean */
+	public $SellOnline;
 }
 ?>

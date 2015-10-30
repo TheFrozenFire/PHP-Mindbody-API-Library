@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
 class Level {
-	public $ID; // int
-	public $Name; // string
-	public $Description; // string
-	
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var string */
+	public $Description;
 }
 ?>

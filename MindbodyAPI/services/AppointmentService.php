@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class AppointmentService extends \MindbodyAPI\MindbodyClient {
-	public static $classmap = array(
+class AppointmentService extends \SoapClient {
+	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/AppointmentService.asmx?WSDL";
+	private $classmap = array(
 		'GetStaffAppointments' => 'MindbodyAPI\structures\GetStaffAppointments',
 		'GetStaffAppointmentsRequest' => 'MindbodyAPI\structures\GetStaffAppointmentsRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',
@@ -29,6 +30,7 @@ class AppointmentService extends \MindbodyAPI\MindbodyClient {
 		'Availability' => 'MindbodyAPI\structures\Availability',
 		'SessionType' => 'MindbodyAPI\structures\SessionType',
 		'Location' => 'MindbodyAPI\structures\Location',
+		'ProviderIDUpdate' => 'MindbodyAPI\structures\ProviderIDUpdate',
 		'ClientRelationship' => 'MindbodyAPI\structures\ClientRelationship',
 		'Client' => 'MindbodyAPI\structures\Client',
 		'ClientIndex' => 'MindbodyAPI\structures\ClientIndex',
@@ -65,15 +67,16 @@ class AppointmentService extends \MindbodyAPI\MindbodyClient {
 		'GetAppointmentOptionsResult' => 'MindbodyAPI\structures\GetAppointmentOptionsResult',
 		'Option' => 'MindbodyAPI\structures\Option',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/AppointmentService.asmx?WSDL", $options = array()) {
-		foreach (self::$classmap as $key => $value) {
+	public function __construct($wsdl = null, $options = array()) {
+		foreach ($this->classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
-		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/AppointmentService.asmx';
-		parent::__construct($wsdl, $options);
+		if (isset($options['headers'])) {
+			$this->__setSoapHeaders($options['headers']);
+		}
+		parent::__construct($wsdl ? : self::WSDL_FILE, $options);
 	}
 	/**
 	 * Gets a list of appointments that a given staff member is instructing.

@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetSessionTypesResult {
-	public $SessionTypes; // ArrayOfSessionType
-	
+class GetSessionTypesResult extends MBResult {
+	/** @var SessionType[] */
+	public $SessionTypes;
 }
 ?>

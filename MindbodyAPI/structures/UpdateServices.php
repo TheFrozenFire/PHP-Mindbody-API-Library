@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class UpdateServices {
-	public $Request; // UpdateServicesRequest
-	
+	/** @var UpdateServicesRequest */
+	public $Request;
 }
 ?>

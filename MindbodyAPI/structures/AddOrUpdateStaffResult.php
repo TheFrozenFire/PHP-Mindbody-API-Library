@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddOrUpdateStaffResult {
-	public $Staff; // ArrayOfStaff
-	
+class AddOrUpdateStaffResult extends MBResult {
+	/** @var Staff[] */
+	public $Staff;
 }
 ?>

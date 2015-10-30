@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class PaymentInfo {
-	public $Name; // string
-	
+	/** @var string */
+	public $Name;
 }
 ?>

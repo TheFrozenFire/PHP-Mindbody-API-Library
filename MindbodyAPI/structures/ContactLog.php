@@ -1,19 +1,31 @@
 <?php
 namespace MindbodyAPI\structures;
-class ContactLog {
-	public $ID; // long
-	public $CreatedBy; // Staff
-	public $Client; // Client
-	public $CreatedDateTime; // dateTime
-	public $FollowupByDate; // dateTime
-	public $ContactName; // string
-	public $Text; // string
-	public $AssignedTo; // Staff
-	public $ContactMethod; // string
-	public $IsSystemGenerated; // boolean
-	public $Comments; // ArrayOfContactLogComment
-	public $Types; // ArrayOfContactLogType
-	public $Action; // ActionCode
-	
+class ContactLog extends MBObject {
+	/** @var long */
+	public $ID;
+	/** @var Staff */
+	public $CreatedBy;
+	/** @var Client */
+	public $Client;
+	/** @var dateTime */
+	public $CreatedDateTime;
+	/** @var dateTime */
+	public $FollowupByDate;
+	/** @var string */
+	public $ContactName;
+	/** @var string */
+	public $Text;
+	/** @var Staff */
+	public $AssignedTo;
+	/** @var string */
+	public $ContactMethod;
+	/** @var boolean */
+	public $IsSystemGenerated;
+	/** @var ContactLogComment[] */
+	public $Comments;
+	/** @var ContactLogType[] */
+	public $Types;
+	/** @var ActionCode */
+	public $Action;
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientContractsResult {
-	public $Contracts; // ArrayOfClientContract
-	
+class GetClientContractsResult extends MBResult {
+	/** @var ClientContract[] */
+	public $Contracts;
 }
 ?>

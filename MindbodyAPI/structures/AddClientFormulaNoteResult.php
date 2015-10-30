@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddClientFormulaNoteResult {
-	public $FormulaNote; // FormulaNote
-	
+class AddClientFormulaNoteResult extends MBResult {
+	/** @var FormulaNote */
+	public $FormulaNote;
 }
 ?>

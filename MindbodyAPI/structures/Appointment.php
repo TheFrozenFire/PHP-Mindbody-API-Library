@@ -1,23 +1,41 @@
 <?php
 namespace MindbodyAPI\structures;
-class Appointment {
-	public $GenderPreference; // string
-	public $Duration; // int
-	public $Action; // ActionCode
-	public $ID; // long
-	public $Status; // AppointmentStatus
-	public $StartDateTime; // dateTime
-	public $EndDateTime; // dateTime
-	public $Notes; // string
-	public $StaffRequested; // boolean
-	public $Program; // Program
-	public $SessionType; // SessionType
-	public $Location; // Location
-	public $Staff; // Staff
-	public $Client; // Client
-	public $FirstAppointment; // boolean
-	public $ClientService; // ClientService
-	public $Resources; // ArrayOfResource
-	
+class Appointment extends ScheduleItem {
+	/** @var string */
+	public $GenderPreference;
+	/** @var int */
+	public $Duration;
+	/** @var string */
+	public $ProviderID;
+	/** @var ActionCode */
+	public $Action;
+	/** @var long */
+	public $ID;
+	/** @var AppointmentStatus */
+	public $Status;
+	/** @var dateTime */
+	public $StartDateTime;
+	/** @var dateTime */
+	public $EndDateTime;
+	/** @var string */
+	public $Notes;
+	/** @var boolean */
+	public $StaffRequested;
+	/** @var Program */
+	public $Program;
+	/** @var SessionType */
+	public $SessionType;
+	/** @var Location */
+	public $Location;
+	/** @var Staff */
+	public $Staff;
+	/** @var Client */
+	public $Client;
+	/** @var boolean */
+	public $FirstAppointment;
+	/** @var ClientService */
+	public $ClientService;
+	/** @var Resource[] */
+	public $Resources;
 }
 ?>

@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddArrivalRequest {
-	public $ClientID; // string
-	public $LocationID; // int
-	
+class AddArrivalRequest extends MBRequest {
+	/** @var string */
+	public $ClientID;
+	/** @var int */
+	public $LocationID;
 }
 ?>

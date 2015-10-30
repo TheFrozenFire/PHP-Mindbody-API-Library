@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetActiveClientMembershipsResult {
-	public $ClientMemberships; // ArrayOfClientMembership
-	
+class GetActiveClientMembershipsResult extends MBResult {
+	/** @var ClientMembership[] */
+	public $ClientMemberships;
 }
 ?>

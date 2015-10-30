@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetActivationCodeResult {
-	public $ActivationCode; // string
-	public $ActivationLink; // string
-	
+class GetActivationCodeResult extends MBResult {
+	/** @var string */
+	public $ActivationCode;
+	/** @var string */
+	public $ActivationLink;
 }
 ?>

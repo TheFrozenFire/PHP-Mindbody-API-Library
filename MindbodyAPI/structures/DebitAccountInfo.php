@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class DebitAccountInfo {
-	public $Amount; // decimal
-	
+class DebitAccountInfo extends PaymentInfo {
+	/** @var decimal */
+	public $Amount;
 }
 ?>

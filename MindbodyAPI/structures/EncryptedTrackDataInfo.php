@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class EncryptedTrackDataInfo {
-	public $Amount; // decimal
-	public $TrackData; // string
-	
+class EncryptedTrackDataInfo extends PaymentInfo {
+	/** @var decimal */
+	public $Amount;
+	/** @var string */
+	public $TrackData;
 }
 ?>

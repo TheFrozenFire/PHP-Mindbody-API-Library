@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetActivationCodeRequest {
+class GetActivationCodeRequest extends MBRequest {
 }
 ?>

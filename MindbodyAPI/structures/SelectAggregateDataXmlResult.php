@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class SelectAggregateDataXmlResult {
-	public $Results; // RecordSet
-	
+class SelectAggregateDataXmlResult extends MBResult {
+	/** @var RecordSet */
+	public $Results;
 }
 ?>

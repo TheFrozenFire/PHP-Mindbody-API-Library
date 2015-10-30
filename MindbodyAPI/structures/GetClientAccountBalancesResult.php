@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientAccountBalancesResult {
-	public $Clients; // ArrayOfClient
-	
+class GetClientAccountBalancesResult extends MBResult {
+	/** @var Client[] */
+	public $Clients;
 }
 ?>

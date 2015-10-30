@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class RemoveClientsFromClassesResult {
-	public $Classes; // ArrayOfClass
-	
+class RemoveClientsFromClassesResult extends MBResult {
+	/** @var Class[] */
+	public $Classes;
 }
 ?>

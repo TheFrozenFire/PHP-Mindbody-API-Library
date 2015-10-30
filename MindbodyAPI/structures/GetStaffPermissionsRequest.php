@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetStaffPermissionsRequest {
-	public $StaffID; // long
-	
+class GetStaffPermissionsRequest extends MBRequest {
+	/** @var long */
+	public $StaffID;
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddClientsToEnrollmentsResult {
-	public $Enrollments; // ArrayOfClassSchedule
-	
+class AddClientsToEnrollmentsResult extends MBResult {
+	/** @var ClassSchedule[] */
+	public $Enrollments;
 }
 ?>

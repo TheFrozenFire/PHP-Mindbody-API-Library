@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class RedeemSpaFinderWellnessCard {
-	public $Request; // RedeemSpaFinderWellnessCardRequest
-	
+	/** @var RedeemSpaFinderWellnessCardRequest */
+	public $Request;
 }
 ?>

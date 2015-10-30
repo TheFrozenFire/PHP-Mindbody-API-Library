@@ -1,10 +1,15 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetWaitlistEntriesRequest {
-	public $ClassScheduleIDs; // ArrayOfInt
-	public $ClientIDs; // ArrayOfString
-	public $WaitlistEntryIDs; // ArrayOfInt
-	public $ClassIDs; // ArrayOfInt
-	
+class GetWaitlistEntriesRequest extends MBRequest {
+	/** @var Int[] */
+	public $ClassScheduleIDs;
+	/** @var String[] */
+	public $ClientIDs;
+	/** @var Int[] */
+	public $WaitlistEntryIDs;
+	/** @var Int[] */
+	public $ClassIDs;
+	/** @var boolean */
+	public $HidePastEntries;
 }
 ?>

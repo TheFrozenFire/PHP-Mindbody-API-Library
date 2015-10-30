@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetResourceScheduleRequest {
-	public $Date; // dateTime
-	
+class GetResourceScheduleRequest extends MBRequest {
+	/** @var dateTime */
+	public $Date;
 }
 ?>

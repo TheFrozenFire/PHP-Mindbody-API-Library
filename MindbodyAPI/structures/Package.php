@@ -1,12 +1,17 @@
 <?php
 namespace MindbodyAPI\structures;
-class Package {
-	public $ID; // int
-	public $Name; // string
-	public $DiscountPercentage; // double
-	public $SellOnline; // boolean
-	public $Services; // ArrayOfService
-	public $Products; // ArrayOfProduct
-	
+class Package extends Item {
+	/** @var int */
+	public $ID;
+	/** @var string */
+	public $Name;
+	/** @var double */
+	public $DiscountPercentage;
+	/** @var boolean */
+	public $SellOnline;
+	/** @var Service[] */
+	public $Services;
+	/** @var Product[] */
+	public $Products;
 }
 ?>

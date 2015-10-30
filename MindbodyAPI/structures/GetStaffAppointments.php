@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetStaffAppointments {
-	public $Request; // GetStaffAppointmentsRequest
-	
+	/** @var GetStaffAppointmentsRequest */
+	public $Request;
 }
 ?>

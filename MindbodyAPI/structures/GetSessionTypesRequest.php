@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetSessionTypesRequest {
-	public $ProgramIDs; // ArrayOfInt
-	public $OnlineOnly; // boolean
-	
+class GetSessionTypesRequest extends MBRequest {
+	/** @var Int[] */
+	public $ProgramIDs;
+	/** @var boolean */
+	public $OnlineOnly;
 }
 ?>

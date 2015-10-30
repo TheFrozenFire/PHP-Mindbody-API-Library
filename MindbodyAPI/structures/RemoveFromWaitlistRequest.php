@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class RemoveFromWaitlistRequest {
-	public $WaitlistEntryIDs; // ArrayOfInt
-	
+class RemoveFromWaitlistRequest extends MBRequest {
+	/** @var Int[] */
+	public $WaitlistEntryIDs;
 }
 ?>

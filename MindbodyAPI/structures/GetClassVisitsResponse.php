@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClassVisitsResponse {
-	public $GetClassVisitsResult; // GetClassVisitsResult
-	
+	/** @var GetClassVisitsResult */
+	public $GetClassVisitsResult;
 }
 ?>

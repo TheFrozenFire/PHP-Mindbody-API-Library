@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class UpdateClientVisitsResponse {
-	public $UpdateClientVisitsResult; // UpdateClientVisitsResult
-	
+	/** @var UpdateClientVisitsResult */
+	public $UpdateClientVisitsResult;
 }
 ?>

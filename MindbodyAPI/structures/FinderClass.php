@@ -1,24 +1,41 @@
 <?php
 namespace MindbodyAPI\structures;
 class FinderClass {
-	public $Organization; // Organization
-	public $Site; // Site
-	public $SessionType; // FinderSessionType
-	public $Price; // double
-	public $TaxAmount; // double
-	public $TaxRate; // double
-	public $Bookable; // boolean
-	public $MBFClassID; // long
-	public $GUID; // string
-	public $Action; // ActionCode
-	public $ClassID; // int
-	public $Location; // Location
-	public $ClassDate; // dateTime
-	public $ClassName; // string
-	public $ClassDescription; // string
-	public $StartDateTime; // dateTime
-	public $EndDateTime; // dateTime
-	public $Staff; // Staff
-	
+	/** @var Organization */
+	public $Organization;
+	/** @var Site */
+	public $Site;
+	/** @var FinderSessionType */
+	public $SessionType;
+	/** @var double */
+	public $Price;
+	/** @var double */
+	public $TaxAmount;
+	/** @var double */
+	public $TaxRate;
+	/** @var boolean */
+	public $Bookable;
+	/** @var long */
+	public $MBFClassID;
+	/** @var string */
+	public $GUID;
+	/** @var ActionCode */
+	public $Action;
+	/** @var int */
+	public $ClassID;
+	/** @var Location */
+	public $Location;
+	/** @var dateTime */
+	public $ClassDate;
+	/** @var string */
+	public $ClassName;
+	/** @var string */
+	public $ClassDescription;
+	/** @var dateTime */
+	public $StartDateTime;
+	/** @var dateTime */
+	public $EndDateTime;
+	/** @var Staff */
+	public $Staff;
 }
 ?>

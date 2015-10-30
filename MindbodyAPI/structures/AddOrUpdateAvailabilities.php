@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class AddOrUpdateAvailabilities {
-	public $Request; // AddOrUpdateAvailabilitiesRequest
-	
+	/** @var AddOrUpdateAvailabilitiesRequest */
+	public $Request;
 }
 ?>

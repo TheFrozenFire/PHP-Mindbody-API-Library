@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class RemoveFromWaitlist {
-	public $Request; // RemoveFromWaitlistRequest
-	
+	/** @var RemoveFromWaitlistRequest */
+	public $Request;
 }
 ?>

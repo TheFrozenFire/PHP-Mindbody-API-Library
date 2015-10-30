@@ -1,17 +1,27 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClassesWithinRadiusRequest {
-	public $SearchLatitude; // double
-	public $SearchLongitude; // double
-	public $SearchRadius; // double
-	public $StartDateTime; // dateTime
-	public $EndDateTime; // dateTime
-	public $SearchLocationID; // int
-	public $SearchClassID; // int
-	public $SearchText; // string
-	public $SortOption; // string
-	public $SearchDomain; // string
-	public $IPAddress; // string
-	
+class GetClassesWithinRadiusRequest extends MBRequest {
+	/** @var double */
+	public $SearchLatitude;
+	/** @var double */
+	public $SearchLongitude;
+	/** @var double */
+	public $SearchRadius;
+	/** @var dateTime */
+	public $StartDateTime;
+	/** @var dateTime */
+	public $EndDateTime;
+	/** @var int */
+	public $SearchLocationID;
+	/** @var int */
+	public $SearchClassID;
+	/** @var string */
+	public $SearchText;
+	/** @var string */
+	public $SortOption;
+	/** @var string */
+	public $SearchDomain;
+	/** @var string */
+	public $IPAddress;
 }
 ?>

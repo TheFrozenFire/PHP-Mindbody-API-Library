@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\structures;
-class Rep {
-	public $ID; // int
-	public $Staff; // Staff
-	
+class Rep extends MBObject {
+	/** @var int */
+	public $ID;
+	/** @var Staff */
+	public $Staff;
 }
 ?>

@@ -1,16 +1,25 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetSessionTypesWithinRadiusRequest {
-	public $SearchLatitude; // double
-	public $SearchLongitude; // double
-	public $SearchRadius; // double
-	public $SearchLocationID; // int
-	public $SearchSessionTypeID; // int
-	public $SearchText; // string
-	public $SortOption; // string
-	public $SearchDomain; // string
-	public $IPAddress; // string
-	public $SessionsPerLocation; // int
-	
+class GetSessionTypesWithinRadiusRequest extends MBRequest {
+	/** @var double */
+	public $SearchLatitude;
+	/** @var double */
+	public $SearchLongitude;
+	/** @var double */
+	public $SearchRadius;
+	/** @var int */
+	public $SearchLocationID;
+	/** @var int */
+	public $SearchSessionTypeID;
+	/** @var string */
+	public $SearchText;
+	/** @var string */
+	public $SortOption;
+	/** @var string */
+	public $SearchDomain;
+	/** @var string */
+	public $IPAddress;
+	/** @var int */
+	public $SessionsPerLocation;
 }
 ?>

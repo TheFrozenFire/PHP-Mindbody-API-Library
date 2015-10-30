@@ -1,10 +1,13 @@
 <?php
 namespace MindbodyAPI\structures;
 class MBObject {
-	public $Site; // Site
-	public $Messages; // ArrayOfString
-	public $Execute; // string
-	public $ErrorCode; // string
-	
+	/** @var Site */
+	public $Site;
+	/** @var String[] */
+	public $Messages;
+	/** @var string */
+	public $Execute;
+	/** @var string */
+	public $ErrorCode;
 }
 ?>

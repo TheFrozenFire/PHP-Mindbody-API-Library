@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetSemestersResult {
-	public $Semesters; // ArrayOfSemester
-	
+class GetSemestersResult extends MBResult {
+	/** @var Semester[] */
+	public $Semesters;
 }
 ?>

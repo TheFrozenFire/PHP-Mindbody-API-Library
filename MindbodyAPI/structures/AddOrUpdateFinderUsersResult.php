@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddOrUpdateFinderUsersResult {
-	public $FinderUsers; // ArrayOfFinderUser
-	
+class AddOrUpdateFinderUsersResult extends MBResult {
+	/** @var FinderUser[] */
+	public $FinderUsers;
 }
 ?>

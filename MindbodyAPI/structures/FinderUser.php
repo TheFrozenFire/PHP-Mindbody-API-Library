@@ -1,15 +1,23 @@
 <?php
 namespace MindbodyAPI\structures;
-class FinderUser {
-	public $Email; // string
-	public $Password; // string
-	public $ChangePasswordNeeded; // boolean
-	public $NewPassword; // string
-	public $FirstName; // string
-	public $LastName; // string
-	public $Phone; // string
-	public $Action; // ActionCode
-	public $CreditCards; // ArrayOfClientCreditCard
-	
+class FinderUser extends MBObject {
+	/** @var string */
+	public $Email;
+	/** @var string */
+	public $Password;
+	/** @var boolean */
+	public $ChangePasswordNeeded;
+	/** @var string */
+	public $NewPassword;
+	/** @var string */
+	public $FirstName;
+	/** @var string */
+	public $LastName;
+	/** @var string */
+	public $Phone;
+	/** @var ActionCode */
+	public $Action;
+	/** @var ClientCreditCard[] */
+	public $CreditCards;
 }
 ?>

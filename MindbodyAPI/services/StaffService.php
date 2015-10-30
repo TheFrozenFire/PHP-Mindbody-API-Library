@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class StaffService extends \MindbodyAPI\MindbodyClient {
-	public static $classmap = array(
+class StaffService extends \SoapClient {
+	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL";
+	private $classmap = array(
 		'GetStaff' => 'MindbodyAPI\structures\GetStaff',
 		'GetStaffRequest' => 'MindbodyAPI\structures\GetStaffRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',
@@ -38,6 +39,7 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 		'AppointmentStatus' => 'MindbodyAPI\structures\AppointmentStatus',
 		'Unavailability' => 'MindbodyAPI\structures\Unavailability',
 		'Availability' => 'MindbodyAPI\structures\Availability',
+		'ProviderIDUpdate' => 'MindbodyAPI\structures\ProviderIDUpdate',
 		'GetStaffPermissions' => 'MindbodyAPI\structures\GetStaffPermissions',
 		'GetStaffPermissionsRequest' => 'MindbodyAPI\structures\GetStaffPermissionsRequest',
 		'GetStaffPermissionsResponse' => 'MindbodyAPI\structures\GetStaffPermissionsResponse',
@@ -51,16 +53,21 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 		'GetStaffImgURLRequest' => 'MindbodyAPI\structures\GetStaffImgURLRequest',
 		'GetStaffImgURLResponse' => 'MindbodyAPI\structures\GetStaffImgURLResponse',
 		'GetStaffImgURLResult' => 'MindbodyAPI\structures\GetStaffImgURLResult',
+		'ValidateStaffLogin' => 'MindbodyAPI\structures\ValidateStaffLogin',
+		'ValidateLoginRequest' => 'MindbodyAPI\structures\ValidateLoginRequest',
+		'ValidateStaffLoginResponse' => 'MindbodyAPI\structures\ValidateStaffLoginResponse',
+		'ValidateLoginResult' => 'MindbodyAPI\structures\ValidateLoginResult',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL", $options = array()) {
-		foreach (self::$classmap as $key => $value) {
+	public function __construct($wsdl = null, $options = array()) {
+		foreach ($this->classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
-		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/StaffService.asmx';
-		parent::__construct($wsdl, $options);
+		if (isset($options['headers'])) {
+			$this->__setSoapHeaders($options['headers']);
+		}
+		parent::__construct($wsdl ? : self::WSDL_FILE, $options);
 	}
 	/**
 	 * Gets a list of staff members.
@@ -112,6 +119,20 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 	 */
 	public function GetStaffImgURL(structures\GetStaffImgURL $parameters) {
 		return $this->__soapCall('GetStaffImgURL', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Validates a username and password. This method returns the staff on success.
+	 *
+	 * @param ValidateStaffLogin $parameters
+	 * @return ValidateStaffLoginResponse
+	 */
+	public function ValidateStaffLogin(structures\ValidateStaffLogin $parameters) {
+		return $this->__soapCall('ValidateStaffLogin', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

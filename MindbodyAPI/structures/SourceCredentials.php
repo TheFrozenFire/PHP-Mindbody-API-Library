@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
 class SourceCredentials {
-	public $SourceName; // string
-	public $Password; // string
-	public $SiteIDs; // ArrayOfInt
-	
+	/** @var string */
+	public $SourceName;
+	/** @var string */
+	public $Password;
+	/** @var Int[] */
+	public $SiteIDs;
 }
 ?>

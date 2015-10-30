@@ -1,13 +1,19 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClassSchedulesRequest {
-	public $LocationIDs; // ArrayOfInt
-	public $ClassScheduleIDs; // ArrayOfInt
-	public $StaffIDs; // ArrayOfLong
-	public $ProgramIDs; // ArrayOfInt
-	public $SessionTypeIDs; // ArrayOfInt
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	
+class GetClassSchedulesRequest extends MBRequest {
+	/** @var Int[] */
+	public $LocationIDs;
+	/** @var Int[] */
+	public $ClassScheduleIDs;
+	/** @var Long[] */
+	public $StaffIDs;
+	/** @var Int[] */
+	public $ProgramIDs;
+	/** @var Int[] */
+	public $SessionTypeIDs;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
 }
 ?>

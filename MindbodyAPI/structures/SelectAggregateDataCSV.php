@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class SelectAggregateDataCSV {
-	public $Request; // SelectAggregateDataCSVRequest
-	
+	/** @var SelectAggregateDataCSVRequest */
+	public $Request;
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetActivationCode {
-	public $Request; // GetActivationCodeRequest
-	
+	/** @var GetActivationCodeRequest */
+	public $Request;
 }
 ?>

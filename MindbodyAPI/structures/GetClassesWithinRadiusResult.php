@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClassesWithinRadiusResult {
-	public $FinderClasses; // ArrayOfFinderClass
-	
+class GetClassesWithinRadiusResult extends MBResult {
+	/** @var FinderClass[] */
+	public $FinderClasses;
 }
 ?>

@@ -1,8 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class ValidateLoginResult {
-	public $GUID; // string
-	public $Client; // Client
-	
+class ValidateLoginResult extends MBResult {
+	/** @var string */
+	public $GUID;
+	/** @var Client */
+	public $Client;
+	/** @var Staff */
+	public $Staff;
 }
 ?>

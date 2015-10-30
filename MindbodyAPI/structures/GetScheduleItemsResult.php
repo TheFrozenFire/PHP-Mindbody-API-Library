@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetScheduleItemsResult {
-	public $StaffMembers; // ArrayOfStaff
-	
+class GetScheduleItemsResult extends MBResult {
+	/** @var Staff[] */
+	public $StaffMembers;
 }
 ?>

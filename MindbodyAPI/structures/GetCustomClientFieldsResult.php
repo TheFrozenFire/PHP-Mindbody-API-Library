@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetCustomClientFieldsResult {
-	public $CustomClientFields; // ArrayOfCustomClientField
-	
+class GetCustomClientFieldsResult extends MBResult {
+	/** @var CustomClientField[] */
+	public $CustomClientFields;
 }
 ?>

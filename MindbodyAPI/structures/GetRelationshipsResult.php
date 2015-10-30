@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetRelationshipsResult {
-	public $Relationships; // ArrayOfRelationship
-	
+class GetRelationshipsResult extends MBResult {
+	/** @var Relationship[] */
+	public $Relationships;
 }
 ?>

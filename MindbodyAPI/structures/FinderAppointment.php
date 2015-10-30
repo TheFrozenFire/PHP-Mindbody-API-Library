@@ -1,17 +1,27 @@
 <?php
 namespace MindbodyAPI\structures;
 class FinderAppointment {
-	public $Site; // Site
-	public $Organization; // Organization
-	public $Location; // Location
-	public $MBFSessionTypeID; // long
-	public $GUID; // string
-	public $SessionType; // FinderSessionType
-	public $Program; // Program
-	public $Price; // double
-	public $TaxRate; // double
-	public $TaxAmount; // double
-	public $Featured; // boolean
-	
+	/** @var Site */
+	public $Site;
+	/** @var Organization */
+	public $Organization;
+	/** @var Location */
+	public $Location;
+	/** @var long */
+	public $MBFSessionTypeID;
+	/** @var string */
+	public $GUID;
+	/** @var FinderSessionType */
+	public $SessionType;
+	/** @var Program */
+	public $Program;
+	/** @var double */
+	public $Price;
+	/** @var double */
+	public $TaxRate;
+	/** @var double */
+	public $TaxAmount;
+	/** @var boolean */
+	public $Featured;
 }
 ?>

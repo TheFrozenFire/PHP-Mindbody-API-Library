@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientScheduleRequest {
-	public $ClientID; // string
-	public $StartDate; // dateTime
-	public $EndDate; // dateTime
-	
+class GetClientScheduleRequest extends MBRequest {
+	/** @var string */
+	public $ClientID;
+	/** @var dateTime */
+	public $StartDate;
+	/** @var dateTime */
+	public $EndDate;
 }
 ?>

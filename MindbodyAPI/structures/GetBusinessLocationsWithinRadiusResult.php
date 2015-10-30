@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetBusinessLocationsWithinRadiusResult {
-	public $Locations; // ArrayOfLocation
-	
+class GetBusinessLocationsWithinRadiusResult extends MBResult {
+	/** @var Location[] */
+	public $Locations;
 }
 ?>

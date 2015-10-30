@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientContactLogsResponse {
-	public $GetClientContactLogsResult; // GetClientContactLogsResult
-	
+	/** @var GetClientContactLogsResult */
+	public $GetClientContactLogsResult;
 }
 ?>

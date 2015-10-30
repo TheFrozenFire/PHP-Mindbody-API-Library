@@ -1,12 +1,17 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClassDescriptionsRequest {
-	public $ClassDescriptionIDs; // ArrayOfInt
-	public $ProgramIDs; // ArrayOfInt
-	public $StaffIDs; // ArrayOfLong
-	public $LocationIDs; // ArrayOfInt
-	public $StartClassDateTime; // dateTime
-	public $EndClassDateTime; // dateTime
-	
+class GetClassDescriptionsRequest extends MBRequest {
+	/** @var Int[] */
+	public $ClassDescriptionIDs;
+	/** @var Int[] */
+	public $ProgramIDs;
+	/** @var Long[] */
+	public $StaffIDs;
+	/** @var Int[] */
+	public $LocationIDs;
+	/** @var dateTime */
+	public $StartClassDateTime;
+	/** @var dateTime */
+	public $EndClassDateTime;
 }
 ?>

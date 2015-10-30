@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetCustomPaymentMethodsRequest {
+class GetCustomPaymentMethodsRequest extends MBRequest {
 }
 ?>

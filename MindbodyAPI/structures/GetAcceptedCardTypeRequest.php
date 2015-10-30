@@ -1,5 +1,5 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetAcceptedCardTypeRequest {
+class GetAcceptedCardTypeRequest extends MBRequest {
 }
 ?>

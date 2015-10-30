@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class SendFinderUserNewPasswordRequest {
-	public $Email; // string
-	
+class SendFinderUserNewPasswordRequest extends MBRequest {
+	/** @var string */
+	public $Email;
 }
 ?>

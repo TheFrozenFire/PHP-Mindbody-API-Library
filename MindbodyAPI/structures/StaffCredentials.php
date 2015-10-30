@@ -1,9 +1,11 @@
 <?php
 namespace MindbodyAPI\structures;
 class StaffCredentials {
-	public $Username; // string
-	public $Password; // string
-	public $SiteIDs; // ArrayOfInt
-	
+	/** @var string */
+	public $Username;
+	/** @var string */
+	public $Password;
+	/** @var Int[] */
+	public $SiteIDs;
 }
 ?>

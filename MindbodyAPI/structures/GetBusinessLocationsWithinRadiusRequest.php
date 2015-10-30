@@ -1,13 +1,19 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetBusinessLocationsWithinRadiusRequest {
-	public $SearchLatitude; // double
-	public $SearchLongitude; // double
-	public $SearchRadius; // double
-	public $SearchLocationID; // int
-	public $SearchText; // string
-	public $SortOption; // string
-	public $SearchDomain; // string
-	
+class GetBusinessLocationsWithinRadiusRequest extends MBRequest {
+	/** @var double */
+	public $SearchLatitude;
+	/** @var double */
+	public $SearchLongitude;
+	/** @var double */
+	public $SearchRadius;
+	/** @var int */
+	public $SearchLocationID;
+	/** @var string */
+	public $SearchText;
+	/** @var string */
+	public $SortOption;
+	/** @var string */
+	public $SearchDomain;
 }
 ?>

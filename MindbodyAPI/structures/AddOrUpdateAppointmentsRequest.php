@@ -1,11 +1,17 @@
 <?php
 namespace MindbodyAPI\structures;
-class AddOrUpdateAppointmentsRequest {
-	public $UpdateAction; // string
-	public $Test; // boolean
-	public $SendEmail; // boolean
-	public $ApplyPayment; // boolean
-	public $Appointments; // ArrayOfAppointment
-	
+class AddOrUpdateAppointmentsRequest extends MBRequest {
+	/** @var string */
+	public $UpdateAction;
+	/** @var boolean */
+	public $Test;
+	/** @var boolean */
+	public $SendEmail;
+	/** @var boolean */
+	public $ApplyPayment;
+	/** @var Appointment[] */
+	public $Appointments;
+	/** @var boolean */
+	public $IgnoreDefaultSessionLength;
 }
 ?>

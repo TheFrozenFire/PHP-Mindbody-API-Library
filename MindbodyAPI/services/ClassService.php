@@ -1,8 +1,9 @@
 <?php
 namespace MindbodyAPI\services;
 use MindbodyAPI\structures;
-class ClassService extends \MindbodyAPI\MindbodyClient {
-	public static $classmap = array(
+class ClassService extends \SoapClient {
+	const WSDL_FILE = "https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL";
+	private $classmap = array(
 		'GetClasses' => 'MindbodyAPI\structures\GetClasses',
 		'GetClassesRequest' => 'MindbodyAPI\structures\GetClassesRequest',
 		'MBRequest' => 'MindbodyAPI\structures\MBRequest',
@@ -39,6 +40,7 @@ class ClassService extends \MindbodyAPI\MindbodyClient {
 		'ClientRelationship' => 'MindbodyAPI\structures\ClientRelationship',
 		'Relationship' => 'MindbodyAPI\structures\Relationship',
 		'CustomClientField' => 'MindbodyAPI\structures\CustomClientField',
+		'ProviderIDUpdate' => 'MindbodyAPI\structures\ProviderIDUpdate',
 		'Visit' => 'MindbodyAPI\structures\Visit',
 		'UpdateClientVisits' => 'MindbodyAPI\structures\UpdateClientVisits',
 		'UpdateClientVisitsRequest' => 'MindbodyAPI\structures\UpdateClientVisitsRequest',
@@ -92,16 +94,25 @@ class ClassService extends \MindbodyAPI\MindbodyClient {
 		'GetWaitlistEntriesResponse' => 'MindbodyAPI\structures\GetWaitlistEntriesResponse',
 		'GetWaitlistEntriesResult' => 'MindbodyAPI\structures\GetWaitlistEntriesResult',
 		'WaitlistEntry' => 'MindbodyAPI\structures\WaitlistEntry',
+		'SubtituteClassTeacher' => 'MindbodyAPI\structures\SubtituteClassTeacher',
+		'SubstituteClassTeacherRequest' => 'MindbodyAPI\structures\SubstituteClassTeacherRequest',
+		'SubtituteClassTeacherResponse' => 'MindbodyAPI\structures\SubtituteClassTeacherResponse',
+		'SubstituteClassTeacherResult' => 'MindbodyAPI\structures\SubstituteClassTeacherResult',
+		'CancelSingleClass' => 'MindbodyAPI\structures\CancelSingleClass',
+		'CancelSingleClassRequest' => 'MindbodyAPI\structures\CancelSingleClassRequest',
+		'CancelSingleClassResponse' => 'MindbodyAPI\structures\CancelSingleClassResponse',
+		'CancelSingleClassResult' => 'MindbodyAPI\structures\CancelSingleClassResult',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL", $options = array()) {
-		foreach (self::$classmap as $key => $value) {
+	public function __construct($wsdl = null, $options = array()) {
+		foreach ($this->classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
-		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/ClassService.asmx';
-		parent::__construct($wsdl, $options);
+		if (isset($options['headers'])) {
+			$this->__setSoapHeaders($options['headers']);
+		}
+		parent::__construct($wsdl ? : self::WSDL_FILE, $options);
 	}
 	/**
 	 * Gets a list of classes.
@@ -279,6 +290,34 @@ class ClassService extends \MindbodyAPI\MindbodyClient {
 	 */
 	public function GetWaitlistEntries(structures\GetWaitlistEntries $parameters) {
 		return $this->__soapCall('GetWaitlistEntries', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Substitutes the teacher for a class.
+	 *
+	 * @param SubtituteClassTeacher $parameters
+	 * @return SubtituteClassTeacherResponse
+	 */
+	public function SubtituteClassTeacher(structures\SubtituteClassTeacher $parameters) {
+		return $this->__soapCall('SubtituteClassTeacher', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Cancels a single class instance.
+	 *
+	 * @param CancelSingleClass $parameters
+	 * @return CancelSingleClassResponse
+	 */
+	public function CancelSingleClass(structures\CancelSingleClass $parameters) {
+		return $this->__soapCall('CancelSingleClass', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',

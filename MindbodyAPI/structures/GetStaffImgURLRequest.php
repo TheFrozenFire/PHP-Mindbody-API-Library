@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetStaffImgURLRequest {
-	public $StaffID; // long
-	
+class GetStaffImgURLRequest extends MBRequest {
+	/** @var long */
+	public $StaffID;
 }
 ?>

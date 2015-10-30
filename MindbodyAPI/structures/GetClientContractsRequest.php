@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
-class GetClientContractsRequest {
-	public $ClientID; // string
-	
+class GetClientContractsRequest extends MBRequest {
+	/** @var string */
+	public $ClientID;
 }
 ?>

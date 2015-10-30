@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class RemoveClientsFromClasses {
-	public $Request; // RemoveClientsFromClassesRequest
-	
+	/** @var RemoveClientsFromClassesRequest */
+	public $Request;
 }
 ?>

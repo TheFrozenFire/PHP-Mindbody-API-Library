@@ -1,16 +1,25 @@
 <?php
 namespace MindbodyAPI\structures;
 class ClientCreditCard {
-	public $CardType; // string
-	public $LastFour; // string
-	public $CardNumber; // string
-	public $CardHolder; // string
-	public $ExpMonth; // string
-	public $ExpYear; // string
-	public $Address; // string
-	public $City; // string
-	public $State; // string
-	public $PostalCode; // string
-	
+	/** @var string */
+	public $CardType;
+	/** @var string */
+	public $LastFour;
+	/** @var string */
+	public $CardNumber;
+	/** @var string */
+	public $CardHolder;
+	/** @var string */
+	public $ExpMonth;
+	/** @var string */
+	public $ExpYear;
+	/** @var string */
+	public $Address;
+	/** @var string */
+	public $City;
+	/** @var string */
+	public $State;
+	/** @var string */
+	public $PostalCode;
 }
 ?>

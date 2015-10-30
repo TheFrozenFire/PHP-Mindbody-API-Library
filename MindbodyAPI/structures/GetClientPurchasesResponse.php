@@ -1,7 +1,7 @@
 <?php
 namespace MindbodyAPI\structures;
 class GetClientPurchasesResponse {
-	public $GetClientPurchasesResult; // GetClientPurchasesResult
-	
+	/** @var GetClientPurchasesResult */
+	public $GetClientPurchasesResult;
 }
 ?>

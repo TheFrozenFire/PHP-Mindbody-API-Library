@@ -1,12 +1,17 @@
 <?php
 namespace MindbodyAPI\structures;
 class MBRequest {
-	public $SourceCredentials; // SourceCredentials
-	public $UserCredentials; // UserCredentials
-	public $XMLDetail; // XMLDetailLevel
-	public $PageSize; // int
-	public $CurrentPageIndex; // int
-	public $Fields; // ArrayOfString
-	
+	/** @var SourceCredentials */
+	public $SourceCredentials;
+	/** @var UserCredentials */
+	public $UserCredentials;
+	/** @var XMLDetailLevel */
+	public $XMLDetail;
+	/** @var int */
+	public $PageSize;
+	/** @var int */
+	public $CurrentPageIndex;
+	/** @var String[] */
+	public $Fields;
 }
 ?>
